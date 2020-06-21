@@ -150,10 +150,12 @@ Besides contribution of challenges, contribution of *ideas* for challenges is al
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'feat: Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Submit your idea for the challenge in the respective `README`.
+3. File a Pull Request with the `challenge-idea` tag. Each challenge must have it's own PR.
+4. Once the challenge is approved, the tag is changed to `challenge-approved`, we comment on the PR.
+5. Build the final challenge and update the *same* PR.
+6. Make sure all commit messages are in accordance with the guidelines in [CONTRIBUTING.md].
+7. Any issues in the challenge will be addressed using GitHub Issues.
 
 You are requested to follow the contribution guidelines specified in [CONTRIBUTING.md](./CONTRIBUTING.md) while contributing to the project :smile:.
 
