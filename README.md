@@ -4,23 +4,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo">
+  <a href="https://github.com/csivitu">
     <img src="https://csivit.com/images/favicon.png" alt="Logo" width="80">
   </a>
 
-  <h3 align="center">YOUR_TITLE</h3>
+  <h3 align="center">CTF Challenges</h3>
 
   <p align="center">
-    YOUR_SHORT_DESCRIPTION
+    CTF challenges for `csictf` 2020.
     <br />
-    <a href="https://github.com/csivitu/repo"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/csivitu/ctf-challenges"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/csivitu/repo">View Demo</a>
+    <a href="https://github.com/csivitu/ctf-challenges">View Demo</a>
     ·
-    <a href="https://github.com/csivitu/repo/issues">Report Bug</a>
+    <a href="https://github.com/csivitu/ctf-challenges/issues">Report Bug</a>
     ·
-    <a href="https://github.com/csivitu/repo/issues">Request Feature</a>
+    <a href="https://github.com/csivitu/ctf-challenges/issues">Request Feature</a>
   </p>
 </p>
 
@@ -30,12 +30,9 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  * [Built With](#built-with)
 * [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
+* [Template](#Template)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contributors](#contributors-)
@@ -45,62 +42,104 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo`, `twitter_handle`, `email`
-
-
-### Built With
-
-* []()
-* []()
-* []()
-
-
+This is a repository to store CTF challenges to be deployed for `csictf`.
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+> Note: This is a beginner CTF, hence the challenges should be of easy / moderate difficulty.
+<br />
 
-### Prerequisites
+> Note: DO NOT PLAGIARIZE challenges from other CTFs. You can take inspiration but not have the exact same challenge.
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
+The following are the categories of challenges that are to be made:
+
+- Pwn
+- Web
+- OSINT
+- Linux
+- Crypto
+- Forensics
+- Log Analysis
+- Miscellaneous
 
 ### Installation
  
 1. Clone the repo
 ```sh
-git clone https://github.com/github_username/repo.git
-```
-2. Install NPM packages
-```sh
-npm install
+git clone https://github.com/csivitu/ctf-challenges.git
 ```
 
+## Template
 
+### Flag Format
 
-<!-- USAGE EXAMPLES -->
-## Usage
+- The flags must be enclosed in `csictf{}`.
+- They can have numbers, alphabets, `_`s, `'`s, `!`s, `.`s, `+`s, `-`s.
+- They must be related to the challenge.
+- They must not be so simple that you can guess them.
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Here's a regex for the flag format.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+```
+/^csictf{[\w_!\.'"+-]{5,35}}$/
+```
 
+Here's a sample flag.
 
+```
+csictf{th1s_i5_4_s4mpl3_fl4g'+!-.}
+```
 
-<!-- ROADMAP -->
-## Roadmap
+### Directory Structure
 
-See the [open issues](https://github.com/github_username/repo/issues) for a list of proposed features (and known issues).
+The following are guidelines for creating challenge folders.
 
+- Each challenge has it's own folder, which is placed in the relevant directory amongst the ones enlisted above.
+- Each challenge **must** have a `README.md` file describing how to solve the challenge, along with the relevant code / files that needs to be run / deployed on the server.
+- The flag must be present in the `README.md` for the challenge.
+- We prefer having each challenge in it's own docker container, so that it's simple to deploy.
 
+```
+- pwn/
+  - n00binary/
+    - README.md
+    - n00binary
+    - n00binary.c
+    - Dockerfile
+- web/
+  - localize/
+    - README.md
+    - localize.php
+```
+
+### Template for Challenge README
+
+As mentioned earlier, each challenge requires a `README`. This should have the following format.
+
+```
+# Challenge Name
+
+## Description
+
+Brief Description about challenge
+
+## Requirements
+
+- Docker: [Dockerfile](./Dockerfile)
+
+## Sources
+
+- [sample.py](./sample.py)
+- [sample.txt](./sample.txt)
+
+## Exploit
+
+<!-- Much more detailed description than the following. -->
+Reverse `sample.py` to decrypt the flag in `sample.txt.`
+```
+
+> Refer to this [sample](https://github.com/csivitu/CTF-Write-ups/tree/master/HSCTF%207/Binary%20Exploitation/boredom#exploitation) for writing the exploit section.
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -119,8 +158,6 @@ You are requested to follow the contribution guidelines specified in [CONTRIBUTI
 ## License
 
 Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more information.
-
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
