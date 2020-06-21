@@ -144,7 +144,7 @@ Reverse `sample.py` to decrypt the flag in `sample.txt.`
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Besides contribution of challenges, contribution of *ideas* for challenges is also appreciated. You can put forward your ideas to [@roerohan](https://github.com/roerohan), [@theProgrammerDavid](https://github.com/roerohan) and [@thebongy](https://github.com/roerohan).
+Besides contribution of challenges, contribution of *ideas* for challenges is also appreciated. You can put forward your ideas to [@roerohan](https://github.com/roerohan), [@theProgrammerDavid](https://github.com/theProgrammerDavid) and [@thebongy](https://github.com/thebongy).
 <br />
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
