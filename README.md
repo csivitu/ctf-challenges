@@ -14,7 +14,7 @@
   <h3 align="center">CTF Challenges</h3>
 
   <p align="center">
-    CTF challenges for `csictf` 2020.
+    CTF challenges for <b>csictf</b> 2020.
     <br />
     <a href="https://github.com/csivitu/ctf-challenges"><strong>Explore the docs »</strong></a>
     <br />
@@ -173,7 +173,7 @@ Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more informati
 [csivitu-shield]: https://img.shields.io/badge/csivitu-csivitu-blue
 [csivitu-url]: https://csivit.com
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/csivitu/repo/issues
+[issues-url]: https://github.com/csivitu/ctf-challenges/issues
 
 ## Contributors ✨
 
