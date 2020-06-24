@@ -78,7 +78,7 @@ git clone https://github.com/csivitu/ctf-challenges.git
 ### Flag Format
 
 - The flags must be enclosed in `csictf{}`.
-- They can have numbers, alphabets, `_`s, `'`s, `!`s, `.`s, `+`s, `-`s.
+- They can have numbers, alphabets, `_`s, `'`s, `!`s, `.`s, `+`s, `-`s, `@`s, `#`s, `$`s, `%`s.
 - They must be related to the challenge.
 - They must not be so simple that you can guess them.
 
