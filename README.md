@@ -157,7 +157,7 @@ Contributions are what make the open source community such an amazing place to b
 3. File a Pull Request with the `challenge-idea` tag. Each challenge must have it's own PR.
 4. Once the challenge is approved, the tag is changed to `challenge-approved`, we comment on the PR.
 5. Build the final challenge and update the *same* PR.
-6. Make sure all commit messages are in accordance with the guidelines in [CONTRIBUTING.md].
+6. Make sure all commit messages are in accordance with the guidelines in [CONTRIBUTING.md](./CONTRIBUTING.md).
 7. Any issues in the challenge will be addressed using GitHub Issues.
 
 You are requested to follow the contribution guidelines specified in [CONTRIBUTING.md](./CONTRIBUTING.md) while contributing to the project :smile:.
