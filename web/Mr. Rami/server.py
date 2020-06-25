@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, send_from_directory
 app = Flask(__name__)
 
 @app.route('/')
