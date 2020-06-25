@@ -123,6 +123,8 @@ As mentioned earlier, each challenge requires a `README`. This should have the f
 ```
 # Challenge Name
 
+Author: [author](https://github.com/author)
+
 ## Description
 
 Brief Description about challenge
