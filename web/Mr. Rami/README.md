@@ -1,5 +1,7 @@
 # Mr. Rami
 
+Author: [roerohan](https://github.com/roerohan)
+
 ## Description
 
 This is a simple `robots.txt` challenge.
