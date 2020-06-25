@@ -15,6 +15,7 @@ This is a simple `robots.txt` challenge.
 - [index.html](./index.html)
 - [flag.txt](./flag.txt)
 - [robots.txt](./robots.txt)
+- [server.py](./server.py)
 
 ```
 "People who get violent get that way because they can’t communicate."
