@@ -6,7 +6,6 @@ def home():
    return send_from_directory('.', 'index.html')
 
 @app.route('/robots.txt')
-@app.route('/sitemap.xml')
 def static_from_root():
     return send_from_directory('.', 'robots.txt')
 
