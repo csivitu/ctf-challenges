@@ -106,6 +106,8 @@ The following are guidelines for creating challenge folders.
 ```
 - pwn/
   - n00binary/
+    - static/
+      - img1.png
     - README.md
     - n00binary
     - n00binary.c
@@ -116,9 +118,11 @@ The following are guidelines for creating challenge folders.
     - localize.php
 ```
 
+> The static folder contains images that may be used in the `README.md`.
+
 ### Template for Challenge README
 
-As mentioned earlier, each challenge requires a `README`. This should have the following format.
+As mentioned earlier, each challenge requires a `README`. The README must be written in such a way that this can serve as an **official write-up** later. This should have the following format.
 
 ```
 # Challenge Name
