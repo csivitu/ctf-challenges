@@ -85,13 +85,13 @@ git clone https://github.com/csivitu/ctf-challenges.git
 Here's a regex for the flag format.
 
 ```
-/^csictf{[\w_!@#$%\.'"+-]{5,50}}$/
+/^csictf{[\w_!@#?$%\.'"+-]{5,50}}$/
 ```
 
 Here's a sample flag.
 
 ```
-csictf{th1s_i5_4_s4mpl3_fl4g'+!-.@#$%}
+csictf{th1s_i5_4_s4mpl3_fl4g'+!-.@#$%?}
 ```
 
 ### Directory Structure
