@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const fs = require('fs');
 
 const app = express();
@@ -10,7 +11,7 @@ app.listen(PORT, () => {
 });
 
 app.get('/getFile', (req, res) => {
-    const { file } = req.query;
+    let { file } = req.query;
 
     // If file name is undefined
     if (!file) {
@@ -19,7 +20,7 @@ app.get('/getFile', (req, res) => {
     }
 
     try {
-        // If file name has characters like ' ', '/'
+        // If file name has characters like ' ', '/', fail.
         if (file.includes(' ') || file.includes('/')) {
             res.send(`file=${file}\nInvalid filename!`);
             return;
@@ -29,22 +30,19 @@ app.get('/getFile', (req, res) => {
         return;
     }
 
-    // If the length of file is greater than 5
-    if (file.length > 5) {
-        res.send(`file=${file}\nFilename too large!`);
-        return;
-    }
-
-    // Check if file type is allowed
+    // Check if file type is allowed.
     if (!allowedFileType(file)) {
         res.send(`File type not allowed`);
         return;
     }
 
-    const temp = __dirname + '/' + file;
+    // If the file name is too long, shorten it.
+    if (file.length > 5) {
+        file = file.slice(0, 5);
+    }
 
-    // If there are multiple file names (comma separated), take the first one.
-    const returnedFile = temp.split(',')[0];
+    // Get the path for the file.
+    const returnedFile = path.resolve(__dirname + '/' + file);
 
     // Read file to check if file exists
     fs.readFile(returnedFile, (err) => {
@@ -66,7 +64,7 @@ function allowedFileType(file) {
     const format = file.slice(file.indexOf('.') + 1);
 
     // Allow only `js` and `txt` files.
-    if (format == 'js' || format == 'txt') {
+    if (format == 'js' || format == 'ts' || format == 'c' || format == 'cpp') {
         return true;
     }
 

@@ -32,6 +32,7 @@ This makes the `req.names` in the backend an array: `['hello', 'world']`.
 
 ```javascript
 const express = require('express');
+const path = require('path');
 const fs = require('fs');
 
 const app = express();
@@ -43,7 +44,7 @@ app.listen(PORT, () => {
 });
 
 app.get('/getFile', (req, res) => {
-    const { file } = req.query;
+    let { file } = req.query;
 
     // If file name is undefined
     if (!file) {
@@ -52,7 +53,7 @@ app.get('/getFile', (req, res) => {
     }
 
     try {
-        // If file name has characters like ' ', '/'
+        // If file name has characters like ' ', '/', fail.
         if (file.includes(' ') || file.includes('/')) {
             res.send(`file=${file}\nInvalid filename!`);
             return;
@@ -62,22 +63,19 @@ app.get('/getFile', (req, res) => {
         return;
     }
 
-    // If the length of file is greater than 5
-    if (file.length > 5) {
-        res.send(`file=${file}\nFilename too large!`);
-        return;
-    }
-
-    // Check if file type is allowed
+    // Check if file type is allowed.
     if (!allowedFileType(file)) {
         res.send(`File type not allowed`);
         return;
     }
 
-    const temp = __dirname + '/' + file;
+    // If the file name is too long, shorten it.
+    if (file.length > 5) {
+        file = file.slice(0, 5);
+    }
 
-    // If there are multiple file names (comma separated), take the first one.
-    const returnedFile = temp.split(',')[0];
+    // Get the path for the file.
+    const returnedFile = path.resolve(__dirname + '/' + file);
 
     // Read file to check if file exists
     fs.readFile(returnedFile, (err) => {
@@ -99,7 +97,7 @@ function allowedFileType(file) {
     const format = file.slice(file.indexOf('.') + 1);
 
     // Allow only `js` and `txt` files.
-    if (format == 'js' || format == 'txt') {
+    if (format == 'js' || format == 'ts' || format == 'c' || format == 'cpp') {
         return true;
     }
 
@@ -110,13 +108,16 @@ function allowedFileType(file) {
 The `/getFile` route is meant to get you a file from the server. But there are certain restrictions. First, you can't have ` `s or `/`s in your file. This prevents path traversal to an extent. 
 <br />
 
-Then, it checks that the `file` parameter has a length of less than 5 characters. This will prevent you from accessing a file like `flag.txt`. Then, it checks if the file ends with `js` or `txt`, only then it will allow you to read that file. If all these are satisfied, a `temp` variable is created to get the absolute path in the directory. After that, it checks whether `temp` has `,`s in it, if yes, it takes the first value before the comma, so that it selects the first file if a user passes many comma-separated files.
+Then, it checks that the `file` parameter has a length of less than 5 characters. If not, it takes just the first 5 characters. Then, it checks if the file extension is `js`, `ts`, `cpp`, or `c`, if yes, it allows you to read that file. If all these are satisfied, the path is resolved using `path.resolve()`.
 <br />
 
-So, if we pass `file[]=flag.txt`, it bypasses all the checks except the `allowedFileType()` check, since the length of the array is less than 5, and it does not have an element ` ` or `/`. Now, you can add 2 new elements to the array `.` and `txt`, to the `file` parameter. Then, `temp` becomes `${__dirname}flag.txt,.,txt`, but the `temp.split(',')[0]` takes care of that. Here's the final payload:
+In the `a.cpp` file, it says `system("cat flag.txt")`, indicating that the flag is present in the same directory in the `flag.txt`. We can pass in an array which passes the first 2 checks. Then it has to check if the `.slice(file.indexOf('.') + 1)`, so the last 2 elements have to be `['.', 'js']`. So, we can try passing `['flag.txt', '.', 'js']`, which makes the path `/home/user/flag.txt,.,js`, which is invalid. However, we can make use of the `path.resolve()`, and the fact that only the first 5 elements are used. If the array becomes `['a', 'b', 'c', 'd', '/../flag.txt', '.', 'js']` (`js` because `txt` is not allowed). So, this passed the file check, because `.slice()` returns `['js']` and `['js'] == 'js'` is true (not used `===`). Now, to get rid of this, we add 4 random elements before the element having `flag.txt`.
+<br />
+
+Now, the string upon concatenation will give `${pwd}/a,b,c,d,/../flag.txt` (now you see why we added `/../`), so that it resolves to `${pwd}/flag.txt` because of `flag.txt`. The payload, therefore, is:
 
 ```
-/getFile?file[]=flag.txt&file[]=.&file[]=txt
+/getFile?file[]=a&file[]=b&file[]=c&file[]=d&file[]=/../flag.txt&file[]=.&file[]=js
 ```
 
 The flag is:
