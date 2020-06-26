@@ -58,15 +58,17 @@ app.get('/getFile', (req, res) => {
     });
 });
 
-
 app.get('/*', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
 function allowedFileType(file) {
-    if ((file[file.length - 1] === 's' && file[file.length - 2] === 'j')
-        || (file[file.length - 1] === 't' && file[file.length - 2] === 'x' && file[file.length - 3]) === 't') {
+    const format = file.slice(file.indexOf('.') + 1)
+
+    // Allow only `js` and `txt` files.
+    if (format == 'js' || format == 'txt') {
         return true;
     }
+
     return false;
 }
