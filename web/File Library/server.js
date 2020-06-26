@@ -44,7 +44,7 @@ app.get('/getFile', (req, res) => {
     const temp = __dirname + '/' + file;
 
     // If there are multiple file names (comma separated), take the first one.
-    const returnedFile = temp.split(',')[0]
+    const returnedFile = temp.split(',')[0];
 
     // Read file to check if file exists
     fs.readFile(returnedFile, (err) => {
@@ -63,7 +63,7 @@ app.get('/*', (req, res) => {
 });
 
 function allowedFileType(file) {
-    const format = file.slice(file.indexOf('.') + 1)
+    const format = file.slice(file.indexOf('.') + 1);
 
     // Allow only `js` and `txt` files.
     if (format == 'js' || format == 'txt') {

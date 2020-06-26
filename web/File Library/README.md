@@ -77,7 +77,7 @@ app.get('/getFile', (req, res) => {
     const temp = __dirname + '/' + file;
 
     // If there are multiple file names (comma separated), take the first one.
-    const returnedFile = temp.split(',')[0]
+    const returnedFile = temp.split(',')[0];
 
     // Read file to check if file exists
     fs.readFile(returnedFile, (err) => {
@@ -91,16 +91,18 @@ app.get('/getFile', (req, res) => {
     });
 });
 
-
 app.get('/*', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
 function allowedFileType(file) {
-    if ((file[file.length - 1] === 's' && file[file.length - 2] === 'j')
-        || (file[file.length - 1] === 't' && file[file.length - 2] === 'x' && file[file.length - 3]) === 't') {
+    const format = file.slice(file.indexOf('.') + 1);
+
+    // Allow only `js` and `txt` files.
+    if (format == 'js' || format == 'txt') {
         return true;
     }
+
     return false;
 }
 ```
@@ -111,10 +113,10 @@ The `/getFile` route is meant to get you a file from the server. But there are c
 Then, it checks that the `file` parameter has a length of less than 5 characters. This will prevent you from accessing a file like `flag.txt`. Then, it checks if the file ends with `js` or `txt`, only then it will allow you to read that file. If all these are satisfied, a `temp` variable is created to get the absolute path in the directory. After that, it checks whether `temp` has `,`s in it, if yes, it takes the first value before the comma, so that it selects the first file if a user passes many comma-separated files.
 <br />
 
-So, if we pass `file[]=flag.txt`, it bypasses all the checks except the `allowedFileType()` check, since the length of the array is less than 5, and it does not have an element ` ` or `/`. Now, you can add 3 new elements to the array `t`, `x`, `t`, to the `file` parameter. Then, `temp` becomes `${__dirname}flag.txtt,x,t`, but the `temp.split(',')[0]` takes care of that. Here's the final payload:
+So, if we pass `file[]=flag.txt`, it bypasses all the checks except the `allowedFileType()` check, since the length of the array is less than 5, and it does not have an element ` ` or `/`. Now, you can add 2 new elements to the array `.` and `txt`, to the `file` parameter. Then, `temp` becomes `${__dirname}flag.txt,.,txt`, but the `temp.split(',')[0]` takes care of that. Here's the final payload:
 
 ```
-/getFile?file[]=flag.txt&file[]=t&file[]=x&file[]=t
+/getFile?file[]=flag.txt&file[]=.&file[]=txt
 ```
 
 The flag is:
