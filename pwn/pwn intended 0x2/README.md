@@ -12,8 +12,8 @@ Buffer overflow to overwrite a variable in the same function.
 
 ## Sources
 
-- [pwn-intended-0x2](./pwn-intended-0x2): Binary
-- [pwn-intended-0x2.c](./pwn-intended-0x2.c)
+- [pwn-intended-0x2](./bin/pwn-intended-0x2): Binary
+- [pwn-intended-0x2.c](./bin/pwn-intended-0x2.c)
 
 ```c
 #include <stdio.h>
@@ -21,6 +21,10 @@ Buffer overflow to overwrite a variable in the same function.
 int main() {
     int check = 0;
     char teleport[30];
+
+    setbuf(stdout, NULL);
+    setbuf(stdin, NULL);
+    setbuf(stderr, NULL);
 
     puts("Welcome to csictf! Where are you headed?");
     gets(teleport);
