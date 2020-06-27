@@ -42,7 +42,9 @@ def flag_function():
 
 while 1:
     try:
-        code = _raw_input(">>> ")
+        sys.stdout.write(">>> ")
+        sys.stdout.flush()
+        code = _raw_input()
         sandbox.execute(code)
 
     except Exception:
