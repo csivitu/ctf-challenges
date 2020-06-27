@@ -1,10 +1,11 @@
-#!/usr/bin/python2
+#!/usr/bin/python
 
 import sys
 
 class Sandbox(object):
     def execute(self, code_string):
         exec(code_string)
+        sys.stdout.flush()
 
 sandbox = Sandbox()
 
@@ -34,6 +35,7 @@ for builtin in orig_builtins.keys():
         del orig_builtins[builtin]
 
 print("Find the flag.")
+sys.stdout.flush()
 
 def flag_function():
     flag = "csictf{m1ch34l_sc0fi3ld_fr0m_pr1s0n_br34k}"
@@ -45,3 +47,4 @@ while 1:
 
     except Exception:
         print("You have encountered an error.")
+        sys.stdout.flush()
