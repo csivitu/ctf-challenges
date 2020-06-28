@@ -116,6 +116,7 @@ The following are guidelines for creating challenge folders.
   - localize/
     - README.md
     - localize.php
+    - Dockerfile
 ```
 
 > The static folder contains images that may be used in the `README.md`.
@@ -163,6 +164,17 @@ csictf{some_flag_here}
 ```
 
 > Refer to this [sample](https://github.com/csivitu/CTF-Write-ups/tree/master/HSCTF%207/Binary%20Exploitation/boredom#exploitation) for writing the exploit section.
+
+### Dockerfiles
+
+Here are some Dockerfiles you can refer to while making your own. Make sure you test it locally before making the PR.
+
+- [Node.js Server ](./web/File20%Library/Dockerfile)
+- [Flask Server](./web/Mr.20%Rami)
+- [Netcat to Python](./miscellaneous/Prison%20Break/Dockerfile)
+- [Pwn Binary](./pwn/pwn%20intended%0x1/Dockerfile)
+
+Make sure you read the `Dockerfile`s and include the necessary files like the `flag.txt`. **REMEMBER TO ADD THE `README.md` FILE TO `.dockerignore`, BECAUSE IT HAS THE SOLUTION.**.
 
 <!-- CONTRIBUTING -->
 ## Contributing
