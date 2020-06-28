@@ -4,7 +4,7 @@ service ctf
     socket_type = stream
     protocol    = tcp
     wait        = no
-    user        = root
+    user        = ctf
     type        = UNLISTED
     port        = 9999
     bind        = 0.0.0.0
