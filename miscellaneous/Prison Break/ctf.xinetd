@@ -8,8 +8,8 @@ service ctf
     type        = UNLISTED
     port        = 9999
     bind        = 0.0.0.0
-    server      = /usr/local/bin/python
-    server_args = /ctf/jail.py
+    server      = /bin/sh
+    server_args = /ctf/start.sh
     banner_fail = /etc/banner_fail
     # safety options
     per_source  = 10 # the maximum instances of this service per source IP address
