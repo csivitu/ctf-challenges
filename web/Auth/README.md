@@ -1,3 +1,0 @@
-// JWT
-// Traversal
-// SQLI
