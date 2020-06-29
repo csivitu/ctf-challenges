@@ -47,7 +47,6 @@ while 1:
         code = _raw_input()
         sandbox.execute(code)
 
-    except Exception as e:
+    except Exception:
         print("You have encountered an error.")
-        print(e)
         sys.stdout.flush()
