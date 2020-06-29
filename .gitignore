@@ -1,5 +1,4 @@
 **/.gdb_history
-**/*.env
 **/peda-session*
 **/node_modules
 .vscode/
