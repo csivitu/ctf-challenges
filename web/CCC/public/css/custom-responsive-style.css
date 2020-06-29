@@ -1,0 +1,251 @@
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 767px) {
+	#Banner .blacksection::before {
+		display: none;
+	}
+	#Banner {
+		width: 100%;
+	}
+	header {
+		background: #e64741; /* Old browsers */
+		position: fixed;
+		width: 100%;
+		padding: 20px;
+		z-index: 99999;
+	}
+	header .mobile-logo {
+		display: block;
+		width: 60px;
+	}
+	#Banner .logo {
+		display: none;
+	}
+	.mobile-logo img {
+		width: 100%;
+		height: auto;
+	}
+	#Banner h1 {
+		font-size: 40px;
+		right: auto;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		opacity: 1;
+		left: 50%;
+		text-align: left;
+	}
+	.mobile-header {
+		display: block;
+	}
+	#Services {
+		padding: 30px 0;
+	}
+	#Services h2 {
+	    font-size: 38px;
+	    margin-bottom: 30px;
+	}
+	#Services .each-services img {
+		padding-bottom: 10px;
+	}
+	.each-services {
+	    margin-bottom: 40px;
+	}
+	#OurWork h2, #TestimonialsSlider h2 {
+		font-size: 38px;
+	}
+	#OurWork .grey-box {
+		margin-bottom: 30px;
+	}
+	#OurWork .each-work {
+		padding: 0 7px 10px;
+		width: 127px;
+		height: 120px;
+	}
+	#OurWork .each-work img {
+		width: 100%;
+		height: auto;
+	}
+	#OurBlog h2 {
+		font-size: 38px;
+	}
+	#OurBlog {
+	    padding: 60px 0;
+	} 
+	.each-block {
+	    position: static;
+	    width: auto;
+	    padding: 0 0;
+	    margin-bottom: 25px;
+	    display: inline-block;
+	}
+	.blog-wrap {
+		margin: 40px 0;
+	}
+	#TestimonialsSlider {
+		padding: 40px 0;
+	}
+	.testimonials-dtl p {
+	    width: auto;
+	    padding: 0 20px;
+	}
+	.testimonials-dtl h5 {
+		padding-top: 20px;
+	}
+	#Footer p {
+		font-size: 34px;
+	}
+	.social-icons li i {
+	    font-size: 26px;
+	}
+	.blog-wrap {
+		height: auto;
+	}
+	#OurBlog .each-block {
+		width: 100%;
+	}
+	#OurBlog .blog-wrap::before, #OurBlog .each-block::before {
+		display: none;
+	}
+	#OurBlog .blog-wrap .blog-intro {
+		width: 75%;
+	}
+	#Testimonials {
+		padding-bottom: 30px;
+	}
+	#Testimonials span {
+		font-size: 50px;
+	}
+	#Testimonials h2 {
+		font-size: 40px;
+	}
+	#Testimonials .title {
+		width: 70%;
+	}
+	#Testimonials .testi-wrapper {
+		margin-top: 50px;
+	}
+	#Testimonials .testi-wrapper .latest-testimonials {
+		margin-right: 0;
+	}
+	#Testimonials .testi-wrapper .each-testi {
+		width: 100%;
+	}
+	#Testimonials .testi-wrapper .old-testimonials {
+		margin: 0 0 30px 0;
+		height: auto;
+	}
+	#Testimonials .each-testi .profile {
+		position: static;
+	}
+	.social-icons li {
+		margin: 0 8px;
+	}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 768px) and (max-width: 991px){
+	#Banner {
+		width: 100%;
+		height: 60vh;
+	}
+	header {
+		background: #e64741; /* Old browsers */
+		position: fixed;
+		width: 100%;
+		padding: 20px;
+		z-index: 99999;
+	}
+	header .mobile-logo {
+		display: block;
+		width: 60px;
+	}
+	#Banner .logo {
+		display: none;
+	}
+	.mobile-logo img {
+		width: 100%;
+		height: auto;
+	}
+	#Banner h1 {
+		right: 16%;
+		opacity: 1;
+	}
+	#OurBlog .each-block::before , #OurBlog .blog-wrap::before {
+		display: none;
+	}
+	#OurBlog .each-block {
+		width: 100%;
+	}
+	#Services {
+	   padding: 30px 0; 
+	}
+	#Services h2 {
+		font-size: 40px;
+		margin-bottom: 30px;
+	}
+	#Services .each-services img {
+	    width: 58px;
+	    padding-bottom: 10px;
+	}
+	#Services .each-services h3 {
+		font-size: 22px;
+		min-height: 50px;
+	}
+	#Services .each-services p {
+		font-size: 16px;
+	}
+	#Banner .blacksection::before {
+	    right: 0;
+	    transform: rotate(50deg);
+	    top: 0;
+	}
+	#OurWork h2, #TestimonialsSlider h2, #OurBlog h2 {
+		font-size: 38px;
+	}
+	#OurWork .each-work {
+		width: 151px;
+	}
+	.blog-wrap:before {
+		content: none;
+	}
+	#Footer p {
+		font-size: 30px;
+	}
+	.social-icons li i {
+		font-size: 36px;
+	}
+	#Testimonials .testi-wrapper {
+		margin-top: 60px;
+	}
+	#TestimonialsSlider {
+		font-size: 40px;
+	}
+	#Testimonials .testi-wrapper .latest-testimonials {
+		margin-right: 0;
+		width: 100%;
+	}
+	#Testimonials .testi-wrapper .old-testimonials {
+		width: 46%;
+	}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 992px) and (max-width: 1024px){
+	#Banner .blacksection::before {
+		width: 1200px;
+	}
+	#Banner h1 {
+		font-size: 60px;
+	}
+	#OurWork .each-work {
+		width: 30.6%;
+	}
+	#OurBlog .each-block::before {
+		right: -53px;
+	}
+	#OurBlog .each-block.two::before {
+		left: -52px;
+	}
+	#Testimonials .testi-wrapper .each-testi {
+		width: 31%;
+	}
+}
