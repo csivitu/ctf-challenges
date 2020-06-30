@@ -1,3 +1,4 @@
+name: Update challenge on CTFd
 on:
   push:
     branches: [ master ]
@@ -9,8 +10,8 @@ jobs:
       - uses: actions/setup-python@v2
       - name: Deploy
         env:
-          TOKEN: ${{ secrets.TOKEN }}
-          URL: ${{ secrets.URL }}
+          CTFD_TOKEN: ${{ secrets.CTFD_TOKEN }}
+          CTFD_URL: ${{ secrets.CTFD_TOKEN }}
         run: |
           pip3 install ctfcli
           cd $GITHUB_WORKSPACE && python3 deploy.py
