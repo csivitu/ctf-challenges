@@ -1,0 +1,17 @@
+name: Update challenge on CTFd
+on:
+  push:
+    branches: [ master ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - name: Deploy
+        env:
+          CTFD_TOKEN: ${{ secrets.CTFD_TOKEN }}
+          CTFD_URL: ${{ secrets.CTFD_URL }}
+        run: |
+          pip3 install ctfcli
+          cd $GITHUB_WORKSPACE && python3 ctfd.py
