@@ -3,23 +3,23 @@
 /* Custom Font style */
 @font-face {
 	font-family: 'Futura PT light';
-	src: url("/getFile?file=font/FuturaPTLight.otf");
+	src: url("/static/font/FuturaPTLight.otf");
 }
 @font-face {
 	font-family: 'Futura PT medium';
-	src: url("/getFile?file=font/FuturaPTMedium.otf");
+	src: url("/static/font/FuturaPTMedium.otf");
 }
 @font-face {
 	font-family: 'Futura PT bold';
-	src: url("/getFile?file=font/FuturaPTBold.otf");
+	src: url("/static/font/FuturaPTBold.otf");
 }
 @font-face {
 	font-family: 'Futura PT book';
-	src: url("/getFile?file=font/FuturaPTBook.otf");
+	src: url("/static/font/FuturaPTBook.otf");
 }
 @font-face {
 	font-family: 'Futura PT Heavy';
-	src: url("/getFile?file=font/FuturaPTHeavy.otf");
+	src: url("/static/font/FuturaPTHeavy.otf");
 }
 /* Global style begins here */
 body {
@@ -469,7 +469,7 @@ body.active .mscroll {
 	margin-right: 0;
 }
 #Testimonials .testi-wrapper .old-testimonials {
-	background: url("/getFile?file=images/testimonials-background.jpg") no-repeat bottom center / cover;
+	background: url("/static/images/testimonials-background.jpg") no-repeat bottom center / cover;
 	padding: 30px 50px;
 	margin: 0 10px;
 	height: 300px;

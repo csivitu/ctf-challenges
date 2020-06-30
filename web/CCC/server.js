@@ -14,10 +14,11 @@ if (!process.env.JWT_SECRET) {
 }
 
 
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
 
 app.listen(PORT, () => {
@@ -56,6 +57,7 @@ function decodeJWT(req, res, next) {
 
     try {
         req.user = jwt.verify(token, process.env.JWT_SECRET);
+
         next();
     } catch (err) {
         res.status(400).json({
@@ -69,7 +71,7 @@ function decodeJWT(req, res, next) {
 
 
 app.get('/admin', decodeJWT, (req, res) => {
-    if (req.user.role !== str_rot13('admin')) {
+    if (req.user.admin !== str_rot13('true')) {
         res.send('Access Denied: You are not an Admin.');
         return;
     }
@@ -96,16 +98,16 @@ app.get('/admin', decodeJWT, (req, res) => {
 
 
 app.get('/login', (req, res) => {
-    const { username, password } = req.query;
-
-    if (!username || !password) {
-        res.sendFile(path.join(__dirname, 'public', 'login.html'));
-        return;
-    }
-
-    res.send(signJWT({ username: str_rot13(username), password: str_rot13(password), role: str_rot13('user') }));
+    res.sendFile(path.join(__dirname, 'public', 'login.html'));    
 });
 
+
+app.post('/login', (req, res) => {
+    const { username, password } = req.body;
+    const token = signJWT({ username: str_rot13(username), password: str_rot13(password), admin: str_rot13('false') });
+    res.setHeader('token', token);
+    res.sendFile(path.join(__dirname, 'public', 'dashboard.html'));
+});
 
 
 app.get('/verifyToken', decodeJWT, (req, res) => {
@@ -118,8 +120,6 @@ app.get('/verifyToken', decodeJWT, (req, res) => {
 
 
 app.get('/adminNames', (_req, res) => {
-    // SQL Injection here
-
     res.redirect('/getFile?file=admins');
 });
 
@@ -135,7 +135,7 @@ app.get('/getFile', (req, res) => {
 
     file = file.toString();
 
-    if (file.includes('../') && file.length > 7) {
+    if (file.length > 7) {
         res.send(`File name too big!`);
         return;
     }
@@ -145,7 +145,10 @@ app.get('/getFile', (req, res) => {
         return;
     }
 
-    res.sendFile(path.resolve(__dirname, 'public', file), { dotfiles: 'allow' });
+    const filePath = path.resolve(__dirname, 'public', file);
+    res.sendFile(filePath, { dotfiles: 'allow' }, (err) => {
+        if (err) res.send('No such file or directory: ' + filePath);
+    });
 });
 
 
