@@ -13,16 +13,15 @@ This is a simple crypto challenge which uses the Enigma Cipher.
 ## Sources
 
 ```
-Please help me decode this. It almost seems impossible. (Words are separarted by underscores) 
+Please help me decode this. It almost seems impossible. (Words are separated by underscores) 
 M4 UKW Gamma 2 4 5 9 14 3 5 20 fv cd hu ik es op yl wq jm
 Ciphertext: zkrtwvvvnrkulxhoywoj
 ```
 
 ## Exploit
 
-The model, reflector, and rotors and their positions, of the machine have been given to the players. They just have to use the online [Enigma decoder](https://cryptii.com/pipes/enigma-machine). You can use brute force to find out the reflector type and the missing rotors, which you will find out to be B, I, IV, and VII respectively. 
-
-
+The model, reflector, and rotors and their positions, of the machine have been given to the players. You just have to use the online [Enigma decoder](https://cryptii.com/pipes/enigma-machine). You have to use brute force to find out the reflector type and the missing rotors, which you'll find out to be B, I, IV, and VII respectively. 
+<br /> 
 
 The flag is:
 
