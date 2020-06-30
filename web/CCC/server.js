@@ -83,13 +83,14 @@ app.get('/admin', decodeJWT, (req, res) => {
         'sauravhiremath',
     ];
 
-    if (!admins.includes(str_rot13(req.user.username))) {
+    const username = str_rot13(req.user.username);
+
+    if (!admins.includes(username)) {
         res.send('Username not found in admin list.');
         return;
     }
 
-    // Do something
-    res.send('You are an admin!');
+    res.send(`Hey ${username}! Here's your flag: ${str_rot13('csictf{1n_th3_3nd_1t_d0esn\'t_3v3n_m4tt3r}')}`);
 });
 
 
