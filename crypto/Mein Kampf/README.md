@@ -21,8 +21,9 @@ $ 5 9
 $ 14 3 
 $ 5 20 
 fv cd hu ik es op yl wq jm
+
 Ciphertext: zkrtwvvvnrkulxhoywoj
-(Word in the flag are separated by underscores)
+(Words in the flag are separated by underscores)
 ```
 
 ## Exploit
