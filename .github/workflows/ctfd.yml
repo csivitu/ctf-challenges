@@ -11,7 +11,7 @@ jobs:
       - name: Deploy
         env:
           CTFD_TOKEN: ${{ secrets.CTFD_TOKEN }}
-          CTFD_URL: ${{ secrets.CTFD_TOKEN }}
+          CTFD_URL: ${{ secrets.CTFD_URL }}
         run: |
           pip3 install ctfcli
           cd $GITHUB_WORKSPACE && python3 ctfd.py
