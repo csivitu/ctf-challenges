@@ -85,26 +85,52 @@ ulong process(uint param_1)
 In this, you can see that there's a loop from `0` to `param_1` (which is a random number between 15 and 20, loop variable `local_14`). Then, it passed `param_1` and `local_14` to the `C()` function, which returns `nCr`, where `n` is the first parameter and `r` is the second. It then checks the value of `local_1c`, which was taken as input from the user, and matches it with the value returned by the `C()` function. Whenever this does not match, `local_18` is set to 0, and we need `local_18` to be `1` for execution of `system("cat flag.txt")`.
 <br />
 
-In essence, the program initially displays a random number `n`, between 15 and 20, and then expects the values of `nCr` where `r` ranges from `0` to `n`. If all these match, it prints the flag.
+In essence, the program initially displays a random number `n`, between 15 and 20, and then expects the values of `nCr` where `r` ranges from `0` to `n`. If all these match, it prints the flag. We can write a [python script](./solve.py) to do so.
 
-```bash
-$ nc $host $port
-15
+```python
+from pwn import *
+
+r = remote(HOST, PORT)
+n = int(r.recv(100).decode())
+
+def nCr(n, r):
+    return str(int(fact(n) / (fact(r) * fact(n - r))))
+  
+def fact(n): 
+    res = 1
+    for i in range(2, n+1): 
+        res = res * i     
+    return res 
+
+for i in range(n+1):
+    print(nCr(n,i))
+    r.sendline(nCr(n,i))
+
+print(r.recv().decode())
+```
+
+Run this script with python after replacing HOST and PORT.
+
+```
+$ python solve.py
+[+] Opening connection to localhost on port 3000: Done
 1
-15
-105
-455
-1365
-3003
-5005
-6435
-6435
-5005
-3003
-1365
-455
-105
-15
+17
+136
+680
+2380
+6188
+12376
+19448
+24310
+24310
+19448
+12376
+6188
+2380
+680
+136
+17
 1
 csictf{y0u_d1sc0v3r3d_th3_p4sc4l's_tr14ngl3}
 ```
