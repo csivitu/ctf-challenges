@@ -13,6 +13,6 @@ for i in categories:
     print(f"Category {i}:")
     print("\n".join(challenges))
     for j in challenges:
-        print(f"Syncing challenge ${j}")
+        print(f"Syncing challenge {j}")
         if os.path.exists(f"{j}/challenge.yml"):
             os.system(f"ctf challenge sync {j}; ctf challenge install {j}; ")
