@@ -86,7 +86,28 @@ In this, you can see that there's a loop from `0` to `param_1` (which is a rando
 <br />
 
 In essence, the program initially displays a random number `n`, between 15 and 20, and then expects the values of `nCr` where `r` ranges from `0` to `n`. If all these match, it prints the flag.
-<br />
+
+```
+$ nc localhost 3000
+15
+1
+15
+105
+455
+1365
+3003
+5005
+6435
+6435
+5005
+3003
+1365
+455
+105
+15
+1
+csictf{y0u_d1sc0v3r3d_th3_p4sc4l's_tr14ngl3}
+```
 
 The flag is:
 ```
