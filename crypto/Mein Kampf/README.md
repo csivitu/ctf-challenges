@@ -14,7 +14,13 @@ This is a simple crypto challenge which uses the Enigma Cipher.
 
 ```
 Please help me decode this. It almost seems impossible. (Words are separated by underscores) 
-M4 UKW Gamma 2 4 5 9 14 3 5 20 fv cd hu ik es op yl wq jm
+M4 
+UKW $
+Gamma 2 4 
+$ 5 9 
+$ 14 3 
+$ 5 20 
+fv cd hu ik es op yl wq jm
 Ciphertext: zkrtwvvvnrkulxhoywoj
 ```
 
