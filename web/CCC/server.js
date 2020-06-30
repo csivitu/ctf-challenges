@@ -41,12 +41,14 @@ function signJWT(data) {
 
 
 function decodeJWT(req, res, next) {
-    const token = req.headers['x-access-token'] || req.headers.authorization || req.query.token;
+    let token = req.headers['x-access-token'] || req.headers.authorization;
+
+    token = (!token && (process.env.NODE_ENV === 'production')) ? undefined: req.query.token;
 
     if (!token) {
         res.status(401).json({
             success: false,
-            message: 'Invalid Token',
+            message: 'Invalid Token, Headers?',
         });
 
         return;
@@ -58,8 +60,9 @@ function decodeJWT(req, res, next) {
     } catch (err) {
         res.status(400).json({
             success: false,
-            message: 'Invalid Token',
+            message: 'Invalid Token, Headers?',
         });
+        return;
     }
 }
 
@@ -91,11 +94,12 @@ app.get('/admin', decodeJWT, (req, res) => {
 
 
 
-app.get('/getToken', (req, res) => {
+app.get('/login', (req, res) => {
     const { username, password } = req.query;
 
     if (!username || !password) {
-        res.send(`Missing Parameters. username=${username} & password=${password}`);
+        res.sendFile(path.join(__dirname, 'public', 'login.html'));
+        return;
     }
 
     res.send(signJWT({ username: str_rot13(username), password: str_rot13(password), role: str_rot13('user') }));
