@@ -44,7 +44,7 @@ function signJWT(data) {
 function decodeJWT(req, res, next) {
     let token = req.headers['x-access-token'] || req.headers.authorization;
 
-    token = (!token && (process.env.NODE_ENV === 'production')) ? undefined: req.query.token;
+    token = (!token && (process.env.NODE_ENV === 'production')) ? undefined: token || req.query.token;
 
     if (!token) {
         res.status(401).json({
@@ -102,19 +102,12 @@ app.get('/login', (req, res) => {
 });
 
 
+
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
     const token = signJWT({ username: str_rot13(username), password: str_rot13(password), admin: str_rot13('false') });
     res.setHeader('token', token);
     res.sendFile(path.join(__dirname, 'public', 'dashboard.html'));
-});
-
-
-app.get('/verifyToken', decodeJWT, (req, res) => {
-    if (!!req.user.role) {
-        res.send('Valid Token!');
-    }
-    res.send('Invalid Token. Token must be in `Authorization`.');
 });
 
 
