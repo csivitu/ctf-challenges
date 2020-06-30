@@ -87,8 +87,8 @@ In this, you can see that there's a loop from `0` to `param_1` (which is a rando
 
 In essence, the program initially displays a random number `n`, between 15 and 20, and then expects the values of `nCr` where `r` ranges from `0` to `n`. If all these match, it prints the flag.
 
-```
-$ nc localhost 3000
+```bash
+$ nc $host $port
 15
 1
 15
