@@ -1,6 +1,6 @@
 import os
 CTFD_TOKEN = os.getenv("CTFD_TOKEN", default=None)
-CTFD_URL = os.getenv("V_URL", default=None)
+CTFD_URL = os.getenv("CTFD_URL", default=None)
 os.system(f"echo '{CTFD_URL}\n{CTFD_TOKEN}\ny' | ctf init")
 blacklist = [".git", ".github", ".ctf"]
 categories = [name for name in os.listdir(".") if os.path.isdir(name) and name not in blacklist]
