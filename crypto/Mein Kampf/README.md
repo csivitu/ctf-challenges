@@ -13,7 +13,7 @@ This is a simple crypto challenge which uses the Enigma Cipher.
 ## Sources
 
 ```
-Please help me decode this. It almost seems impossible. (Words are separated by underscores) 
+"We have intercepted the enemy's communications, but unfortunately, some data was corrupted during transmission. Can you recover the message?"  
 M4 
 UKW $
 Gamma 2 4 
@@ -22,6 +22,7 @@ $ 14 3
 $ 5 20 
 fv cd hu ik es op yl wq jm
 Ciphertext: zkrtwvvvnrkulxhoywoj
+(Word in the flag are separated by underscores)
 ```
 
 ## Exploit
