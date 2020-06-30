@@ -1,0 +1,8 @@
+name: test2
+author: test
+category: test
+description: This is a test description
+value: 100
+type: standard
+flag:
+  - flag{test}

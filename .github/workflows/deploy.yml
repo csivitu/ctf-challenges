@@ -1,0 +1,16 @@
+on:
+  push:
+    branches: [ master ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - name: Deploy
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          URL: ${{ secrets.URL }}
+        run: |
+          pip3 install ctfcli
+          cd $GITHUB_WORKSPACE && python3 deploy.py
