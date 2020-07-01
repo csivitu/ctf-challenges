@@ -2,6 +2,5 @@
 git clone https://github.com/csivitu/ctfcli /tmp/ctfcli
 
 cd /tmp/ctfcli
-git checkout feat/accept-state
 python3 setup.py install
 cd -
