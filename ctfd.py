@@ -15,4 +15,4 @@ for i in categories:
     for j in challenges:
         print(f"Syncing challenge {j}")
         if os.path.exists(f"{j}/challenge.yml"):
-            os.system(f"ctf challenge sync {j} || ctf challenge install {j}")
+            os.system(f"ctf challenge sync {j}; ctf challenge install {j}")

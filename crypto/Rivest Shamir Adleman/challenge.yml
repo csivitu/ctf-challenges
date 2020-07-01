@@ -17,7 +17,7 @@ tags:
   - crypto
 
 files:
-  - "crypto/enc.txt"
+  - "crypto/Rivest Shamir Adleman/enc.txt"
 
 state: hidden
 version: "0.1"
