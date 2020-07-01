@@ -113,7 +113,7 @@ Run this script with python after replacing HOST and PORT.
 
 ```
 $ python solve.py
-[+] Opening connection to localhost on port 3000: Done
+[+] Opening connection to HOST on port PORT: Done
 1
 17
 136
