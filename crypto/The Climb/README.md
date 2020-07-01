@@ -14,7 +14,7 @@ This is a crypto challenge to reverse the Hill Cipher program.
 
 
 ```
-"I lost my flag while trekking but I sent the ciphertext to my friend for safe keeping. He sent it to me but I forgot how to decrypt it. Could you please help me?"
+"I lost my flag while trekking but I sent the ciphertext to my friend for safe keeping. He sent it back to me but I forgot how to decrypt it. Could you please help me?"
 ```
 
 ## Exploit
