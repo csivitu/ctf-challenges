@@ -12,14 +12,17 @@ This is a crypto challenge to reverse the Hill Cipher program.
 
 ## Sources
 
+- [The Climb](./theclimb.txt)
 
 ```
-"I lost my flag while trekking but I sent the ciphertext to my friend for safe keeping. He sent it back to me but I forgot how to decrypt it. Could you please help me?"
+"We are not lost, we're right here somewhere on this little blue line. Wait, why do I feel like I'm being watched?"
+(Don't forget to wrap the flag with csictf{})
+
 ```
 
 ## Exploit
 
-You just need to reverse the java program for the Hill Cipher.
+You just need to write a program to reverse the the Hill Cipher.
 <br />
 
 The flag is:
