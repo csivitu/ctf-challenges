@@ -14,12 +14,12 @@ This is a crypto challenge to reverse the Hill Cipher program.
 
 
 ```
-Forgot how to decrypt my flag. Help?
+"I lost my flag while trekking but I sent the ciphertext to my friend for safe keeping. He sent it to me but I forgot how to decrypt it. Could you please help me?"
 ```
 
 ## Exploit
 
-You just need to reverse the Hill Cipher program.
+You just need to reverse the java program for the Hill Cipher.
 <br />
 
 The flag is:
