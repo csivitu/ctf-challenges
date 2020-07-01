@@ -22,7 +22,7 @@ This is a crypto challenge to reverse the Hill Cipher program.
 
 ## Exploit
 
-You just need to write a program to reverse the the Hill Cipher.
+You just need to write a program to reverse the Hill Cipher.
 <br />
 
 The flag is:
