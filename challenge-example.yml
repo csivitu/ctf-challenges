@@ -23,6 +23,10 @@ description: This is a sample description
 # This is the number of points awarded for the challenge.
 value: 100
 type: dynamic
+# Number of solves it takes to reach the minimum value
+decay: 50
+# Minimum value
+minimum: 50
 
 # Flags specify answers that your challenge use. You should generally provide
 # at least one.
