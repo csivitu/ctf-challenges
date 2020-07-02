@@ -8,10 +8,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
+
+      - name: Setup csivitu/ctfcli
+        run: ./ctfd-init
+
       - name: Deploy
         env:
           CTFD_TOKEN: ${{ secrets.CTFD_TOKEN }}
           CTFD_URL: ${{ secrets.CTFD_URL }}
-        run: |
-          pip3 install ctfcli
-          cd $GITHUB_WORKSPACE && python3 ctfd.py
+        run: cd $GITHUB_WORKSPACE && python3 ctfd.py
