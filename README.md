@@ -167,7 +167,7 @@ csictf{some_flag_here}
 
 ### challenge.yml
 
-Every challenge must have a `challenge.yml`, in the format specified in [challenge-example.yml](./challenge-example.yml). This is **MANDATORY**, without this the challenge will not be deployed. Remove the comments in the specified format, leave out the `value`, `decay` and `minimum` keys, those will be filled by us before merging.
+Every challenge must have a `challenge.yml`, in the format specified in [challenge-example.yml](./challenge-example.yml). This is **MANDATORY**, without this the challenge will not be deployed. Remove the comments in the specified format, leave out the `value`, `decay` and `minimum` keys as they are in the template. Every challenge has 500 points initially and decays to 100 points over 450 solves.
 
 ### Dockerfiles
 
