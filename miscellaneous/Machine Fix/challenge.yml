@@ -6,12 +6,12 @@ category: Miscellaneous
 description: To help fix the machine, download the PDF.
 #pdf link to be added
 
-value: 100
+value: 500
 type: dynamic
 
-decay: 50
+decay: 450
 
-minimum: 50
+minimum: 100
 
 flags:
   - csictf{785539772602034710213927792950}
@@ -20,12 +20,7 @@ tags:
   - algo
 
 files:
-  - ./sol.py
   - ./prob.pdf
-
-hints:
-  - { content: "The machines act like ternary numbers.", cost: 10 }
-  - { content: "Think of the contribution of each machine separately.", cost: 10 }
   
 state: hidden
 
