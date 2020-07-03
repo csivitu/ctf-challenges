@@ -14,8 +14,10 @@ Another pyjail challenge with a little twist at the end to find the flag.
 
 ## Sources
 
-- [crypto.py](./crypto.py)
-- [.git/](./.git/)
+- [crypto.py](./src/crypto.py)
+- [.gitignore](./src/.gitignore)
+- [.git/](./src/.git/)
+- [start.sh](./src/start.sh)
 
 ## Challenge description to go up on the website.
 
