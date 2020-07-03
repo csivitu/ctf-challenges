@@ -17,7 +17,7 @@ Hint 2: Think of the contribution of each machine separately.
 ## Sources
 
 - [sol.py](./sol.py)
-- [ques.pdf](./ques.pdf)
+- [prob.pdf](./prob.pdf)
 
 ## Exploit
 
