@@ -13,6 +13,7 @@ This is a crypto challenge to reverse the Hill Cipher program.
 ## Sources
 
 - [The Climb](./theclimb.txt)
+- [The Climb](./theclimb.java)
 
 ```
 "We are not lost, we're right here somewhere on this little blue line. Wait, why do I feel like I'm being watched?"
@@ -22,7 +23,10 @@ This is a crypto challenge to reverse the Hill Cipher program.
 
 ## Exploit
 
-You just need to write a program to reverse the Hill Cipher.
+You just need to write a program to reverse the Hill Cipher, key element being inverting the ciphertext matrix.
+
+Solution program:
+- [The Climb solution](./theclimbsol.java)
 <br />
 
 The flag is:
