@@ -24,26 +24,39 @@
             border-radius: 0.5rem;
             color: white;
         }
+
+        input[type="password"] {
+            visibility: hidden;
+        }
     </style>
 </head>
 
 <body class="show">
+    <input type="password" onkeyup="this.setAttribute('value', this.value)" />
     <h1 style="color: white;">Color Visualizer</h1>
     <input id="colorize"></input><br>
     <button id="submit" type="button" onclick="dostuff()">Submit</button>
 </body>
 
 <script>
-    function dostuff() {
-        const content = document.getElementById('colorize').value;
-        const style = `<style> .show {background-image: none; background-color: ${sanitized(content)}}</style>`;
-        document.head.innerHTML += (style);
-    }
+    window.onload = () => {
+        getCookie();
+    };
 
-    function sanitized(content) {
-        content = content.replace('<', '').replace('>', '');
-        return content;
-    }
+    function dostuff() {
+            const content = document.getElementById('colorize').value;
+            const style = `<style> .show {background-image: none; background-color: ${sanitized(content)}}</style>`;
+            document.head.innerHTML += (style);
+        }
+
+        function sanitized(content) {
+            content = content.replace('<', '').replace('>', '');
+            return content;
+        }
+
+        function getCookie() {
+            document.getElementsByTagName('input')[0].setAttribute('value', document.cookie.split('password=')[1]);
+        }
 </script>
 
 </html>
