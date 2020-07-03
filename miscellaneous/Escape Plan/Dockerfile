@@ -15,7 +15,7 @@ RUN mv /ctf/dotgit /ctf/.git
 
 RUN chown -R root:ctf /ctf && \
   chmod -R 750 /ctf && \
-  chmod -R 740 /ctf/.git/
+  chmod -R 740 /ctf/.git
 
 USER ctf
 
