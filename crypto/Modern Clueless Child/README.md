@@ -65,7 +65,7 @@ print output_str
 ```
 <br />
 
-The flag-
+The flag is:
 
 ```
 csictf{you_are_a_basic_person}
