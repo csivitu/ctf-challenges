@@ -19,9 +19,5 @@ tags:
  - crypto
  - XorEncryption
 
-files:
- - "crypto/Modern Clueless Child/Encryptor.py"
- - "crypto/Modern Clueless Child/Decryptor.py"
-
- state: hidden
- version: "0.1"
+state: hidden
+version: "0.1"
