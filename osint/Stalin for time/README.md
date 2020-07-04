@@ -10,7 +10,7 @@ This is an osint challenge, that has a WWII theme.
 
 ## Sources
 
-In this question, we have a webpage, where on the first half, there’s a video with a press to make me fall button, which would make the video fall to the bottom of the screen. On the second half, theres a quote that says “Remove a letter, it’s now a slur, remove another letter, the opposite of a blur Sometimes we are captured and hung” (in red if not visible in the README) given at the top. Below it, a picture of Dwayne Johnson and David Beckham with the words Looking for another one below it. The question is: Who took it? What was taken?
+In this question, we have a webpage, where on the first half, there’s a video with a press to make me fall button, which would make the video fall to the bottom of the screen. On the second half, theres a quote that says “Remove a letter, it’s now a slur, remove another letter, the opposite of a blur Sometimes we are captured and hung” (in red if not visible in the README) given at the top. Below it, a picture of Dwayne Johnson and David Beckham with the words Looking for another one below it. The question is: Who took it? What was taken? Note: The format of the flag is csictf{answer1_answer2}
 
 ## Challenge description to go up on the website
 Hint: “Wkh yrlfh ri wkh shrsoh”- Julius Caesar
