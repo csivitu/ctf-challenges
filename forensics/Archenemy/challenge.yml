@@ -16,5 +16,9 @@ flags:
 tags:
   - forensics
 
+files:
+  - "forensics/Archenemy/arched.png"
+
+
 state: hidden
 version: "0.1"
