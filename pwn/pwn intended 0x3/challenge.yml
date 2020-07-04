@@ -1,0 +1,25 @@
+name: "pwn intended 0x3"
+author: "roerohan"
+category: Pwn
+
+description: |
+  Travelling through spacetime!
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{ch4lleng1ng_th3_v3ry_l4ws_0f_phys1cs}
+
+files:
+  - "pwn/pwn intended 0x3/bin/pwn-intended-0x3"
+  - "pwn/pwn intended 0x3/bin/pwn-intended-0x3.c"
+
+tags:
+  - pwn
+
+state: hidden
+version: "0.1"
