@@ -15,8 +15,8 @@ flags:
 files:
   - "forensics/Gradient sky/poly.jpg"
 tags: 
-  -forensics 
-  -steganography 
+  - forensics 
+  - steganography 
 
 state: hidden
 version: "0.1"
