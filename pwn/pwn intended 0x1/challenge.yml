@@ -20,7 +20,6 @@ files:
 
 tags:
   - pwn
-  - reverse
 
 state: hidden
 version: "0.1"
