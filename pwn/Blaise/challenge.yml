@@ -14,6 +14,9 @@ minimum: 100
 flags:
   - csictf{y0u_d1sc0v3r3d_th3_p4sc4l's_tr14ngl3}
 
+files:
+  - "pwn/Blaise/bin/blaise"
+
 tags:
   - pwn
   - reverse
