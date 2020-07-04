@@ -14,10 +14,7 @@ This website can be exploited with the help of CSS Injection.
 ## Sources
 
 ```
-Challenge description to go up on the website.
-p
-Hint 1: If any - Points 100
-Hint 2: If any - Points 200
+Wow that's a pretty color! Don't you think?
 ```
 
 ## Exploit
@@ -32,5 +29,5 @@ The last line should be the flag.
 The flag is:
 
 ```
-csictf{some_flag_here}
+csictf{cssxss}
 ```

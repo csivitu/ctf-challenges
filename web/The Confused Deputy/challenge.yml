@@ -1,0 +1,21 @@
+name: "The Confused Deputy"
+author: "roerohan"
+category: Web
+
+description: |
+  Wow that's a pretty color! Don't you think?
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{cssxss}
+
+tags:
+  - web
+
+state: hidden
+version: "0.1"
