@@ -1,0 +1,29 @@
+name: "Stalin for time"
+author: :"Parth"
+category: "OSINT"
+
+description: This is an osint challenge, that has a WWII theme.
+
+value: 500
+type: dynamic
+
+
+decay: 450
+
+
+minimum: 100
+
+flags:
+  -csictf{yevgeny_khaldei_adrianov_compass}
+
+tags:
+-"osint"
+-"research"
+
+files:
+  -Stalinfortimewebpage.html
+  -dwayneanddavid.jpg
+
+state: hidden
+
+version: "0.1"
