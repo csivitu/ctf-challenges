@@ -1,0 +1,27 @@
+name: "Modern Clueless Child"
+author: "SrishtiGohain"
+category: Crypto
+
+description: I was surfing the crimson wave and oh my gosh I was totally bugging. I also tried out the lilac hair trend but it didn't work out. 
+That's not to say you are any better, you are a snob and a half. But let's get back to the main question here-
+Who am I? (You don't know my name)
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+ - csictf{you_are_a_basic_person}
+
+tags:
+ - crypto
+ - XorEncryption
+
+files:
+ - "crypto/Modern Clueless Child/Encryptor.py"
+ - "crypto/Modern Clueless Child/Decryptor.py"
+
+ state: hidden
+ version: "0.1"
