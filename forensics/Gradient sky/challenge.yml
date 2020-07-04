@@ -1,0 +1,39 @@
+
+
+name: "Gradient sky"
+author: "tangobeer"
+
+
+category: Forensics
+
+
+description: Gradient sky is a begginer level ctf challenge which is aimed towards rookies.
+
+
+value: 500
+type: dynamic
+
+
+decay: 450
+
+
+minimum: 100
+
+# Flags specify answers that your challenge use. You should generally provide
+# at least one.
+# Can be removed if unused
+# Accepts strings or dictionaries
+flags:
+  - csictf{j0ker_w4snt_happy}
+
+
+tags:
+  -rar file 
+
+
+# It is "visible" by default.
+state: hidden
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"
