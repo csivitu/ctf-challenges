@@ -1,0 +1,23 @@
+name: "Prison Break"
+author: "roerohan"
+category: Miscellaneous
+
+description: |
+  I saw them put someone in jail. Can you find out who it is?
+  They said this is the best prison ever built. You sure can't break it, can you?
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{m1ch34l_sc0fi3ld_fr0m_pr1s0n_br34k}
+
+tags:
+  - miscellaneous
+  - jail
+
+state: hidden
+version: "0.1"
