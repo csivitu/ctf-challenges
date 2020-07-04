@@ -143,12 +143,13 @@ Brief Description about challenge
 - [sample.py](./sample.py)
 - [sample.txt](./sample.txt)
 
-```
+<!-- Remove this comment, and the '\' before '```' -->
+\```
 Challenge description to go up on the website.
 
 Hint 1: If any - Points 100
 Hint 2: If any - Points 200
-```
+\```
 
 ## Exploit
 
@@ -160,16 +161,23 @@ The last line should be the flag.
 <br />
 
 The flag is:
+
+\```
 csictf{some_flag_here}
+\```
 ```
 
 > Refer to this [sample](https://github.com/csivitu/CTF-Write-ups/tree/master/HSCTF%207/Binary%20Exploitation/boredom#exploitation) for writing the exploit section.
+
+### challenge.yml
+
+Every challenge must have a `challenge.yml`, in the format specified in [challenge-example.yml](./challenge-example.yml). This is **MANDATORY**, without this the challenge will not be deployed. Remove the comments in the specified format, leave out the `value`, `decay` and `minimum` keys as they are in the template. Every challenge has 500 points initially and decays to 100 points over 450 solves.
 
 ### Dockerfiles
 
 Here are some Dockerfiles you can refer to while making your own. Make sure you test it locally before making the PR.
 
-- [Node.js Server ](./web/File20%Library/Dockerfile)
+- [Node.js Server](./web/File20%Library/Dockerfile)
 - [Flask Server](./web/Mr.20%Rami)
 - [Netcat to Python](./miscellaneous/Prison%20Break/Dockerfile)
 - [Pwn Binary](./pwn/pwn%20intended%0x1/Dockerfile)
@@ -184,7 +192,7 @@ Besides contribution of challenges, contribution of *ideas* for challenges is al
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1. Fork the Project
+1. Fork the Project.
 2. Submit your idea for the challenge in the respective `README`.
 3. File a Pull Request with the `challenge-idea` tag. Each challenge must have it's own PR.
 4. Once the challenge is approved, the tag is changed to `challenge-approved`, we comment on the PR.

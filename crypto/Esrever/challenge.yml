@@ -1,0 +1,25 @@
+name: "Esrever"
+author: "roerohan"
+category: Crypto
+
+description: I encrypted my flag so that nobody can see it, but now I realize I don't know how to decrypt it. Can you help me?
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{esreverisjustreverseinreverseright}
+
+tags:
+  - crypto
+  - reverse
+
+files:
+  - "crypto/Esrever/esrever.py"
+  - "crypto/Esrever/esrever.txt"
+
+state: hidden
+version: "0.1"

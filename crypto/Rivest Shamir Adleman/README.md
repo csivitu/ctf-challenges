@@ -16,7 +16,7 @@ RSA challenge.
 - [enc.txt](./enc.txt)
 
 ```
-These 3 guys encrypted my flag, but they didn't tell me how to decrypt it. Please help me!
+These 3 guys encrypted my flag, but they didn't tell me how to decrypt it.
 ```
 
 ## Exploit
