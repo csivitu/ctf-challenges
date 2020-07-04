@@ -16,7 +16,7 @@ Steganography and bruteforce.
 - [arched.png](./arched.png)
 
 ```
-Challenge description to go up on the website.
+John likes Arch Linux. What is he hiding?
 ```
 
 ## Exploit
