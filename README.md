@@ -182,7 +182,7 @@ Here are some Dockerfiles you can refer to while making your own. Make sure you 
 - [Netcat to Python](./miscellaneous/Prison%20Break/Dockerfile)
 - [Pwn Binary](./pwn/pwn%20intended%0x1/Dockerfile)
 
-Make sure you read the `Dockerfile`s and include the necessary files like the `flag.txt`. **REMEMBER TO ADD THE `README.md` FILE TO `.dockerignore`, BECAUSE IT HAS THE SOLUTION.**.
+Make sure you read the `Dockerfile`s and include the necessary files like the `flag.txt`. **REMEMBER TO ADD THE `README.md` and `challenge.yml` FILES TO `.dockerignore`, BECAUSE IT HAS THE SOLUTION.**.
 
 <!-- CONTRIBUTING -->
 ## Contributing

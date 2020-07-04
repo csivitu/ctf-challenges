@@ -2,3 +2,4 @@ node_modules
 package-lock.json
 README.md
 Dockerfile
+challenge.yml
