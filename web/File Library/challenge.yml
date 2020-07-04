@@ -1,0 +1,21 @@
+name: "CCC"
+author: "roerohan"
+category: Web
+
+description: |
+  This is my file library. I don't have a lot of files, but I hope you like the ones I have!
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{5h0uld_5tr1ng1fy_th3_p4r4ms}
+
+tags:
+  - web
+
+state: hidden
+version: "0.1"
