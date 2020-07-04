@@ -1,6 +1,6 @@
 # The Climb
 
-Authors: [Ashikka](https://github.com/ashikka) and [AJ1479](https://github.com/AJ1479)
+Authors: [ashikka](https://github.com/ashikka) and [AJ1479](https://github.com/AJ1479)
 
 ## Description
 
@@ -23,7 +23,7 @@ This is a crypto challenge to reverse the Hill Cipher program.
 
 ## Exploit
 
-You just need to write a program to reverse the Hill Cipher, key element being inverting the ciphertext matrix.
+You just need to write a program to reverse the Hill Cipher, key point to be noted being inverting the ciphertext matrix.
 
 Solution program:
 - [The Climb solution](./theclimbsol.java)
