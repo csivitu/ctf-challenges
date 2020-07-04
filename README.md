@@ -143,12 +143,13 @@ Brief Description about challenge
 - [sample.py](./sample.py)
 - [sample.txt](./sample.txt)
 
-```
+<!-- Remove this comment, and the '\' before '```' -->
+\```
 Challenge description to go up on the website.
 
 Hint 1: If any - Points 100
 Hint 2: If any - Points 200
-```
+\```
 
 ## Exploit
 
@@ -160,7 +161,10 @@ The last line should be the flag.
 <br />
 
 The flag is:
+
+\```
 csictf{some_flag_here}
+\```
 ```
 
 > Refer to this [sample](https://github.com/csivitu/CTF-Write-ups/tree/master/HSCTF%207/Binary%20Exploitation/boredom#exploitation) for writing the exploit section.
