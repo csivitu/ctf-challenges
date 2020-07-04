@@ -8,12 +8,15 @@ value: 500
 type: dynamic
 decay: 450
 minimum: 100
+
 flags:
   - csictf{j0ker_w4snt_happy}
+
 files:
   - "forensics/Gradient sky/poly.jpg"
 tags: 
   -forensics 
   -steganography 
+
 state: hidden
 version: "0.1"
