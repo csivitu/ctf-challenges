@@ -1,0 +1,17 @@
+
+
+name: "Gradient sky"
+author: "tangobeer"
+category: Forensics
+description: Gradient sky is a begginer level ctf challenge which is aimed towards rookies.
+value: 500
+type: dynamic
+decay: 450
+minimum: 100
+flags:
+  - csictf{j0ker_w4snt_happy}
+tags: 
+  -forensics 
+  -steganography 
+state: hidden
+version: "0.1"
