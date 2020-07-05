@@ -1,6 +1,6 @@
 
 
-# pydis
+# PYDIS_2_CTF
 
 Authors: [Atharva](https://github.com/Atharva-Gundawar)
 
@@ -17,12 +17,13 @@ Files: dis_code, encodedflag.txt
 
 # Exploitation
 
-The code you see in [`dis_code`]('./dis_code) is essentially python bytecode. The target in this challenge is to reverse this program and pass the string in [`encodedflag.txt`](./py_dis) as input, so that we get the flag.
+The code you see in [C1cipher](./C1cipher) and [C2cipher](./C2cipher) is essentially python bytecode. The target in this challenge is to reverse this programs and pass the string in [`encodedflag.txt`](./py_dis) as input, so that we get the flag.
 
 ```
 ## Sources
 
-- [dis_code](./dis_code)
+- [C1cipher](./C1cipher)
+- [C2cipher](./C2cipher)
 - [encodedflag.txt](./encodedflag.txt)
 
 ## Challenge description to go up on the website.
@@ -33,12 +34,8 @@ Hint 2: pip install Assembly - Points 200/300
 ## Exploit
 
 
-Reverse `dis_code` to decrypt the flag in `encodedflag.txt` .
-The `dis_code`  File will be the reversed version of 2 layers of Substituion Ciphers:
-
- - Substitution acording to occurance : For any given char if n is the number of times it occurs then it would be replacd by chr(x+n) where x is the ascii value of the char
- 
- - Some other popular and known ciphers 
+There are two ciphers in [C1cipher](./C1cipher) and [C2cipher](./C2cipher) and you have two convery both the ciphers into python code 
+the solution is in [Solution](https://github.com/csivitu/ctf-challenges/tree/master/miscellaneous/PYDIS_2_CTF/solution.txt)
 
  
 ## The Flag:

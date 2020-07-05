@@ -1,0 +1,24 @@
+name: "PYDIS_2_CTF"
+author: "atharva-Gundawar"
+category: miscellaneous
+description: PYDIS_2_CTF is a  medium level ctf challenge .
+value: 500
+type: dynamic
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{T#a+_wA5_g0oD_d155aSe^^bLy}
+
+files:
+  - "miscellaneous/pydis_2_cyf/flag.txt"
+  - "miscellaneous/pydis_2_cyf/C1cipher.txt"
+  - "miscellaneous/pydis_2_cyf/C2cipher.txt"
+  
+tags: 
+  - miscellaneous 
+  - Python Disassembly   
+  - ciphers
+
+state: hidden
+version: "0.1"
