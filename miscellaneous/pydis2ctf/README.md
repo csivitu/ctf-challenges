@@ -1,4 +1,4 @@
-# PYDIS_2_CTF
+# pydis2ctf
 
 Authors: [21StWarlock#1598](21StWarlock#1598)
 
