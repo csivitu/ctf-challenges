@@ -22,7 +22,7 @@ I wanted to send this file to AJ1479 but I did not want anyone else to see what'
 
 ## Exploit
 
-You need to bruteforce 4 lettered pin using a tool like `john (the ripper)` to access the zipped file. Then, unzip the file to see two images, one of them distorted. You need to use a tool like `FlexHex` to compare the two images, to find out that the hexadecimal values that are different when concatenated comprise of the flag.
+You need to bruteforce 4 lettered pin `(2611)` using a tool like `john (the ripper)` to access the zipped file. Then, unzip the file to see two images, one of them distorted. You need to use a tool like `FlexHex` to compare the two images, to find out that the hexadecimal values that are different when concatenated comprise of the flag.
 
 The flag is:
 
