@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 2bd46f9367f9f5fd9deaf06bf1b8c4fea8c9686e Your Name <you@example.com> 1593766044 +0530	clone: from https://github.com/alias-rahil/crypto-cli
+2bd46f9367f9f5fd9deaf06bf1b8c4fea8c9686e 5741f50afaf7ecd534a2ba075137e9cfb2734a83 Your Name <you@example.com> 1593766066 +0530	commit: feat: remove gitignore
+5741f50afaf7ecd534a2ba075137e9cfb2734a83 21c14711539895c717dd14c6dbb234d590cf154c Your Name <you@example.com> 1593926934 +0530	commit: fix: message
