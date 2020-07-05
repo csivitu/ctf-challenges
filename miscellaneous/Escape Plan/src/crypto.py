@@ -80,7 +80,7 @@ Currently supported ciphers:
 To exit:
     exit()
 
-I am constantly trying to make this cipher decoder better and more secure! Help me add support to more ciphers by submitting a PR at "repository-link"!
+I am constantly trying to make this cipher decoder better and more secure! Help me add support to more ciphers by submitting a PR!
 Hope it helps you!
 
     """

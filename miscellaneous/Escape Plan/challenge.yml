@@ -1,0 +1,22 @@
+name: "Escape Plan"
+author: "alias-rahil"
+category: Miscellaneous
+
+description: 'I found a script that solves ciphers, they say it's pretty secure!'
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+ - csictf{2077m4y32_h45_35c4p3d}
+
+tags:
+ - Python
+ - PyJail
+ - Jail
+
+state: hidden
+version: "0.1"

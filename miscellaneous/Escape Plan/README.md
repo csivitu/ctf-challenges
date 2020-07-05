@@ -1,7 +1,7 @@
 
 # Challenge name
 
-Authors: [Rahil](https://github.com/alias-rahil)
+Authors: [alias-rahil](https://github.com/alias-rahil)
 
 ## Description
 
@@ -20,7 +20,7 @@ Another pyjail challenge with a little twist at the end to find the flag.
 
 ## Challenge description to go up on the website.
 
-I found a CLI tool to solve cryptography, they say it's pretty secure!
+I found a script that solves ciphers, they say it's pretty secure!
 
 # Exploit
 
