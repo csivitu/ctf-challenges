@@ -11,7 +11,7 @@ flags:
   - csictf{j0ker_w4snt_happy}
 
 files:
-  - "forensics/Gradient sky/poly.jpg"
+  - "forensics/Gradient sky/sky.jpg"
 tags: 
   - forensics 
   - steganography 
