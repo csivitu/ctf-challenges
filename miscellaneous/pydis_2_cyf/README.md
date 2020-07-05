@@ -1,6 +1,6 @@
 # PYDIS_2_CTF
 
-Authors: [Atharva](https://github.com/Atharva-Gundawar)
+Authors: [21StWarlock#1598](21StWarlock#1598)
 
 Disassemble Python byte code and reverse the obtained python code.
 
