@@ -1,4 +1,4 @@
-FROM python:latest
+FROM python:3.7-slim
 
 RUN apt-get update && apt-get install -y \
   xinetd \
@@ -15,7 +15,7 @@ RUN mv /ctf/dotgit /ctf/.git
 
 RUN chown -R root:ctf /ctf && \
   chmod -R 750 /ctf && \
-  chmod -R 740 /ctf/.git
+  chmod -R 740 /ctf/.git/*
 
 USER ctf
 
