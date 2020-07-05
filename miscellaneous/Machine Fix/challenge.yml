@@ -1,0 +1,27 @@
+name: "Machine Fix"
+author: "harsoh"
+
+category: Miscellaneous
+
+description: To help fix the machine, download the PDF.
+
+value: 500
+type: dynamic
+
+decay: 450
+
+minimum: 100
+
+flags:
+  - csictf{785539772602034710213927792950}
+
+tags:
+  - miscellaneous
+  - algo
+
+files:
+  - ./prob.pdf
+  
+state: hidden
+
+version: "0.1"
