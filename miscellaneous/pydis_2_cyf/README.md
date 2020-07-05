@@ -22,10 +22,12 @@ The code you see in [C1cipher](./C1cipher) and [C2cipher](./C2cipher) is essenti
 - [C2cipher](./C2cipher)
 - [encodedflag.txt](./encodedflag.txt)
 
-## Challenge description to go up on the website.
 
+```
+Assemble and reverse 2 ciphers to get the flag
 Hint 1: python disassembly is easy  - Points 100
-Hint 2: pip install Assembly - Points 200/300
+Hint 2: pip install Assembly - Points 200
+```
 
 ## Exploit
 
