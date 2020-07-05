@@ -20,11 +20,15 @@ Another pyjail challenge with a little twist at the end to find the flag.
 
 ## Challenge description to go up on the website.
 
+```
 I found a script that solves ciphers, they say it's pretty secure!
+```
 
 # Exploit
 
-It is a python file running on a netcat listener which can encode/decode crypto ciphers. It uses eval function which can be easily exploited to gain a shell access. The user will then find a `.git` folder and if he checks older commits of the repo, he will find a `.env` file which was deleted later containing the flag.
+It is a python file running on a netcat listener which can encode/decode crypto ciphers. The user can notice that it can not only call the cipher functions mentioned in the examples but can also run all the python built-in functions. He will then use `__import__('os').system('sh')` to spawn a shell. After finding the repository link from `.git/config`, he should be able to find the flag by checking the older commits. The flag is in a `.env` file, which was deleted in later conmits.
  
-## The Flag:
+The Flag is:
+```
 csictf{2077m4y32_h45_35c4p3d}
+```

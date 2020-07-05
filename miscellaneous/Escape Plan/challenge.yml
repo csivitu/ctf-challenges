@@ -14,9 +14,9 @@ flags:
  - csictf{2077m4y32_h45_35c4p3d}
 
 tags:
- - Python
- - PyJail
- - Jail
+ - python
+ - miscellaneous
+ - jail
 
 state: hidden
 version: "0.1"
