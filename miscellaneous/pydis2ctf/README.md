@@ -13,7 +13,7 @@ Files: dis_code, encodedflag.txt
 ```
 # Exploitation
 
-The code you see in [C1cipher](./C1cipher) and [C2cipher](./C2cipher) is essentially python bytecode. The target in this challenge is to reverse this programs and pass the string in [`encodedflag.txt`](./py_dis) as input, so that we get the flag.
+The code you see in [C1cipher](./C1cipher) and [C2cipher](./C2cipher) is essentially python bytecode. The target in this challenge is to reverse this programs and pass the string in [`encodedflag.txt`](./encodedflag.txt) as input, so that we get the flag.
 
 ```
 ## Sources
