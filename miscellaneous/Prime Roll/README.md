@@ -31,4 +31,6 @@ Looking at a simpler problem helps. Imagine a normal 6-sided dice, lets try to f
 <br />
 
 The flag is:
+```
 csictf{9999999999}
+```
