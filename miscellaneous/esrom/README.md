@@ -11,7 +11,7 @@ Reverse morse code(audio) to get a combination of 1's and 0's and then reverse t
 - Morse code decoder
 -   hex code decoder
 
-Files: flag.mp4
+Files: flag.wav
 ```
 # Exploitation
 
@@ -20,7 +20,7 @@ Files: flag.mp4
 ```
 ## Sources
 
-- [flag.mp4](./flag.mp4)
+- [flag.wav](./flag.wav)
 ```
 Decode to get the flag
 Hint 1: decode the morse code  - Points 100
