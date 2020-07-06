@@ -25,7 +25,7 @@ async function run(url, host, color) {
             document.getElementsByTagName('input')[1].value = color;
             document.getElementById('submit').click();
         }, color);
-
+        await page.waitFor(1000);
         return true;
     } catch (e) {
         return false;
