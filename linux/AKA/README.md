@@ -12,10 +12,6 @@ This is a bash prison linux challenge.
 
 ## Sources
 
-- [flag.txt](./flag.txt)
-- [script.sh](./script.sh)
-- Docker
-
 ```
 "Cows are following me everywhere I go. Help, I'm trapped!"
 ```
