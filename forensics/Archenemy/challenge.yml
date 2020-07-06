@@ -1,0 +1,24 @@
+name: "Archenemy"
+author: "roerohan"
+category: Forensics
+
+description: John likes Arch Linux. What is he hiding?
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{1_h0pe_y0u_don't_s33_m3_here}
+
+tags:
+  - forensics
+
+files:
+  - "forensics/Archenemy/arched.png"
+
+
+state: hidden
+version: "0.1"

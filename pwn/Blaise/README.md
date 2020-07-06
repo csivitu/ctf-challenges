@@ -16,7 +16,7 @@ Brief Description about challenge
 - [blaise](./blaise)
 
 ```
-I recovered a binary from my teacher's computer. I tried to reverse it but I couldn't. Will you help me?
+I recovered a binary from my teacher's computer. I tried to reverse it but I couldn't.
 ```
 
 ## Exploit

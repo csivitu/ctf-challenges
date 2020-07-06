@@ -1,0 +1,24 @@
+name: "Pirates of the Memorial"
+author: "roerohan"
+category: OSINT
+
+description: |
+  The original photographer of this picture commented the flag on his post. Find the flag.
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{pl4g14r1sm_1s_b4d}
+
+files:
+  - "osint/Pirates of the Memorial/storm.jpeg"
+
+tags:
+  - osint
+
+state: hidden
+version: "0.1"

@@ -2,7 +2,7 @@ name: "Escape Plan"
 author: "alias-rahil"
 category: Miscellaneous
 
-description: 'I found a script that solves ciphers, they say it's pretty secure!'
+description: "I found a script that solves ciphers, they say it's pretty secure!"
 
 value: 500
 type: dynamic

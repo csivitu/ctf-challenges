@@ -4,10 +4,10 @@ category: Crypto
 
 description: I encrypted my flag so that nobody can see it, but now I realize I don't know how to decrypt it. Can you help me?
 
-value: 300
+value: 500
 type: dynamic
 
-decay: 50
+decay: 450
 minimum: 100
 
 flags:

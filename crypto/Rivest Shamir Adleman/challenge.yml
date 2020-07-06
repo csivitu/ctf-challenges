@@ -4,10 +4,10 @@ category: Crypto
 
 description: These 3 guys encrypted my flag, but they didn't tell me how to decrypt it.
 
-value: 300
+value: 500
 type: dynamic
 
-decay: 50
+decay: 450
 minimum: 100
 
 flags:

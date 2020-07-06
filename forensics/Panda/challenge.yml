@@ -1,0 +1,24 @@
+name: "Panda"
+author: "ashikka"
+category: Forensics
+
+description: I wanted to send this file to AJ1479 but I did not want anyone else to see what's inside it, so I protected it with a pin.
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{kung_fu_p4nd4}
+
+tags:
+  - forensics
+
+files:
+  - "forensics/Panda/panda.zip"
+
+
+state: hidden
+version: "0.1"

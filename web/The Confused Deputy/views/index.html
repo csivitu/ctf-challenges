@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .show {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(#cc2b5e, #753a88);
+        }
+
+        #colorize {
+            font-size: 2rem;
+            border-radius: 0.5rem;
+        }
+
+        #submit {
+            height: 2.5rem;
+            background-image: linear-gradient(#42275a, #734b6d);
+            border: 1px solid #734b6d;
+            border-radius: 0.5rem;
+            color: white;
+        }
+
+        input[type="password"] {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body class="show">
+    <input type="password" onkeyup="this.setAttribute('value', this.value)" />
+    <h1 style="color: white;">Color Visualizer</h1>
+    <input id="colorize"></input><br>
+    <button id="submit" type="button" onclick="dostuff()">Submit</button>
+</body>
+
+<script>
+    window.onload = () => {
+        getCookie();
+    };
+
+    function dostuff() {
+            const content = document.getElementById('colorize').value;
+            const style = `<style> .show {background-image: none; background-color: ${sanitized(content)}}</style>`;
+            document.head.innerHTML += (style);
+        }
+
+        function sanitized(content) {
+            content = content.replace('<', '').replace('>', '');
+            return content;
+        }
+
+        function getCookie() {
+            document.getElementsByTagName('input')[0].setAttribute('value', document.cookie.split('password=')[1]);
+        }
+</script>
+
+</html>
