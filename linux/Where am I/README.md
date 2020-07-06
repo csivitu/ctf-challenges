@@ -1,5 +1,5 @@
 
-# Where am I?
+# Where am I
 
 Authors: [alias-rahil](https://github.com/alias-rahil)
 
