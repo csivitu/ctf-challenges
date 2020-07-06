@@ -11,9 +11,9 @@ flags:
   - csictf{T#a+_wA5_g0oD_d155aSe^^bLy}
 
 files:
-  - "miscellaneous/pydis_2_cyf/encodedflag.txt"
-  - "miscellaneous/pydis_2_cyf/C1cipher.txt"
-  - "miscellaneous/pydis_2_cyf/C2cipher.txt"
+  - "miscellaneous/pydis2ctf/encodedflag.txt"
+  - "miscellaneous/pydis2ctf/C1cipher.txt"
+  - "miscellaneous/pydis2ctf/C2cipher.txt"
   
 tags: 
   - miscellaneous 
