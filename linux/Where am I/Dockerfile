@@ -4,7 +4,8 @@ RUN ssh-keygen -A
 RUN ssh-keygen -N "" -f ~/.ssh/id_rsa
 RUN adduser --disabled-password --gecos "" ctf
 RUN mkdir chroot
-RUN rsync -az --exclude chroot / chroot || :
+RUN rsync -az --exclude /chroot / /chroot || :
+RUN cp /chroot/root/.ssh/id_rsa /chroot/root/.ssh/authorized_keys
 RUN chmod -R 555 /chroot
 RUN chmod 666 /chroot/dev/null
 COPY flag.txt flag.txt
