@@ -19,13 +19,19 @@ app.get('/admin', (req, res) => {
 });
 
 app.post('/admin', async (req, res) => {
-    let { url } = req.body;
+    let { url, color } = req.body;
     url = url.toString();
+    color = color.toString();
+
+    if (!url || !color) {
+        res.send('Invalid fields');
+        return;
+    }
 
     const hostname = process.env.DOMAIN || req.get('host');
 
     try {
-        const success = await visitor(url, hostname);
+        const success = await visitor(url, hostname, color);
         if (!success) {
             res.send('An error occured while visiting the link!');
             return;
