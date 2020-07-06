@@ -13,7 +13,7 @@ A linux chroot jail challenge.
 
 ## Sources
 
-- [flag.py](./flag.txt)
+- [flag.txt](./flag.txt)
 - [Dockerfile](./Dockerfile)
 - [script.sh](./script.sh)
 
