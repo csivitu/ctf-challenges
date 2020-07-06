@@ -1,3 +1,10 @@
 categories:
+  - 'crypto'
+  - 'forensics'
+  - 'linux'
+  - 'logAnalysis'
+  - 'miscellaneous'
+  - 'osint'
   - 'pwn'
+  - 'web'
 registry: 'gcr.io/summer-project-275116'
