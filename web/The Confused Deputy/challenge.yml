@@ -3,7 +3,7 @@ author: "roerohan"
 category: Web
 
 description: |
-  Wow that's a pretty color! Don't you think?
+  Wow that's a pretty color! Don't you think? Pick your favourite and show it to the admin on /admin.
 
 value: 500
 type: dynamic
