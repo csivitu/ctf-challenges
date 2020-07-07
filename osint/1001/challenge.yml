@@ -3,12 +3,12 @@ author: :"Parth"
 category: "OSINT"
 
 description: | 
-"At 25 I started playing the market game,
-Now everyone in China knows my name.
-A box and Sparrow remind people of my man,
-Although some would say he’s closer to Jackie Chan.
+  "At 25 I started playing the market game,
+  Now everyone in China knows my name.
+  A box and Sparrow remind people of my man,
+  Although some would say he’s closer to Jackie Chan.
 
-The poem is a reference to a famous story. Who wrote the story?"
+  The poem is a reference to a famous story. Who wrote the story?"
 
 value: 500
 type: dynamic
@@ -23,8 +23,8 @@ flags:
   - csictf{hanna_diyab}
 
 tags:
-- "osint"
-- "research"
+  - "osint"
+  - "research"
 
 files:
   - "Genie.png"
