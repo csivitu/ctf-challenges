@@ -9,13 +9,6 @@ Disassemble Python byte code and reverse the obtained python code.
 - Python 3
 - Basic Knowledge of Python Byte Code
 
-Files: dis_code, encodedflag.txt
-```
-# Exploitation
-
-The code you see in [C1cipher](./C1cipher) and [C2cipher](./C2cipher) is essentially python bytecode. The target in this challenge is to reverse this programs and pass the string in [`encodedflag.txt`](./encodedflag.txt) as input, so that we get the flag.
-
-```
 ## Sources
 
 - [C1cipher](./C1cipher)
@@ -24,7 +17,7 @@ The code you see in [C1cipher](./C1cipher) and [C2cipher](./C2cipher) is essenti
 
 
 ```
-Assemble and reverse 2 ciphers to get the flag
+I learnt Python in school but I have no clue what this is!
 Hint 1: python disassembly is easy  - Points 100
 Hint 2: pip install Assembly - Points 200
 ```

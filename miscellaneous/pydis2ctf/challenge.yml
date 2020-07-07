@@ -1,7 +1,8 @@
 name: "pydis2ctf"
 author: "21StWarlock#1598"
-category: miscellaneous
-description: Assemble and reverse 2 ciphers to get the flag .
+category: Miscellaneous
+description: I learnt Python in school but I have no clue what this is!
+
 value: 500
 type: dynamic
 decay: 450
