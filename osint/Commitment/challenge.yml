@@ -1,0 +1,20 @@
+name: "Commitment"
+author: "ashikka"
+category: OSINT
+
+description: hoshimaseok is up to no good. Track him down.
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{sc4r3d_0f_c0mm1tm3nt}
+
+tags:
+  - osint
+
+state: hidden
+version: "0.1"

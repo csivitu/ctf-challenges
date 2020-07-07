@@ -1,0 +1,23 @@
+name: "AKA"
+author: "AJ1479"
+category: linux
+
+description: |
+  Cows are following me everywhere I go. Help, I'm trapped!
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{1_4m_cl4rk3_k3nt}
+
+tags:
+  - linux
+
+files: 
+
+state: hidden
+version: "0.1"
