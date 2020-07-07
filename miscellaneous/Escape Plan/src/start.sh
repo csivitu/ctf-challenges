@@ -1,4 +1,3 @@
 #! /bin/sh
 
-cd /ctf
-/usr/local/bin/python crypto.py
+su - ctf "su - ctf -c 'cd /ctf; /usr/local/bin/python crypto.py'"
