@@ -3,12 +3,9 @@ author: :"Parth"
 category: "OSINT"
 
 description: | 
-  "At 25 I started playing the market game,
-  Now everyone in China knows my name.
-  A box and Sparrow remind people of my man,
-  Although some would say he’s closer to Jackie Chan.
+  "First going to CK227. I write real good,  don't you think?
 
-  The poem is a reference to a famous story. Who wrote the story?"
+   Where do I work?"
 
 value: 500
 type: dynamic
@@ -20,14 +17,14 @@ decay: 450
 minimum: 100
 
 flags:
-  - csictf{hanna_diyab}
+  - csictf{nbc}
 
 tags:
   - "osint"
   - "research"
 
 files:
-  - "Genie.png"
+  - "JackTwitter.jpg"
 
 state: hidden
 

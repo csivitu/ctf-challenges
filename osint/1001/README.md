@@ -3,7 +3,7 @@
 Author: [parthkgh24](https://github.com/parthkgh24)
 
 ## Description
-This is an osint challenge, that has a Chinese theme.
+This is an osint challenge.
 
 ## Requirements
 
@@ -11,12 +11,9 @@ This is an osint challenge, that has a Chinese theme.
 
 ## Sources
 ```
-At 25 I started playing the market game,
-Now everyone in China knows my name.
-A box and Sparrow remind people of my man,
-Although some would say he’s closer to Jackie Chan.
+First going to CK227. I write real good,  don't you think?
 
-The poem is a reference to a famous story. Who wrote the story?
+Where do I work?
 ```
 
 
@@ -25,12 +22,11 @@ The poem is a reference to a famous story. Who wrote the story?
 
 ## Exploit
 
-The 25 started playing the market game line refers to entering the stock market or setting up the IPO of a company. Here 25 doesn’t refer to the company’s age when they had their IPO but at their valuation which is $25 (billion). The company is very famous in China, as seen in their second line. The box and Sparrow reminding people of the main is referring to Jack Ma (jack in the box and Jack Sparrow), and the last line refers to his name sounding similar to Jackie. <br />
-The picture contains 40 genies, which represents genies and 40 things. Putting these together, we can see that the company is Alibaba and the story we are referring to is Alibaba and 40 thieves. This story was written by Hanna Diyab.
+CK227 is the China Cargo Airlines flight from Shanghai to Anchorage, and I write real good is a Twitter handle (iwriterealgood). Jack Dorsey here is a reference to using Twitter and another Jack (Jack Ma) whose first tweet was about sending masks on this flight CK227. If you search CK227 on Twitter, you find a tweet by Sergio Quintana replying to Jack Ma and @iwriterealgood. A look at his bio shows that he works at NBC. 
 
 The flag is:
 
 ```
-csictf{hanna_diyab} 
+csictf{nbc} 
 ```
 
