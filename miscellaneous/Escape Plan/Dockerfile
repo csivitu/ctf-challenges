@@ -17,8 +17,6 @@ RUN chown -R root:ctf /ctf && \
   chmod -R 750 /ctf && \
   chmod -R 740 /ctf/.git/*
 
-RUN adduser --disabled-password --gecos "" ctf
-
 ENTRYPOINT []
 CMD ["/usr/sbin/xinetd", "-dontfork"]
 
