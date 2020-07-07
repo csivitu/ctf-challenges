@@ -1,0 +1,21 @@
+name: "Where am I"
+author: "alias-rahil"
+category: Linux
+
+description: "Something is not right? I feel like I am in a prison!"
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+ - csictf{n1c3_d093_w0w_5uch_55h}
+
+tags:
+ - linux
+ - jail
+
+state: hidden
+version: "0.1"
