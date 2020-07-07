@@ -1,7 +1,7 @@
   
 name: "esrom"
 author: "21StWarlock#1598"
-category: forensics
+category: Forensics
 description: The target in this challenge is to reverse engineer this clip to find the flag .
 value: 500
 type: dynamic
