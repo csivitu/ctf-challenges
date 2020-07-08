@@ -1,0 +1,22 @@
+name: "BroBot"
+author: "alias-rahil"
+category: Miscellaneous
+
+description: "This BoT can speak, can you ask him the flag? https://telegram.me/csictf_brobot/"
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+ - csictf{ai_will_take_over_the_world}
+
+tags:
+ - python
+ - miscellaneous
+ - bot
+
+state: hidden
+version: "0.1"
