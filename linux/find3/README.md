@@ -9,34 +9,52 @@ enter the challenge through ~hosted-site~ at port XXXX
 
 ## Exploit :
 - ssh ~hosted-site~ -p XXXX
+
 Sentences can play games, so do their lengths, look carefully for your flag or make amends!
+
 > root$ ls -a
+
 > dir1 dir2 dir3 dir4 dir11 dir12 dir13 dir14 
+
 > root$ 
 
 [can brute force]
+
 [or run command > root$ find ./ -size 91c]
+
 [or run command >root$ grep -r csictf *]
 
+
 > /dir12/ file3.txt
+
 
 Contents of file.txt :(the fullstop is the 91st byte)
 csictf{n0t_th3_fl4g} challenge 2 is at ~some-site~ port XXXX                   .
 
+
 > exit
 
+
 - ssh ~some-site~ port XXXX
+
 Stuck wondering what to do? No similar files contain the flag, why not change the view?
 
 > C:\ dir
+
 file1.txt file2.txt file3.txt file4.txt file5.txt file6.txt 
+
 > C:\ fc /a file1.txt file2.txt [compare each of them - 5 of them are identical, one contains the flag]
+
 
 (for ex :file1 and file2 contain junk data except 1 string which is in file1 and not in file2)
 
-> file1
+> *****
+file1
+
 ...s0m3_junk_d4t4s0m3_junk_d4t4s0m3_junk_d4t41_4m_h3h3_y0u_jusT_F0unD_m3s0m3_junk_d4t4s0m3_junk_d4t4s0m3_junk_d4t4s0m3_junk_d4t4s0m3_junk_d4t4s0m3_junk_d4t4...
+*****
 file2
+
 ...s0m3_junk_d4t4s0m3_junk_d4t4s0m3_junk_d4t4s0m3_junk_d4t4s0m3_junk_d4t4s0m3_junk_d4t4s0m3_junk_d4t4s0m3_junk_d4t4s0m3_junk_d4t4...
 
 
