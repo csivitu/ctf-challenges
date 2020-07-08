@@ -7,9 +7,6 @@ Author: [Pragati1610](https://github.com/pragati1610)
 Reach the final flag, so don't blow your horns too fast :
 enter the challenge through ~hosted-site~ at port XXXX
 
-## What is it :
--  A course of 2 challenges using the linux command line tools 
-
 ## Exploit :
 - ssh ~hosted-site~ -p XXXX
 Sentences can play games, so do their lengths, look carefully for your flag or make amends!
@@ -24,7 +21,7 @@ Sentences can play games, so do their lengths, look carefully for your flag or m
 > /dir12/ file3.txt
 
 Contents of file.txt :(the fullstop is the 91st byte)
-csictf{st4rt_w1th_0n3_3nd_w1th_3} challenge 2 is at ~some-site~ port XXXX                 .
+csictf{n0t_th3_fl4g} challenge 2 is at ~some-site~ port XXXX                   .
 
 > exit
 
