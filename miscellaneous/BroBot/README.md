@@ -17,8 +17,6 @@ A code injection challenge!
 
 - None
 
-## Challenge description to go up on the website.
-
 ```
 This BoT can speak, can you ask him the flag? https://telegram.me/csictf_brobot/
 ```

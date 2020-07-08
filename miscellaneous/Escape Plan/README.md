@@ -16,8 +16,6 @@ Another pyjail challenge with a little twist at the end to find the flag.
 
 - None
 
-## Challenge description to go up on the website.
-
 ```
 I found a script that solves ciphers, they say it's pretty secure!
 ```
