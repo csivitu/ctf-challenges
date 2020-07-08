@@ -1,0 +1,20 @@
+name: "Hidden contact"
+author: "Pran-Ker"
+category: Web
+
+description: |
+  Finding the site database password. We all know you can't.
+value: 200
+type: dynamic
+
+decay: 40
+minimum: 100
+
+flags:
+  - csictf{th4nk$_4_c0ntact1ng_m#}
+
+tags:
+  - web
+
+state: hidden
+version: "0.1"
