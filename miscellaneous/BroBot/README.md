@@ -10,7 +10,7 @@ A code injection challenge!
 # Requirements
 
 - Python
-- espeak
+- Espeak
 - Docker
 
 ## Sources
