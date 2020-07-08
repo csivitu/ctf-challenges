@@ -52,7 +52,7 @@ def send_voice_msg(update, context):
 
 def start(update, context):
     update.message.reply_text(
-        """Available Coomands:
+        """Available Commands:
 /start
 /help
 /text2voice
