@@ -15,8 +15,7 @@ A code injection challenge!
 
 ## Sources
 
-- [bot.py](./bot.py)
-- [flag.txt](./flag.txt)
+- None
 
 ## Challenge description to go up on the website.
 
