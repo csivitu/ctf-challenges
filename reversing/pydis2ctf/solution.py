@@ -19,8 +19,7 @@ def reverse_substitution_cipher(text):
 # after converting to python code:
 
 def XOR(inpString): 
-  
-    xorKey = 'S'; 
+    xorKey = 'S'
     length = len(inpString)
     for i in range(length):
         inpString = (inpString[:i] + chr(ord(inpString[i]) ^ ord(xorKey)) + inpString[i + 1:]) 
