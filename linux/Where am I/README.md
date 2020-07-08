@@ -13,9 +13,7 @@ A linux chroot jail challenge.
 
 ## Sources
 
-- [flag.txt](./flag.txt)
-- [Dockerfile](./Dockerfile)
-- [script.sh](./script.sh)
+- None
 
 ## Challenge description to go up on the website.
 
