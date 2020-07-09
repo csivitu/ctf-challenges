@@ -37,7 +37,8 @@ app.post('/admin', async (req, res) => {
             return;
         }
         res.send('Admin visited your link successfully!');
-    } catch {
+    } catch (err) {
+        console.error(err);
         res.send('Unexpected Error.');
     }
 });

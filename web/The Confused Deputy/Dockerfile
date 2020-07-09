@@ -1,6 +1,8 @@
 FROM node:12-buster-slim
 
-WORKDIR /app
+RUN mkdir /ctf
+WORKDIR /ctf
+RUN useradd -M -d /ctf ctf
 
 RUN  apt-get update \
      && apt-get install -y wget gnupg ca-certificates \
@@ -31,4 +33,4 @@ EXPOSE 9999
 
 USER ctf
 
-CMD ["node", "/app/server.js"]
+CMD ["node", "/ctf/server.js"]
