@@ -1,0 +1,22 @@
+name: "Vietnam"
+author: 
+category: Reversing
+
+description: 
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{l00k_4t_th3_t0w3rs_0f_h4n01}
+
+tags:
+  - reversing 
+
+file:
+
+state: hidden
+version: "0.1"
