@@ -11,9 +11,7 @@ This is an osint challenge.
 
 ## Sources
 ```
-First going to CK227. I write real good,  don't you think?
-
-Where do I work?
+A reporter wanted to know where this flight is headed. Where does he live?
 ```
 
 
@@ -22,11 +20,11 @@ Where do I work?
 
 ## Exploit
 
-CK227 is the China Cargo Airlines flight from Shanghai to Anchorage, and I write real good is a Twitter handle (iwriterealgood). Jack Dorsey here is a reference to using Twitter and another Jack (Jack Ma) whose first tweet was about sending masks on this flight CK227. If you search CK227 on Twitter, you find a tweet by Sergio Quintana replying to Jack Ma and @iwriterealgood. A look at his bio shows that he works at NBC. 
+This picture is from Jack Ma's Twitter account which shows a flight carrying masks to be sent to the US. On going through the comments, someone named Sergio Quintana asks where the flight is headed. On going through his account, we can see that he lives in San Francisco.
 
 The flag is:
 
 ```
-csictf{nbc} 
+csictf{san_francisco} 
 ```
 
