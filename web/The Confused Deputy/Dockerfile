@@ -29,4 +29,6 @@ COPY . .
 
 EXPOSE 9999
 
+USER ctf
+
 CMD ["node", "/app/server.js"]
