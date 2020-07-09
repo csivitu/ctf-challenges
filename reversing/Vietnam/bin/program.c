@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-unsigned char SA[1024], SB[1024], SC[1024], STR[1024], CODE[1024];
+unsigned char SA[1024], SB[1024], SC[1024], STR[1024];
 
 unsigned char *sa = SA, *sb = SB, *sc = SC, *tmp, *str = STR;
 int cp = 0;
 
 int main(int argc, char **argv)
 {
-  char *code = CODE;
+  char *code = (char *)malloc(1024 * sizeof(char));
   fgets(code, 1024, stdin);
 
   setbuf(stdout, NULL);
