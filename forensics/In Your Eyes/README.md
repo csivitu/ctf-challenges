@@ -19,6 +19,7 @@ This is a forensics challenge that also uses Braille encoded text.
   Days seem bright but you don't know for sure.
   I stand in your place and close my eyes,
   What do I see?"
+  (Open your windows to see the secret message)
 ```
 
 ## Exploit
