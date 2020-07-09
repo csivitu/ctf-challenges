@@ -26,5 +26,4 @@ version: "0.1"
 
 expose:
 - containerPort: 9999
-  targetPort: 30003
-
+  targetPort: 30013
