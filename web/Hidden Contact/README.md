@@ -15,9 +15,9 @@ Finding the site database password. We all know you can't .
 ------------
 
 Copy the whole folder contents to, for instance, `/opt/ctf/w100/`.
-Then you need to configure Wordpress to accept requests on the virtual host you desire. For that replace any reference to `localhost:30100` in the `sql/wordpress.sql` file with the new virtual host, for instance using `sed 's/localhost:30100/newhostname/g' sql/wordpress.sql`
+Then you need to configure Wordpress to accept requests on the virtual host you desire. For that replace any reference to `localhost:30100` in the `sql/wordpress.sql` file with the new virtual host, for instance using `sed 's/localhost:9999/newhostname/g' sql/wordpress.sql`
 
-Then you just need to link the systemd service with `sudo ln -s /opt/ctf/w100/w100.service /etc/systemd/system/w100.service` and start it with `sudo systemdctl start w100.service`.By default it will listen in the `30100` port.
+Then you just need to link the systemd service with `sudo ln -s /opt/ctf/w100/w100.service /etc/systemd/system/w100.service` and start it with `sudo systemdctl start w100.service`.By default it will listen in the `9999` port.
 
 
 
