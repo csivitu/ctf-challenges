@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: git fetch --all --tags
       - uses: actions/setup-node@v1
         with:
           node-version: '12'
@@ -27,3 +28,4 @@ jobs:
           gcloud container clusters get-credentials "${{ secrets.GKE_CLUSTER_NAME }}" --zone "${{ secrets.GKE_CLUSTER_ZONE }}"
       - name: Deploy
         run: ctfup -c ctfup.yml .
+      - run: git push origin latest
