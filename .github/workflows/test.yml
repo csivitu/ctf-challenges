@@ -1,7 +1,7 @@
 name: Test
 on:
   push:
-    branches: [ master ]
+    branches: [ test ]
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -11,7 +11,7 @@ jobs:
       
       - name: Test
         run: |
-          echo $COMMITHASH
+          echo ${{ env.COMMITHASH }}
         env:
           COMMITHASH: $(git rev-list -n 1 latest)
   
