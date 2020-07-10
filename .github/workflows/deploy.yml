@@ -36,5 +36,6 @@ jobs:
           COMMITHASH: $(git rev-list -n 1 latest)
   
       - run: |
-          git tag -fa latest
+          git config --global user.email "roerohan@gmail.com"
+          git tag -fa latest user.name "roerohan"
           git push -f latest
