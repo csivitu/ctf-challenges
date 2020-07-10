@@ -35,4 +35,6 @@ jobs:
         env:
           COMMITHASH: $(git rev-list -n 1 latest)
   
-      - run: git push origin latest -f
+      - run: |
+          git tag -fa latest
+          git push -f latest
