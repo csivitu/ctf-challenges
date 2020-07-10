@@ -1,6 +1,6 @@
 name: "Blaise"
 author: "roerohan"
-category: Pwn
+category: Reversing
 
 description: |
   I recovered a binary from my teacher's computer. I tried to reverse it but I couldn't.
@@ -15,11 +15,11 @@ flags:
   - csictf{y0u_d1sc0v3r3d_th3_p4sc4l's_tr14ngl3}
 
 files:
-  - "pwn/Blaise/bin/blaise"
+  - "reversing/Blaise/bin/blaise"
 
 tags:
-  - pwn
-  - reverse
+  - binary
+  - reversing
 
 state: hidden
 version: "0.1"

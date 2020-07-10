@@ -23,3 +23,7 @@ tags:
 
 state: hidden
 version: "0.1"
+
+expose:
+- containerPort: 9999
+  targetPort: 30013

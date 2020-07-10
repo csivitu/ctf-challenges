@@ -63,7 +63,7 @@ The following are the categories of challenges that are to be made:
 - Linux
 - Crypto
 - Forensics
-- Log Analysis
+- Reversing
 - Miscellaneous
 
 ### Installation

@@ -1,0 +1,24 @@
+name: "Vietnam"
+author: 
+category: Reversing
+
+description: |
+  The Viet Cong in transmitting a secret message. They built a password checker so that only a selected few can view the secret message. We've recovered the binary, we need you to find out what they're trying to say.
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{l00k_4t_th3_t0w3rs_0f_h4n01}
+
+tags:
+  - reversing 
+
+files:
+  - "reversing/Vietnam/bin/vietnam"
+
+state: hidden
+version: "0.1"

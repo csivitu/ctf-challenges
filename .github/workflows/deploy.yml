@@ -7,9 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: git fetch --all --tags
       - uses: actions/setup-node@v1
         with:
           node-version: '12'
+
       - run: npm install -g ctfup
          # Setup gcloud CLI
       - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
@@ -25,5 +27,12 @@ jobs:
       # Get the GKE credentials so we can deploy to the cluster
       - run: |-
           gcloud container clusters get-credentials "${{ secrets.GKE_CLUSTER_NAME }}" --zone "${{ secrets.GKE_CLUSTER_ZONE }}"
+
       - name: Deploy
-        run: ctfup -c ctfup.yml .
+        run: |
+          ctfup -c ctfup.yml .
+          echo ${{ env.COMMITHASH }}
+        env:
+          COMMITHASH: $(git rev-list -n 1 latest)
+  
+      - run: git push origin latest -f
