@@ -28,4 +28,4 @@ containers:
 
 expose:
 - containerPort: 9999
-  targetPort: 30215
+  nodePort: 30215
