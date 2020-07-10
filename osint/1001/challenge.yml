@@ -1,9 +1,9 @@
-name: "1001"
+name: "Flying places"
 author: :"Parth"
 category: "OSINT"
 
 description: | 
-  "A reporter wanted to know where this flight is headed. Where does he live?"
+  A reporter wanted to know where this flight is headed. Where does he live?
 
 value: 500
 type: dynamic
@@ -22,7 +22,7 @@ tags:
   - "research"
 
 files:
-  - "Flight.jpg"
+  - osint/Flying Places/Flight.jpg
 
 state: hidden
 

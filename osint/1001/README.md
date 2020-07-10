@@ -1,4 +1,4 @@
-# 1001
+# Flying Places
 
 Author: [parthkgh24](https://github.com/parthkgh24)
 
@@ -13,9 +13,6 @@ This is an osint challenge.
 ```
 A reporter wanted to know where this flight is headed. Where does he live?
 ```
-
-
-## Challenge description to go up on the website
 
 
 ## Exploit
