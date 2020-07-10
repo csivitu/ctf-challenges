@@ -4,7 +4,7 @@ Author: [roerohan](https://github.com/roerohan)
 
 ## Description
 
-Brief Description about challenge
+This is a reversing challenge, can be solved using any decompiler / dissasembler.
 
 ## Requirements
 
@@ -13,7 +13,7 @@ Brief Description about challenge
 
 ## Sources
 
-- [blaise](./blaise)
+- [blaise](./bin/blaise)
 
 ```
 I recovered a binary from my teacher's computer. I tried to reverse it but I couldn't.

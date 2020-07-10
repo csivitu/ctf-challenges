@@ -2,7 +2,8 @@ name: "Vietnam"
 author: 
 category: Reversing
 
-description: 
+description: |
+  The Viet Cong in transmitting a secret message. They built a password checker so that only a selected few can view the secret message. We've recovered the binary, we need you to find out what they're trying to say.
 
 value: 500
 type: dynamic
@@ -16,7 +17,8 @@ flags:
 tags:
   - reversing 
 
-file:
+files:
+  - "reversing/Vietnam/bin/vietnam"
 
 state: hidden
 version: "0.1"
