@@ -39,4 +39,4 @@ jobs:
           git config --global user.email "roerohan@gmail.com"
           git config --global user.name "roerohan"
           git tag -fa latest -m "feat:Update latest tag"
-          git push -f latest
+          git push -f origin latest
