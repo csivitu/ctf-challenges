@@ -1,0 +1,24 @@
+name: "Secure Portal"
+author: "ashikka"
+category: Web
+
+description: This is a super secure portal with a really unusual HTML file. Try to login.
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{l3t_m3_c0nfus3_y0u}
+
+tags:
+  - web
+
+state: hidden
+version: "0.1"
+
+expose:
+- containerPort: 9999
+  nodePort: 30281
