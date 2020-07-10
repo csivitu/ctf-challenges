@@ -16,7 +16,6 @@ Obfuscated JS in Frontend
 This is a super secure portal with a really unusual HTML file. Try to login.
 ```
 
-
 ## Exploit
 
 You need to view the page source, which contains something like this: 
