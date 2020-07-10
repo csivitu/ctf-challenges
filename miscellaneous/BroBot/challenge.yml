@@ -20,3 +20,7 @@ tags:
 
 state: hidden
 version: "0.1"
+
+containers:
+  server:
+    build: .
