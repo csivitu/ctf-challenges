@@ -14,11 +14,7 @@ Another pyjail challenge with a little twist at the end to find the flag.
 
 ## Sources
 
-- [crypto.py](./src/crypto.py)
-- [dotgit/](./src/dotgit/)
-- [start.sh](./src/start.sh)
-
-## Challenge description to go up on the website.
+- None
 
 ```
 I found a script that solves ciphers, they say it's pretty secure!
