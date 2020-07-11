@@ -23,6 +23,9 @@ flags:
 tags:
   - forensics
   - steganography
+  
+files:
+  - "forensics/In Your Eyes/coolguy.bmp"
 
 state: hidden
 version: "0.1"
