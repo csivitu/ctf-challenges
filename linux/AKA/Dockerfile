@@ -18,8 +18,6 @@ RUN chown -R root:ctf /ctf && \
     chmod -R 750 /ctf && \
     chmod 740 /ctf/flag.txt
 
-USER ctf
-
 ENTRYPOINT []
 CMD ["/usr/sbin/xinetd", "-dontfork"]
 
