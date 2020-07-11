@@ -30,7 +30,7 @@ var _0x575c = ["2-4", "substring", "4-7", "getItem", "deleteItem", "12-14", "0-2
 ```
 
 Now, in the function `CheckPassword`, you see the word `window` being repeated many times. For an example, the line `window[_0x4bbdc3[0x0]][_0x4bbdc3[0x2]]` is actually `window.localStorage.setItem` and so on. The password has been split to many parts. This command stores each part of the password to an assigned key.
-Similarly, the line `window[_0x4bbdc3[0x0]][_0x4bbdc3[0x1]]` is `window.localStorage.getItem`. We use this command to check the splitted password with our input password. 
+Similarly, the line `window[_0x4bbdc3[0x0]][_0x4bbdc3[0x1]]` is `window.localStorage.getItem`. We use this command to check the splitted password with our input password. The password is `5W$Fbb=+nBE*pg4t^7M`.
 <br />
 
 The flag is:
