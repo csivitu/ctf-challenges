@@ -1,0 +1,68 @@
+<style>
+    body{
+        background-color: seagreen;
+    }
+    #leftvid{
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+    #button{
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    #video{
+        display: inline-block;
+        vertical-align: middle;
+        transition-duration: 2s;
+    }
+    #right{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: -220px;
+    }
+    #lines{
+        color: yellow;
+        margin-right: 70px;
+        margin-top: 50px;
+        background-color: red;
+        padding: 5px;
+    }
+    #picture{
+        margin-top: 200px;
+        margin-right: 100px;
+    }
+
+</style>
+
+<html>
+    <body>
+     <div id="leftvid">
+        <button id="button">Click to watch me fall</button>  
+        
+            <a id="video" href="https://youtu.be/JhfwI3gIkzA?t=19">Till 45</a>
+
+</div>
+<div id="right">
+<div id="lines">
+    <p>Remove a letter, it’s now a slur,</p>
+    <p> Remove another letter, the opposite of a blur</p>
+    <p>Sometimes we are captured and sometimes we are hung</p>
+</div>
+<div id="picture">
+    <img src="dwayneanddavid.jpg">
+    <p>Looking for another one</p>
+</div>
+</div>
+<script>
+    const btn= document.getElementById("button");
+    const link=document.getElementById("video");
+    btn.onclick=function(){
+        link.style.marginTop="500px";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+name: "pwn intended 0x1"
+author: "roerohan"
+category: Pwn
+
+description: |
+  I really want to have some coffee!
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{y0u_ov3rfl0w3d_th@t_c0ff33_l1ke_@_buff3r}
+
+files:
+  - "pwn/pwn intended 0x1/bin/pwn-intended-0x1"
+  - "pwn/pwn intended 0x1/bin/pwn-intended-0x1.c"
+
+tags:
+  - pwn
+
+state: hidden
+version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 30001

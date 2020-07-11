@@ -1,0 +1,27 @@
+name: "Prime Roll"
+author: "harsoh"
+
+category: Miscellaneous
+
+description: | 
+  Harshit always envisioned random number generators as rolling dices in the background and just printing the result of the roll. He loves prime numbers so he usually imagines a dice with (10^9)+7 (a famous prime number) sides being rolled. To simulate random behaviour, Harshit decided to roll the dice n number of times, where n equals the 2^((10^9)+7) (th) prime number. He wants to know the probability of the largest result among all these rolls being a prime number too. You can stop him from rolling dices till the Heat Death of the universe by telling him the answer beforehand. Calculate the first 10 digits after the decimal place.
+  
+  The flag will look like -> csictf{first_10_digits_after_the_decimal_point}
+
+value: 500
+type: dynamic
+
+decay: 450
+
+minimum: 100
+
+flags:
+  - csictf{9999999999}
+
+tags:
+  - miscellaneous
+  - algo
+  
+state: hidden
+
+version: "0.1"

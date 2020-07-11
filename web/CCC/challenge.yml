@@ -1,0 +1,31 @@
+name: "CCC"
+author: "roerohan"
+category: Web
+
+description: |
+  You can steal a car if you steal its key.
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{1n_th3_3nd_1t_d0esn't_3v3n_m4tt3r}
+
+tags:
+  - web
+
+state: hidden
+version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 30215

@@ -1,0 +1,24 @@
+name: "pydis2ctf"
+author: "21StWarlock#1598"
+category: Reversing
+description: I learnt Python in school but I have no clue what this is!
+
+value: 500
+type: dynamic
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{T#a+_wA5_g0oD_d155aSe^^bLy}
+
+files:
+  - "reversing/pydis2ctf/encodedflag.txt"
+  - "reversing/pydis2ctf/C1cipher.txt"
+  - "reversing/pydis2ctf/C2cipher.txt"
+  
+tags: 
+  - reversing
+  - ciphers
+
+state: hidden
+version: "0.1"

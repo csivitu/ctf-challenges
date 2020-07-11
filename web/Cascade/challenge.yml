@@ -1,0 +1,31 @@
+name: "Cascade"
+author: "roerohan"
+category: Web
+
+description: |
+  Welcome to csictf.
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{w3lc0me_t0_csictf}
+
+tags:
+  - web
+
+state: hidden
+version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 30203

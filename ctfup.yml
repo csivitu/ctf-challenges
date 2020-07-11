@@ -1,0 +1,17 @@
+categories:
+  - 'crypto'
+  - 'forensics'
+  - 'linux'
+  - 'reversing'
+  - 'miscellaneous'
+  - 'osint'
+  - 'pwn'
+  - 'web'
+registry: 'gcr.io/summer-project-275116'
+resources:
+  limits:
+    cpu: 100m
+    memory: 150Mi
+  requests:
+    cpu: 10m
+    memory: 30Mi

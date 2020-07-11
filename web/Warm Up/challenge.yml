@@ -1,0 +1,31 @@
+name: "Warm Up"
+author: "roerohan"
+category: Web
+
+description: |
+  If you know, you know; otherwise you might waste a lot of time.
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{typ3_juggl1ng_1n_php}
+
+tags:
+  - web
+
+state: hidden
+version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 80
+
+expose:
+- containerPort: 80
+  nodePort: 30272

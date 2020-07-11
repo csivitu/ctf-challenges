@@ -1,0 +1,31 @@
+name: "Stalin for time"
+author: :"Parth"
+category: "OSINT"
+
+description: |
+  "There are 3 parts to this challenge. Who took it? What was "taken"? 
+  Note The format of the flag is csictf{answer1_answer2}"
+
+value: 500
+type: dynamic
+
+
+decay: 450
+
+
+minimum: 100
+
+flags:
+  - csictf{yevgeny_khaldei_adrianov_compass}
+
+tags:
+- "osint"
+- "research"
+
+files:
+  - "osint/Stalin for time/Stalinfortimewebpage.html"
+  - "osint/Stalin for time/dwayneanddavid.jpg"
+
+state: hidden
+
+version: "0.1"

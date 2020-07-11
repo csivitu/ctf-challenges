@@ -1,0 +1,31 @@
+name: "In Your Eyes"
+author: "SrishtiGohain"
+category: Forensics
+
+description: |
+  'I talk of wondrous things I see,
+  You picture purely out of imagination,
+  You wonder how your light is spent,
+  Days seem bright but you don't know for sure.
+  I stand in your place and close my eyes,
+  What do I see?
+  (Open your windows to see the secret message)'
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{nowucme}
+
+tags:
+  - forensics
+  - steganography
+  
+files:
+  - "forensics/In Your Eyes/coolguy.bmp"
+
+state: hidden
+version: "0.1"

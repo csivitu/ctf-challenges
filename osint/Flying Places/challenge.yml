@@ -1,0 +1,29 @@
+name: "Flying Places"
+author: :"Parth"
+category: "OSINT"
+
+description: | 
+  A reporter wanted to know where this flight is headed. Where does he live?
+
+value: 500
+type: dynamic
+
+
+decay: 450
+
+
+minimum: 100
+
+flags:
+  - csictf{san_francisco}
+
+tags:
+  - "osint"
+  - "research"
+
+files:
+  - "osint/Flying Places/Flight.jpg"
+
+state: hidden
+
+version: "0.1"
