@@ -1,6 +1,6 @@
 [![csivit][csivitu-shield]][csivitu-url]
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 [![Issues][issues-shield]][issues-url]
 
@@ -231,6 +231,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/alias-rahil"><img src="https://avatars2.githubusercontent.com/u/59060219?v=4" width="100px;" alt=""/><br /><sub><b>alias-rahil</b></sub></a><br /><a href="https://github.com/csivitu/ctf-challenges/commits?author=alias-rahil" title="Documentation">📖</a> <a href="https://github.com/csivitu/ctf-challenges/commits?author=alias-rahil" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/ashikka"><img src="https://avatars1.githubusercontent.com/u/58368421?v=4" width="100px;" alt=""/><br /><sub><b>ashikka</b></sub></a><br /><a href="https://github.com/csivitu/ctf-challenges/commits?author=ashikka" title="Documentation">📖</a> <a href="https://github.com/csivitu/ctf-challenges/commits?author=ashikka" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/parthkgh24"><img src="https://avatars3.githubusercontent.com/u/60440835?v=4" width="100px;" alt=""/><br /><sub><b>parthkgh24</b></sub></a><br /><a href="https://github.com/csivitu/ctf-challenges/commits?author=parthkgh24" title="Documentation">📖</a> <a href="https://github.com/csivitu/ctf-challenges/commits?author=parthkgh24" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Atharva-Gundawar"><img src="https://avatars0.githubusercontent.com/u/54273198?v=4" width="100px;" alt=""/><br /><sub><b>Atharva-Gundawar</b></sub></a><br /><a href="https://github.com/csivitu/ctf-challenges/commits?author=Atharva-Gundawar" title="Documentation">📖</a> <a href="https://github.com/csivitu/ctf-challenges/commits?author=Atharva-Gundawar" title="Code">💻</a></td>
   </tr>
 </table>
 
