@@ -1,6 +1,6 @@
 [![csivit][csivitu-shield]][csivitu-url]
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 [![Issues][issues-shield]][issues-url]
 
@@ -235,6 +235,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/Atharva-Gundawar"><img src="https://avatars0.githubusercontent.com/u/54273198?v=4" width="100px;" alt=""/><br /><sub><b>Atharva-Gundawar</b></sub></a><br /><a href="https://github.com/csivitu/ctf-challenges/commits?author=Atharva-Gundawar" title="Documentation">📖</a> <a href="https://github.com/csivitu/ctf-challenges/commits?author=Atharva-Gundawar" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/SrishtiGohain"><img src="https://avatars2.githubusercontent.com/u/59062633?v=4" width="100px;" alt=""/><br /><sub><b>SrishtiGohain</b></sub></a><br /><a href="https://github.com/csivitu/ctf-challenges/commits?author=SrishtiGohain" title="Documentation">📖</a> <a href="https://github.com/csivitu/ctf-challenges/commits?author=SrishtiGohain" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/harsoh"><img src="https://avatars3.githubusercontent.com/u/55947999?v=4" width="100px;" alt=""/><br /><sub><b>harsoh</b></sub></a><br /><a href="https://github.com/csivitu/ctf-challenges/commits?author=harsoh" title="Documentation">📖</a> <a href="https://github.com/csivitu/ctf-challenges/commits?author=harsoh" title="Code">💻</a></td>
   </tr>
 </table>
 
