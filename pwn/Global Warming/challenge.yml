@@ -1,0 +1,36 @@
+name: "Global Warming"
+author: "AJ1479"
+category: pwn
+
+description: |
+  Greta Thunberg 1 Administration 0
+  
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{n0_5tr1ng5_@tt@ch3d}
+
+files:
+  - "pwn/Global Warming/bin/global-warming"
+  - "pwn/Global Warming/bin/global-warming.c"
+
+tags:
+  - pwn
+
+state: hidden
+version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 30001
