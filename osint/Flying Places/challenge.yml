@@ -1,4 +1,4 @@
-name: "Flying places"
+name: "Flying Places"
 author: :"Parth"
 category: "OSINT"
 
@@ -22,7 +22,7 @@ tags:
   - "research"
 
 files:
-  - osint/Flying Places/Flight.jpg
+  - "osint/Flying Places/Flight.jpg"
 
 state: hidden
 
