@@ -1,0 +1,23 @@
+name: "Hide and Seek"
+author: "Pran-Ker"
+category: Miscellaneous
+
+description: |
+  You're mission should you choose to accept it is to find out the hidden message in this document.
+  This message will self distruct in 3 seconds.... 1,2,3 POOF.
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{i_sp1_with_m1_littl3_i}
+
+tags:
+  - miscellaneous
+  - pdf
+
+state: hidden
+version: "0.1"
