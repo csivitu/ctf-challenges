@@ -19,3 +19,13 @@ tags:
 
 state: hidden
 version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 80
+
+expose:
+- containerPort: 80
+  nodePort: 30272
