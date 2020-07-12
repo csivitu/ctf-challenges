@@ -9,7 +9,7 @@ Reverse morse code(audio) to get a combination of 1's and 0's and then reverse t
 
 - Python 3
 - Morse code decoder
--   hex code decoder
+- hex code decoder
 
 Files: flag.wav
 ```
@@ -23,13 +23,13 @@ Files: flag.wav
 - [flag.wav](./flag.wav)
 ```
 Decode to get the flag
-Hint 1: decode the morse code  - Points 100
-Hint 2: search play store for morse code audio decoders - Points 200
+Hint 1: search for morse code audio decoders by morse code international  - Points 100
+Hint 2: look deeper in the file - Points 200
 ```
 
 ## Exploit
 
-You have to convert the audio into morse code and then you will get some hex characters which when converted to ascii gives the flag
+You have to convert the audio into morse code and then you will get some hex characters which when converted to ascii gives the secret key which will be used to extract the flag hidden in the morse code using steghide
 
 
  The flag is:
