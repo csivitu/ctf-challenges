@@ -18,8 +18,8 @@ void say_hello(char *arg1)
 	char name[128];
 	strcpy(name, arg1);
 	printf("Hello, ");
-    printf(name);
-    printf("!\n");
+        printf(name);
+        printf("!\n");
 	return;
 }
 
