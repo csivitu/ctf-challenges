@@ -1,4 +1,4 @@
-# Challenge Name
+# Prime Roll
 
 Author: [harsoh](https://github.com/harsoh)
 
