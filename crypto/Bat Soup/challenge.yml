@@ -1,0 +1,29 @@
+name: "Bat Soup"
+author: "ashikka"
+category: Crypto
+
+description: |
+  Ben has encrypted a message with the same value of 'e' for 3 public moduli -
+  n1 = 86812553978993
+  n2 = 81744303091421 
+  n3 = 83695120256591 
+  and got the cipher texts - 
+  c1 = 8875674977048
+  c2 = 70744354709710
+  c3 = 29146719498409.
+  Find the original message. (Wrap it with csictf{})
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{h45t4d}
+
+tags:
+  - crypto
+
+state: hidden
+version: "0.1"
