@@ -1,4 +1,4 @@
-# Challenge Name
+# Machine Fix
 
 Author: [harsoh](https://github.com/harsoh)
 
@@ -15,16 +15,14 @@ Algorithmic challenge.
 - [prob.pdf](./prob.pdf)
 
 ```
-To help fix the machine, download the PDF.
+To help us calculate it faster, download the PDF.
 
-Hint 1: The machines act like ternary numbers.
-
-Hint 2: Think of the contribution of each machine separately.
+Hint 1: Think of the contribution of each bit separately.
 ```
 
 ## Exploit
 
-The problem is a complicated way of saying - Given a positive integer n, find the sum of number of positions with different bits between consecutive ternary numbers from 0 to n.
+The problem is -> Given a positive integer n, find the sum of number of positions with different bits between consecutive ternary numbers from 0 to n.
 <br />
 
 The answer could have been brute-forced but the number is of the order 10^30 so it is not possible. Rather understanding how bits work in any general base helps.
