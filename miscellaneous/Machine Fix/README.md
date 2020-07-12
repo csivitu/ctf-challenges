@@ -12,10 +12,12 @@ Algorithmic challenge.
 
 ## Sources
 
-- [prob.pdf](./prob.pdf)
+- [code.py](./code.py)
 
 ```
-To help us calculate it faster, download the PDF.
+We ran a code on a machine a few years ago. It is still running however we forgot what it was meant for. It completed n=523693181734689806809285195318 iterations of the loop and broke down. We want the answer but cannot wait a few more years. Find the answer after n iterations to get the flag.
+
+The flag would be of the format csictf{answer_you_get_from_above}.
 
 Hint 1: Think of the contribution of each bit separately.
 ```
