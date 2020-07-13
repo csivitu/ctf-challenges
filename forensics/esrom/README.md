@@ -10,7 +10,7 @@ Reverse morse code(audio) to get a combination of 1's and 0's and then reverse t
 - Morse code decoder
 - hex code decoder
 
-Files: flag.wav
+Files: morse.wav
 ## Sources
 
 - [morse.wav](./morse.wav)
@@ -33,7 +33,7 @@ which when converted to ascii gives a secret key:
 reversemorse
 ```
 
-which when used to extract the flag hidden in the morse code using steghide we get falg.txt which has the floowing text :
+which when used to extract the flag hidden in the morse code using steghide we get falg.txt which has the following text :
 ```
 csictf{7h47_w45_50m3_9o0d_r3v3R51n9}
 ```
