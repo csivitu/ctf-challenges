@@ -5,6 +5,8 @@ category: Reversing
 description: |
   The Viet Cong in transmitting a secret message. They built a password checker so that only a selected few can view the secret message. We've recovered the binary, we need you to find out what they're trying to say.
 
+  nc chall.csivit.com 30814
+
 value: 500
 type: dynamic
 
@@ -22,3 +24,13 @@ files:
 
 state: hidden
 version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 30814

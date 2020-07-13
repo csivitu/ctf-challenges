@@ -2,7 +2,10 @@ name: "Where am I"
 author: "alias-rahil"
 category: Linux
 
-description: "Something is not right? I feel like I am in a prison!"
+description: |
+  Something is not right? I feel like I am in a prison!
+
+  nc chall.csivit.com 30623
 
 value: 500
 type: dynamic
@@ -19,3 +22,13 @@ tags:
 
 state: hidden
 version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 30623
