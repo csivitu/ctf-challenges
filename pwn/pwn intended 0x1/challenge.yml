@@ -5,6 +5,8 @@ category: Pwn
 description: |
   I really want to have some coffee!
 
+  nc chall.csivit.com 30001
+
 value: 500
 type: dynamic
 

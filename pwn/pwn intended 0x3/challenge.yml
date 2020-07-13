@@ -5,6 +5,8 @@ category: Pwn
 description: |
   Travelling through spacetime!
 
+  nc chall.csivit.com 30013
+
 value: 500
 type: dynamic
 
