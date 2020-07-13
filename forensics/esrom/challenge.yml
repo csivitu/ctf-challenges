@@ -11,7 +11,7 @@ flags:
   - csictf{7h47_w45_50m3_9o0d_r3v3R51n9}
 
 files:
-  - "forensics/esrom/flag.wav"
+  - "forensics/esrom/morse.wav"
 tags: 
   - forensics
 
