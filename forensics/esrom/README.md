@@ -13,7 +13,7 @@ Reverse morse code(audio) to get a combination of 1's and 0's and then reverse t
 Files: flag.wav
 ## Sources
 
-- [flag.wav](./flag.wav)
+- [morse.wav](./morse.wav)
 ```
 Decode to get the flag
 Hint 1: search for morse code audio decoders by morse code international  - Points 100
