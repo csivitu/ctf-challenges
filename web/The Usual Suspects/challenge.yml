@@ -17,7 +17,6 @@ flags:
 
 tags:
   - web
-  - Server Side Template Injection
 
 files:
   - "web/The Usual Suspects/source.py"
