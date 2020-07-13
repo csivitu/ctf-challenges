@@ -38,7 +38,4 @@ which when used to extract the flag hidden in the morse code using steghide we g
 csictf{7h47_w45_50m3_9o0d_r3v3R51n9}
 ```
 
- The flag is:
-```
-csictf{7h47_w45_50m3_9o0d_r3v3R51n9}
-```
+ The flag is: `csictf{7h47_w45_50m3_9o0d_r3v3R51n9}`
