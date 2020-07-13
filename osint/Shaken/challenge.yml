@@ -1,0 +1,29 @@
+name: "Shaken"
+author: :"Parth"
+category: "OSINT"
+
+description: | 
+  I love this watch. It's been with me all over the world, from Istanbul to Shanghai to Macau.I wear it with suits quite a lot. My boss liked it too. I remember wearing it when she died. What is her successor's name?
+
+value: 500
+type: dynamic
+
+
+decay: 450
+
+
+minimum: 100
+
+flags:
+  - csictf{gareth_mallory}
+
+tags:
+  - "osint"
+  - "research"
+
+files:
+  - "osint/Flying Places/300 M.jpg"
+
+state: hidden
+
+version: "0.1"
