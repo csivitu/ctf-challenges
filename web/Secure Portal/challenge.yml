@@ -2,7 +2,10 @@ name: "Secure Portal"
 author: "ashikka"
 category: Web
 
-description: This is a super secure portal with a really unusual HTML file. Try to login.
+description: |
+  This is a super secure portal with a really unusual HTML file. Try to login.
+
+  http://chall.csivit.com:30281
 
 value: 500
 type: dynamic

@@ -2,7 +2,12 @@ name: "Oreo"
 author: "AJ1479"
 category: Web
 
-description: My nephew is a fussy eater and is only willing to eat chocolate oreo. Any other flavour and he throws a tantrum.
+description: |
+  My nephew is a fussy eater and is only willing to eat chocolate oreo. Any other flavour and he throws a tantrum.
+
+  http://chall.csivit.com:30243
+
+
 value: 500
 type: dynamic
 
