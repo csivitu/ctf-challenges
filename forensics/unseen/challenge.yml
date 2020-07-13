@@ -1,17 +1,18 @@
-name: "esrom"
+name: "unseen"
 author: "21StWarlock#1598"
 category: Forensics
-description: The Flash is in trouble as one of his enemies has planted a bomb in the middle of central city, he finds an audio file which contains the code to stop the bomb, can you help him solve it?
+description: The avengers face a new threat, Mr.Invisible has escaped the prison but has left behind his phone. The avengers know that his phone has his current location and it is can be accessed using a key hidden in an image and an audio file. Can you help them find it ? 
 value: 500
 type: dynamic
 decay: 450
 minimum: 100
 
 flags:
-  - csictf{7h47_w45_50m3_9o0d_r3v3R51n9}
+  - csictf{7h47_15_h0w_y0u_c4n_83c0m3_1nv151813}
 
 files:
   - "forensics/esrom/morse.wav"
+  - "forensics/esrom/nyc.png"
 tags: 
   - forensics
 
