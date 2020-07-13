@@ -1,4 +1,3 @@
-
 # esrom
 
 Authors: [21StWarlock#1598](21StWarlock#1598)
@@ -12,12 +11,6 @@ Reverse morse code(audio) to get a combination of 1's and 0's and then reverse t
 - hex code decoder
 
 Files: flag.wav
-```
-# Exploitation
-
- The target in this challenge is to reverse engineer this clip to find the flag .
-
-```
 ## Sources
 
 - [flag.wav](./flag.wav)
