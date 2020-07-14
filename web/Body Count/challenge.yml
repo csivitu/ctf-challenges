@@ -5,7 +5,7 @@ category: Web
 description: |
   Here's a character count service for you!
 
-  http://chall.csivit.com:
+  http://chall.csivit.com:30202
 
 value: 500
 type: dynamic
@@ -30,3 +30,4 @@ containers:
 
 expose:
 - containerPort: 80
+- nodeport: 30202
