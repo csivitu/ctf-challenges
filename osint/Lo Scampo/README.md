@@ -13,7 +13,8 @@ This is a simple OSINT challenge.
 ## Sources
 
 ```
-Malcolm X took Broiestevane to a Day of the Dead themed party but she never returned. Her only friends, Mr Bean and the Pink Panther realised that she was missing when she didn't show up for an exam. Broistevane liked posting pictures, where was the party held?
+Malcolm X took Broiestevane to a Day of the Dead themed party but she never returned. Her only friends, Mr Bean and the Pink Panther realised that she
+was missing when she didn't show up for an exam. Broistevane liked posting pictures, where was the party held?
 (Don't forget to wrap your answer in csictf{})
 ```
 
