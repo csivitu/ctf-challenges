@@ -2,6 +2,7 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad,unpad
 from Crypto.Random import get_random_bytes
 import binascii
+import sys
 
 key = get_random_bytes(16)
 iv = get_random_bytes(16)
@@ -22,17 +23,25 @@ def decrypt(str2):
 
 
 print("We implemented a really cool AES-encryption for our login, however in the process we forgot the username and password to the admin account.")
+sys.stdout.flush()
 print("We don't remember the exact credentials but the username was similar to c?i and password similar to c?f.")
+sys.stdout.flush()
 print("When we entered 'user:c?i' and 'pass:c?f' the portal spit out 2 hex strings : ")
+sys.stdout.flush()
 enc1=encrypt("user:c?i")
 enc2=encrypt("pass:c?f")
 hexstring1=binascii.hexlify(enc1)
 hexstring2=binascii.hexlify(enc2)
 print()
+sys.stdout.flush()
 print(str(binascii.hexlify(iv))[2:-1]+str(hexstring1)[2:-1])
+sys.stdout.flush()
 print(str(binascii.hexlify(iv))[2:-1]+str(hexstring2)[2:-1])
+sys.stdout.flush()
 print()
+sys.stdout.flush()
 print("The only way to login now is to enter 2 hex strings which decrypt to the correct credentials.")
+sys.stdout.flush()
 
 try:
     inp1=input('Enter username hex string : ')
@@ -45,8 +54,6 @@ try:
     dec1=str(dec1)[2:-1]
     dec2=decrypt(inp2)
     dec2=str(dec2)[2:-1]
-    print(dec1)
-    print(dec2)
     if("user:csi" in dec1 and "pass:ctf" in dec2):
         print("Congratulations u fixed our problems, here is the flag : ",flag)
     else:
