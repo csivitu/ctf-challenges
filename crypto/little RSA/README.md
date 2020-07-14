@@ -17,9 +17,7 @@ This challenge is a simple Wiener's attack challenge which has given the values 
 - [a.txt](./a.txt)
 
 ```
-The flag.zip contains the flag I am looking for but it is password protected. The password is the encrypted message which has to be correctly decrypted so I can useit to open the zip file. I tried using RSA but the zip doesn't open by it. Can you help me get the flag please? 
-
-password to the root is : csictf
+The flag.zip contains the flag I am looking for but it is password protected. The password is the encrypted message which has to be correctly decrypted so I can use it to open the zip file. I tried using RSA but the zip doesn't open by it. Can you help me get the flag please? 
 
 Hint 1: Try applying Wiener's attack approximations. - Points 100
 ```
