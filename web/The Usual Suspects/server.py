@@ -56,10 +56,11 @@ class MainHandler(tornado.web.RequestHandler):
         #if self.get_argument('name')==True:
         template_data = TEMPLATE.replace("FOO",self.get_argument('icecream',''))
         t = tornado.template.Template(template_data)
-        self.set_secure_cookie("admin", "false")
         secret = "Unfortunately, you aren't worthy"
         if self.get_secure_cookie("admin")==b"true":
             secret = flag
+        else:
+            self.set_secure_cookie("admin", "false")
         self.write(t.generate(chocolate=chocolate,vanilla=vanilla, butterscotch=butterscotch, application=application, secret=secret))
 
 
