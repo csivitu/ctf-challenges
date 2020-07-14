@@ -1,6 +1,8 @@
 import tornado.template
 import tornado.ioloop
 import tornado.web
+import os, pwd, grp
+
 TEMPLATE = '''
 <html>
  <head><title> 🐱‍👤Hello Hacker</title></head>
@@ -34,7 +36,7 @@ class MainHandler(tornado.web.RequestHandler):
         self.write(t.generate(person=person,application=application))
         
         if self.get_secure_cookie("mycookie")==b"youwin":
-            self.write("csictf{h3r3_i_4m}")
+            self.write(open("rf.txt").read())
         else:
             self.write("Better luck next time!")
         cookie=self.get_secure_cookie("mycookie")
@@ -46,8 +48,22 @@ class MainHandler(tornado.web.RequestHandler):
 application = tornado.web.Application([
     (r"/test", MainHandler)
     
-], debug=True, static_path=None, template_path=None, cookie_secret="Password")
+], debug=True, static_path=None, template_path=None, cookie_secret=open("cs.txt").read()
  
 if __name__ == '__main__':
     application.listen(8000)
     tornado.ioloop.IOLoop.instance().start()
+
+def drop_privileges(uid_name='nobody', gid_name='nogroup'):
+    if os.getuid() != 0:
+        return
+
+    running_uid = pwd.getpwnam(uid_name).pw_uid
+    running_gid = grp.getgrnam(gid_name).gr_gid
+
+    os.setgroups([])
+ 
+    os.setgid(running_gid)
+    os.setuid(running_uid)
+
+    old_umask = os.umask(077)
