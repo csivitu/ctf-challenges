@@ -18,8 +18,5 @@ flags:
 tags:
   - web
 
-files:
-  - "web/The Usual Suspects/source.py"
-
 state: hidden
 version: "0.1"
