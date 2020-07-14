@@ -33,9 +33,9 @@ You have to find the hidden code in `[nyc.jpg](./nyc.jpg)` by using lsb steganog
 ```
 then when you apply steghide `steghide extract -sf morse.wav` you get flag.txt
 
-```
+
 [flag.txt](./flag.txt)
-```
+
 
 when we first look at `Flag.txt` it seems empty but it is filled woth tabs and spaces , using whitespace interpriter when we run the `flag.txt` we get the flag : 
 ```
