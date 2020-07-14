@@ -1,0 +1,25 @@
+name: "The Usual Suspects"
+author: "SrishtiGohain"
+category: web
+
+description: |
+ 'You may think I walk with no 'name' because it can be changed whenever I want. I am a 'person' whose 'secret' can never be found. Can you find this 'person's 'secret'?
+ (I love you 8000.)'
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{h3r3_i_4m}
+
+tags:
+  - web
+
+files:
+  - "web/The Usual Suspects/source.py"
+
+state: hidden
+version: "0.1"
