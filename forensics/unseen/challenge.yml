@@ -1,5 +1,5 @@
 name: "unseen"
-author: "21StWarlock#1598"
+author: "21StWarlock"
 category: Forensics
 description: The avengers face a new threat, Mr.Invisible has escaped the prison but has left behind his phone. The avengers know that his phone has his current location and it is can be accessed using a key hidden in an image and an audio file. Can you help them find it ? 
 value: 500
@@ -11,8 +11,8 @@ flags:
   - csictf{7h47_15_h0w_y0u_c4n_83c0m3_1nv151813}
 
 files:
-  - "forensics/esrom/morse.wav"
-  - "forensics/esrom/nyc.png"
+  - "forensics/unseen/morse.wav"
+  - "forensics/unseen/nyc.png"
 tags: 
   - forensics
 
