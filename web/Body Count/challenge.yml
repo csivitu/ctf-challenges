@@ -1,0 +1,33 @@
+name: "Body Count"
+author: "AJ1479"
+category: Web
+
+description: |
+  Here's a character count service for you!
+
+  http://chall.csivit.com:30202
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{1nj3ct10n_15_p41nfu1}
+
+tags:
+  - web
+
+state: hidden
+version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 80
+
+expose:
+- containerPort: 80
+- nodeport: 30202
