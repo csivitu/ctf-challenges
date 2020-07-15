@@ -18,7 +18,6 @@ flags:
 
 files:
   - "pwn/Smash/hello"
-  - "pwn/Smash/libc.so.6"
 
 tags:
   - pwn
