@@ -1,6 +1,6 @@
 # Body Count
 
-Author: [AJ1479](https://github.com/AJ1479)
+Author: [AJ1479](https://github.com/AJ1479) and [roerohan](https://github.com/roerohan)
 
 ## Description
 
