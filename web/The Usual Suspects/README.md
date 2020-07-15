@@ -109,7 +109,13 @@ if __name__ == '__main__':
 
 - Run the server script with the exploit payload `http://chall.csivit.com:30279/?icecream={{application.settings["cookie_secret"]}}` to get the cookie_secret value `MangoDB` displayed on the website.
   
-- Replace the value of the secure cookie `admin` to the required comparison value `true` to obtain a signed cookie on the browser. Now, replace the signed cookie generated upon running the server script with the one obtained after the secure cookie value was set to `true`. Upon reloading the server script, the text on the website would change from `Unfortunately, you aren't worthy` to the flag value:
+- Replace the value of the secure cookie `admin` to the required comparison value `true` to obtain a signed cookie on the browser. Now, replace the signed cookie generated upon running the server script with the one obtained after the secure cookie value was set to `true`. This results in the following cookie:
+
+```
+2|1:0|10:1594808471|5:admin|8:dHJ1ZQ==|5da7d1e446451e825e42001e7f07360e2e2e77c9c68b14fca1a517259712cdac
+```
+
+- Upon reloading the server script, the text on the website would change from `Unfortunately, you aren't worthy` to the flag value:
 
 ```
 csictf{h3r3_i_4m}
