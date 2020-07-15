@@ -14,7 +14,8 @@ flags:
  - csictf{5up32_m4210_5m45h_8202}
 
 files:
-  - ./hello
+  - "pwn/Smash/hello"
+  - "pwn/Smash/libc.so.6"
 
 tags:
  - pwn
