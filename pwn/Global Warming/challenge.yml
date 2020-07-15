@@ -4,6 +4,8 @@ category: Pwn
 
 description: |
   Greta Thunberg 1 Administration 0
+
+  nc chall.csivit.com 30023
   
 
 value: 500

@@ -5,6 +5,8 @@ category: Reversing
 description: |
   I recovered a binary from my teacher's computer. I tried to reverse it but I couldn't.
 
+  nc chall.csivit.com 30808
+
 value: 500
 type: dynamic
 
@@ -23,3 +25,13 @@ tags:
 
 state: hidden
 version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 30808

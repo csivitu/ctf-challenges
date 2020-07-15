@@ -5,6 +5,8 @@ category: Linux
 description: |
   Cows are following me everywhere I go. Help, I'm trapped!
 
+  nc chall.csivit.com 30611
+
 value: 500
 type: dynamic
 
@@ -21,3 +23,13 @@ files:
 
 state: hidden
 version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 30611

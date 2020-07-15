@@ -6,6 +6,8 @@ description: |
   I saw them put someone in jail. Can you find out who it is?
   They said this is the best prison ever built. You sure can't break it, can you?
 
+  nc chall.csivit.com 30407
+
 value: 500
 type: dynamic
 
@@ -21,3 +23,13 @@ tags:
 
 state: hidden
 version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 30407

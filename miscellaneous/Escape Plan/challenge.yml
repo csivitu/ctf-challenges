@@ -2,7 +2,10 @@ name: "Escape Plan"
 author: "alias-rahil"
 category: Miscellaneous
 
-description: "I found a script that solves ciphers, they say it's pretty secure!"
+description: |
+  I found a script that solves ciphers, they say it's pretty secure!
+
+  nc chall.csivit.com 30419
 
 value: 500
 type: dynamic
@@ -20,3 +23,13 @@ tags:
 
 state: hidden
 version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 30419

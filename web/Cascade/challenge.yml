@@ -5,6 +5,8 @@ category: Web
 description: |
   Welcome to csictf.
 
+  http://chall.csivit.com:30203
+
 value: 500
 type: dynamic
 

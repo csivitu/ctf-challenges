@@ -1,0 +1,24 @@
+name: "Where am I"
+author: "thebongy and roerohan"
+category: Linux
+
+description: |
+  I forgot my 'flag.txt' file on the server...
+
+  Server is at 34.93.37.238.
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+ - csictf{4n0nym0u5_ftp_l0g1n}
+
+tags:
+ - linux
+ - hackthebox
+
+state: hidden
+version: "0.1"
