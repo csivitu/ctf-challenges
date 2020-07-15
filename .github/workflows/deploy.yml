@@ -31,7 +31,7 @@ jobs:
       - name: Deploy
         run: |
           echo ${{ env.COMMITHASH }}
-          ctfup -c ctfup.yml .
+          ctfup -c ctfup.yml -d ${{ env.COMMITHASH }} .
         env:
           COMMITHASH: $(git rev-list -n 1 latest)
   
