@@ -71,7 +71,7 @@ application = tornado.web.Application([
 
 if __name__ == '__main__':
     drop_privileges()
-    application.listen(8000)
+    application.listen(9999)
     print("Listening :)")
     tornado.ioloop.IOLoop.instance().start()
 

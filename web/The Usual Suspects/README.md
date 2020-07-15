@@ -96,25 +96,24 @@ application = tornado.web.Application([
 
 if __name__ == '__main__':
     drop_privileges()
-    application.listen(8000)
+    application.listen(9999)
     print("Listening :)")
     tornado.ioloop.IOLoop.instance().start()
 ```
 <br />
 
-- The server script runs on ```localhost:8000/test```. Input is taken as the "icecream" value. 
+- The server script runs on `http://chall.csivit.com:30279/`. Input is taken as the "icecream" value. 
  
 - A secure cookie is being set and compared to print a flag value. In tornado, signed cookies contain the encoded value of the cookie
-  alongwith a timestamp and an HMAC signature. Such cookies are supported by the set_secure_cookie and get_secure_cookie methods which require a specific secret key:
-  cookie_secret.
+  alongwith a timestamp and an HMAC signature. Such cookies are supported by the set_secure_cookie and get_secure_cookie methods which require a specific secret key: cookie_secret.
 
-- Run the server script with the exploit payload ```localhost:8000/?icecream={{application.settings["cookie_secret"]}}``` to get the cookie_secret value ```MangoDB```
-  displayed on the website.
+- Run the server script with the exploit payload `http://chall.csivit.com:30279/?icecream={{application.settings["cookie_secret"]}}` to get the cookie_secret value `MangoDB` displayed on the website.
   
-- Replace the value of the secure cookie ```admin``` to the  required comparison value ```true``` to obtain a signed cookie on the browser
-  Now, replace the signed cookie generated upon running the server script with the one obtained after the secure cookie value was set to ```true```.
-  Upon reloading the server script, the text on the website would change from ```Unfortunately, you aren't worthy``` to the flag value:
-  ```csictf{h3r3_i_4m}```
+- Replace the value of the secure cookie `admin` to the required comparison value `true` to obtain a signed cookie on the browser. Now, replace the signed cookie generated upon running the server script with the one obtained after the secure cookie value was set to `true`. Upon reloading the server script, the text on the website would change from `Unfortunately, you aren't worthy` to the flag value:
+
+```
+csictf{h3r3_i_4m}
+```
 
 
 The flag is:
