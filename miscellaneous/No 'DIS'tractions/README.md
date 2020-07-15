@@ -28,7 +28,6 @@ Hint 2: Siri and Alexa might be smarter than me, but they won't tell you the ans
 The challenge requires the user to figure out that they have to send a private message to the bot in order to recieve the flag. Texting the bot on any of the text channels will not work and the bot will send the flag only when the user messages the bot privately. If you message the bot on an of the text channels, you get a response which hints you towards messaging the bot personally. 
 <br />
 
-<br />
 
 The flag is:
 

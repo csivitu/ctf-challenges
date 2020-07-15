@@ -21,12 +21,7 @@ flags:
 
 tags:
   - discord
-  - bot
 
-
-hints:
-  - { content: "Siri and Alexa might be smarter than me, but they won't tell you the answer for this question, I will.", cost: 10 }
-  - It's all in the name.
 
 state: hidden
 
