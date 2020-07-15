@@ -1,0 +1,157 @@
+Mitrooon
+bhaiyo aur behno "Enter a number"
+mann ki baat nambar
+
+agar nambar barabar 1 hai {
+	bhaiyo aur behno "s"
+}
+
+nahi toh agar nambar barabar 13 hai {
+	bhaiyo aur behno "_"
+}
+
+
+nahi toh agar nambar barabar 15 hai {
+	bhaiyo aur behno "5"
+}
+
+
+nahi toh agar nambar barabar 22 hai {
+	bhaiyo aur behno "4"
+}
+
+
+nahi toh agar nambar barabar 28 hai {
+	bhaiyo aur behno "k"
+}
+
+
+nahi toh agar nambar barabar 8 hai {
+	bhaiyo aur behno "y"
+}
+
+
+nahi toh agar nambar barabar 17 hai {
+	bhaiyo aur behno "4"
+}
+
+
+nahi toh agar nambar barabar 9 hai {
+	bhaiyo aur behno "_"
+}
+
+
+nahi toh agar nambar barabar 4 hai {
+	bhaiyo aur behno "t"
+}
+
+
+nahi toh agar nambar barabar 3 hai {
+	bhaiyo aur behno "c"
+}
+
+
+nahi toh agar nambar barabar 20 hai {
+	bhaiyo aur behno "r"
+}
+
+
+nahi toh agar nambar barabar 12 hai {
+	bhaiyo aur behno "n"
+}
+
+
+nahi toh agar nambar barabar 0 hai {
+	bhaiyo aur behno "c"
+}
+
+
+nahi toh agar nambar barabar 23 hai {
+	bhaiyo aur behno "t"
+}
+
+
+nahi toh agar nambar barabar 27 hai {
+	bhaiyo aur behno "0"
+}
+
+
+nahi toh agar nambar barabar 10 hai {
+	bhaiyo aur behno "n"
+}
+
+
+nahi toh agar nambar barabar 11 hai {
+	bhaiyo aur behno "4"
+}
+
+
+nahi toh agar nambar barabar 7 hai {
+	bhaiyo aur behno "m"
+}
+
+
+nahi toh agar nambar barabar 25 hai {
+	bhaiyo aur behno "c"
+}
+
+
+nahi toh agar nambar barabar 24 hai {
+	bhaiyo aur behno "_"
+}
+
+
+nahi toh agar nambar barabar 6 hai {
+	bhaiyo aur behno "{"
+}
+
+
+nahi toh agar nambar barabar 16 hai {
+	bhaiyo aur behno "_"
+}
+
+
+nahi toh agar nambar barabar 18 hai {
+	bhaiyo aur behno "_"
+}
+
+
+nahi toh agar nambar barabar 2 hai {
+	bhaiyo aur behno "i"
+}
+
+
+nahi toh agar nambar barabar 5 hai {
+	bhaiyo aur behno "f"
+}
+
+
+nahi toh agar nambar barabar 19 hai {
+	bhaiyo aur behno "g"
+}
+
+
+nahi toh agar nambar barabar 14 hai {
+	bhaiyo aur behno "1"
+}
+
+
+nahi toh agar nambar barabar 21 hai {
+	bhaiyo aur behno "3"
+}
+
+
+nahi toh agar nambar barabar 26 hai {
+	bhaiyo aur behno "0"
+}
+
+
+nahi toh agar nambar barabar 29 hai {
+	bhaiyo aur behno "}"
+}
+
+nahi toh {
+	bhaiyo aur behno ""
+}
+
+achhe din aa gaye
