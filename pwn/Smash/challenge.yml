@@ -12,15 +12,15 @@ decay: 450
 minimum: 100
 
 flags:
- - csictf{5up32_m4210_5m45h_8202}
+  - csictf{5up32_m4210_5m45h_8202}
 
 files:
   - "pwn/Smash/hello"
   - "pwn/Smash/libc.so.6"
 
 tags:
- - pwn
- - binary
+  - pwn
+  - binary
 
 state: hidden
 version: "0.1"
@@ -32,5 +32,5 @@ containers:
       - containerPort: 9999
 
 expose:
-- containerPort: 9999
-  nodePort: 30046
+  - containerPort: 9999
+    nodePort: 30046
