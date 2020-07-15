@@ -1,0 +1,24 @@
+name: "Smash"
+author: "alias-rahil"
+category: Pwn
+
+description: "My first C program that says hello, do you want to try it?"
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+ - csictf{5up32_m4210_5m45h_8202}
+
+files:
+  - ./hello
+
+tags:
+ - pwn
+ - binary
+
+state: hidden
+version: "0.1"
