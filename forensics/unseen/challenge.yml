@@ -3,6 +3,10 @@ author: "21StWarlock"
 category: Forensics
 description: |
   With his dying breath, Prof. Ter Stegen hands us an image and a recording. He tells us that the image is least significant, but is a numerical key to the recording and the recording hides the answer. It may seem as though it's all for nothing, but trust me it's not.
+  	
+  https://mega.nz/file/cmhnAQDB#9dbHojKcxzliZ5NAYtGBN7N8WHCqtoU7kKa5yuJzG0w
+  https://mega.nz/file/h75UCIRJ#YGF3yCViKSQpwogmMgkdPQ1DXMez9Sv2DZBUWvCueSY
+
 type: dynamic
 decay: 450
 minimum: 100
@@ -10,9 +14,7 @@ minimum: 100
 flags:
   - csictf{7h47_15_h0w_y0u_c4n_83c0m3_1nv151813}
 
-files:
-  - "forensics/unseen/morse.wav"
-  - "forensics/unseen/nyc.png"
+
 tags: 
   - forensics
 
