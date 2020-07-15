@@ -18,15 +18,15 @@
 <body style="height: 100vh; text-align: center; background-color: black; color: white; display: flex; flex-direction: column; justify-content: center;">
     <?php
     if (!isset($_GET['file'])) {
-        echo "this is a secret string";
+        echo "shhhhs3cr3tstr1ng";
         header("Location: /?file=index.php");
         exit;
     }
     header("HTTP/1.0 302 Magic");
 
     ini_set('max_execution_time', 5);
-        if ($_COOKIE['key'] != 'true') {
-            setcookie('key', 'false');
+        if ($_COOKIE['key'] != 'shhhhs3cr3tstr1ng') {
+            setcookie('key', 'secret');
             die('Sorry, only people from csivit are allowed to access this page.');
         }
     ?>
