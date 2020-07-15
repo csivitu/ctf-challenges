@@ -1,0 +1,28 @@
+name: "No 'DIS'tractions"
+author: "Shiv10"
+
+
+category: Miscellaneous
+
+description: |
+  I see all, I read all, but I shall not speak until I am 'commanded' to do so. Ask me, and thou shall recieve.
+
+value: 500
+type: dynamic
+
+decay: 450
+
+minimum: 100
+
+
+flags:
+  - csictf{m0r3_huMaN_than_Y0u}
+
+
+tags:
+  - discord
+
+
+state: hidden
+
+version: "0.1"
