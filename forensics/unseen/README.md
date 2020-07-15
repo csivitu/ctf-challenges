@@ -27,7 +27,12 @@ Hint 2: steghide - Points 200
 
 ## Exploit
 
-You have to find the hidden code in `[nyc.jpg](./nyc.jpg)` by using lsb steganography , and the password you get is :
+You have to find the hidden code in `[nyc.jpg](./nyc.jpg)` by using lsb steganography :
+```
+When you visit https://incoherency.co.uk/image-steganography/ and do extract image, at lsb of value 1 bit you get a new image with some numbers  
+```
+
+and the password you get is :
 ```
 42845193
 ```
