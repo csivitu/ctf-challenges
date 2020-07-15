@@ -1,8 +1,8 @@
 name: "unseen"
 author: "21StWarlock"
 category: Forensics
-description: The avengers face a new threat, Mr.Invisible has escaped the prison but has left behind his phone. The avengers know that his phone has his current location and it is can be accessed using a key hidden in an image and an audio file. Can you help them find it ? 
-value: 500
+description: |
+  With his dying breath, Prof. Ter Stegen hands us an image and a recording. He tells us that the image is least significant, but is a numerical key to the recording and the recording hides the answer. It may seem as though it's all for nothing, but trust me it's not.
 type: dynamic
 decay: 450
 minimum: 100

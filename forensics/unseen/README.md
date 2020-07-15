@@ -20,9 +20,7 @@ Files:
 - [nyc.jpg](./nyc.jpg)
 
 ```
-Decode to get the flag
-Hint 1: https://incoherency.co.uk/image-steganography/  - Points 100
-Hint 2: steghide - Points 200
+With his dying breath, Prof. Ter Stegen hands us an image and a recording. He tells us that the image is least significant, but is a numerical key to the recording and the recording hides the answer. It may seem as though it's all for nothing, but trust me it's not.
 ```
 
 ## Exploit
