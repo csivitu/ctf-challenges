@@ -6,6 +6,8 @@ description: |
 
   https://mega.nz/file/cmhnAQDB#9dbHojKcxzliZ5NAYtGBN7N8WHCqtoU7kKa5yuJzG0w
   https://mega.nz/file/h75UCIRJ#YGF3yCViKSQpwogmMgkdPQ1DXMez9Sv2DZBUWvCueSY
+
+value: 500
 type: dynamic
 decay: 450
 minimum: 100
