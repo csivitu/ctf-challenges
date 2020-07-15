@@ -26,10 +26,13 @@ def mathStuff(x):
     y = round(y, 0)
     return y
 
-sys.stdout.flush
-x = round(float(input("Enter a number: ")), 0)
+print("Enter a number: ")
+sys.stdout.flush()
+x = round(float(input()), 0)
 if x == mathStuff(x):
     print('Fail')
+    sys.stdout.flush()
 else:
     print(open('namo.txt').read())
+    sys.stdout.flush()
     
