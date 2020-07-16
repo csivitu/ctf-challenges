@@ -1,0 +1,26 @@
+name: "Secret Society"
+author: "harsoh"
+
+category: Pwn
+
+description: Wanna enter the Secret Society? Well you have to find the secret code first!
+
+value: 500
+type: dynamic
+
+decay: 450
+
+minimum: 100
+
+flags:
+  - csivit{Bu!!er_e3pl01ts_ar5_5asy}
+
+tags:
+  - pwn
+ 
+files:
+  - "pwn/Secret Society/prob.c"
+
+state: hidden
+
+version: "0.1"
