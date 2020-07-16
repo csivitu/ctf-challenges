@@ -186,10 +186,10 @@ l00s lines of output
 .
 .
 .
-fun() took 3.000000 seconds to execute csictf{y0u_d1sc0v3r3d_th3_p4sc4l's_tr14ngl3}
+fun() took 3.000000 seconds to execute csictf{h3_7u2n3d_h1m531f_1n70_4_p1ck13}
 ```
 
 The flag is:
 ```
-csictf{y0u_d1sc0v3r3d_th3_p4sc4l's_tr14ngl3}
+csictf{h3_7u2n3d_h1m531f_1n70_4_p1ck13}
 ```
