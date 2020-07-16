@@ -22,11 +22,15 @@ for i in range(500):
 
     if 'fun()' in inp:
         print(inp)
+    
+    elif 'csictf' in inp:
+        print(inp)
         break
 
-    a, b = list(map(int, inp.split(" ")))
+    else:
+        a, b = list(map(int, inp.split(" ")))
 
-    print(a, b)
-    x=fact(hcf(a,b)+3)
-    print("a = {}, b = {}, x = {}".format(a, b, x))
-    r.sendline(str(x))
+        print(a, b)
+        x=fact(hcf(a,b)+3)
+        print("a = {}, b = {}, x = {}".format(a, b, x))
+        r.sendline(str(x))
