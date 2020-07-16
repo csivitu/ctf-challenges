@@ -15,7 +15,8 @@ COPY ctf.xinetd /etc/xinetd.d/ctf
 COPY ./src /ctf/
 
 RUN chown -R ctf:ctf /ctf && chmod -R 770 /ctf
-RUN su ctf -c "pip3 install pycryptodomex"
+RUN su ctf -c "pip3 install pycryptodome==3.4.3"
+RUN pip3 install pycryptodome==3.4.3
 
 RUN chown -R root:ctf /ctf && \
   chmod -R 750 /ctf
