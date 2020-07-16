@@ -15,7 +15,7 @@ Challenge based on buffer overflow exploit.
 - [prob.c](./prob.c)
 
 ```
-Wanna enter the Secret Society? Well you have to find the secret first!
+Wanna enter the Secret Society? Well you have to find the secret code first!
 
 ```
 
