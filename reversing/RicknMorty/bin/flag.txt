@@ -1,1 +1,1 @@
-flag{shbdckjsdhb}
+csictf{enter_flag_here}
