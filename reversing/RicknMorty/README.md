@@ -1,6 +1,6 @@
-# Blaise
+# RickNMorty
 
-Author: [roerohan](https://github.com/roerohan)
+Author: [Atharva=Gundawar](https://github.com/Atharva-Gundawar/)
 
 ## Description
 
@@ -13,100 +13,165 @@ This is a reversing challenge, can be solved using any decompiler / dissasembler
 
 ## Sources
 
-- [blaise](./bin/blaise)
+- [RickNMorty](./bin/RickNMorty)
 
 ```
-I recovered a binary from my teacher's computer. I tried to reverse it but I couldn't.
+Rick has been captured by the council of ricks and in this dimmention morty has to save him, the chamber holding rick needs a key . Can you help him find the key ? 
 ```
 
 ## Exploit
 
 Open `ghidra` and analyze the binary. You can see the following main function:
 
-```c
+```
+
 undefined8 main(void)
 
 {
-  uint uVar1;
+  int iVar1;
   time_t tVar2;
+  ulong uVar3;
+  long lVar4;
+  int local_4c;
+  time_t local_48;
+  time_t local_40;
+  time_t local_38;
+  uint local_30;
+  uint local_2c;
+  char *local_28;
+  int local_20;
+  int local_1c;
   
   setbuf(stdout,(char *)0x0);
   setbuf(stdin,(char *)0x0);
   setbuf(stderr,(char *)0x0);
-  tVar2 = time((time_t *)0x0);
+  tVar2 = time(&local_38);
   srand((uint)tVar2);
-  uVar1 = display_number(0xf,0x14,0x14);
-  process((ulong)uVar1);
+  time(&local_40);
+  local_1c = 1;
+  local_20 = 0;
+  while( true ) {
+    iVar1 = rand();
+    if (iVar1 % 400 + 100 <= local_20) break;
+    iVar1 = rand();
+    local_2c = iVar1 % 10 + 6;
+    iVar1 = rand();
+    local_30 = iVar1 % 10 + 6;
+    printf("%d %d",(ulong)local_2c,(ulong)local_30);
+    __isoc99_scanf();
+    uVar3 = function1(local_2c,local_30);
+    lVar4 = function2((int)uVar3 + 3);
+    if ((long)local_4c != lVar4) {
+      local_1c = 0;
+    }
+    local_20 = local_20 + 1;
+  }
+  time(&local_48);
+  local_28 = (char *)(double)(local_48 - local_40);
+  printf(local_28,"fun() took %f seconds to execute \n");
+  if ((local_1c == 1) && ((double)local_28 <= 5.00000000)) {
+    system("cat flag.txt");
+  }
   return 0;
 }
+
+
 ```
 
-So first, you can see that the value returned by `display_number()` is stored in a variable `uVar1`. On seeing the decompiled `display_number()` function, you see that it simply prints a random value in the given range. The range, as you see in `main()` is from `0xf` to `0x14`, which is from `15` to `20` in integers.
+So at first look we can see that there is a time limit of 5 sec for the program to run , and that two random numbers `local_2c` and `local_30` are ouptupted which are in turn processed by the following functions and if the value of the number returned is what the user inputs for all casses then the the flag is outputed :
 <br />
 
-Now, it runs the process function, and passes `uVar1` to it.
+The first function is called function 1 and it consits of : 
 
-```c
-ulong process(uint param_1)
+```
+
+ulong function1(uint param_1,uint param_2)
 
 {
-  int iVar1;
-  ulong uVar2;
-  undefined4 extraout_var;
-  long in_FS_OFFSET;
-  int local_1c;
-  int local_18;
-  uint local_14;
-  long local_10;
+  uint local_10;
+  uint local_c;
   
-  local_10 = *(long *)(in_FS_OFFSET + 0x28);
-  local_18 = 1;
-  local_14 = 0;
-  while (uVar2 = (ulong)local_14, (int)local_14 <= (int)param_1) {
-    __isoc99_scanf(&DAT_00102008,&local_1c);
-    iVar1 = C((ulong)param_1,(ulong)local_14,(ulong)local_14);
-    if (iVar1 != local_1c) {
-      local_18 = 0;
+  local_c = 0;
+  local_10 = 1;
+  while ((local_10 <= param_1 || (local_10 <= param_2))) {
+    if ((param_1 % local_10 == 0) && (param_2 % local_10 == 0)) {
+      local_c = local_10;
     }
-    local_14 = local_14 + 1;
+    local_10 = local_10 + 1;
   }
-  if (local_18 == 1) {
-    iVar1 = system("cat flag.txt");
-    uVar2 = CONCAT44(extraout_var,iVar1);
-  }
-  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
-                    /* WARNING: Subroutine does not return */
-    __stack_chk_fail();
-  }
-  return uVar2;
+  return (ulong)local_c;
 }
-```
 
-In this, you can see that there's a loop from `0` to `param_1` (which is a random number between 15 and 20, loop variable `local_14`). Then, it passed `param_1` and `local_14` to the `C()` function, which returns `nCr`, where `n` is the first parameter and `r` is the second. It then checks the value of `local_1c`, which was taken as input from the user, and matches it with the value returned by the `C()` function. Whenever this does not match, `local_18` is set to 0, and we need `local_18` to be `1` for execution of `system("cat flag.txt")`.
+```
+You can see that this code starts a loop from 0 to the min of the 2 variables passed to it, then it finds the largest nuber which divides both of them .
+In short this is an HCF function
 <br />
 
-In essence, the program initially displays a random number `n`, between 15 and 20, and then expects the values of `nCr` where `r` ranges from `0` to `n`. If all these match, it prints the flag. We can write a [python script](./solve.py) to do so.
+The second function is called function 2 and it consits of : 
 
-```python
+```
+
+long function2(uint param_1)
+
+{
+  long lVar1;
+  
+  if (param_1 == 0) {
+    lVar1 = 1;
+  }
+  else {
+    lVar1 = function2(param_1 - 1);
+    lVar1 = lVar1 * (ulong)param_1;
+  }
+  return lVar1;
+}
+
+```
+You can see that these lines of code is a code for a factorial function
+
+<br />
+
+In essence, the program initially displays 2 random number `a` and `b`, between 10 and 16, and then expects the values of the factorial of its HCF random number of times between 100 and 500. If all these match in a given time limmit of 5 seconds , it prints the flag. We can write a [python script](./solve.py) to do so.
+
+```
+
 from pwn import *
 
-r = remote(HOST, PORT)
-n = int(r.recv(100).decode())
+r = remote('localhost', 3000)
 
-def nCr(n, r):
-    return str(int(fact(n) / (fact(r) * fact(n - r))))
-  
-def fact(n): 
-    res = 1
-    for i in range(2, n+1): 
-        res = res * i     
-    return res 
 
-for i in range(n+1):
-    print(nCr(n,i))
-    r.sendline(nCr(n,i))
+def fact(n):
+    if n==1:
+        return n
+    else:
+        return n * fact(n-1)
 
-print(r.recv().decode())
+def hcf(a,b):
+    hcf = 0
+    for i in range(1,max(a,b)): 
+        if( a%i == 0 and  b%i == 0 ):
+            hcf = i
+    return hcf
+
+
+for i in range(500):
+    inp=r.recv(100).decode()
+
+    if 'fun()' in inp:
+        print(inp)
+    
+    elif 'csictf' in inp:
+        print(inp)
+        break
+
+    else:
+        a, b = list(map(int, inp.split(" ")))
+
+        print(a, b)
+        x=fact(hcf(a,b)+3)
+        print("a = {}, b = {}, x = {}".format(a, b, x))
+        r.sendline(str(x))
+        
 ```
 
 Run this script with python after replacing HOST and PORT.
@@ -114,25 +179,14 @@ Run this script with python after replacing HOST and PORT.
 ```
 $ python solve.py
 [+] Opening connection to HOST on port PORT: Done
-1
-17
-136
-680
-2380
-6188
-12376
-19448
-24310
-24310
-19448
-12376
-6188
-2380
-680
-136
-17
-1
-csictf{y0u_d1sc0v3r3d_th3_p4sc4l's_tr14ngl3}
+.
+.
+.
+l00s lines of output 
+.
+.
+.
+fun() took 3.000000 seconds to execute csictf{y0u_d1sc0v3r3d_th3_p4sc4l's_tr14ngl3}
 ```
 
 The flag is:
