@@ -1,4 +1,4 @@
-FROM python:2.7-slim
+FROM python:3.7-slim
 
 RUN apt-get update && apt-get install -y \
   xinetd \
@@ -13,8 +13,7 @@ COPY ctf.xinetd /etc/xinetd.d/ctf
 COPY ./src /ctf/
 
 RUN chown -R root:ctf /ctf && \
-  chmod -R 750 /ctf && \
-  chmod 740 /ctf/flag.txt
+  chmod -R 750 /ctf
 
 ENTRYPOINT []
 CMD ["/usr/sbin/xinetd", "-dontfork"]
