@@ -1,12 +1,10 @@
-name: "Login Error"
+name: "Secret Society"
 author: "harsoh"
 
-category: Crypto
+category: Pwn
 
 description: |
-  We forgot our credentials, help us to get the flag.
-
-  nc chall.csivit.com 30431
+  Wanna enter the Secret Society? Well you have to find the secret code first!
 
 value: 500
 type: dynamic
@@ -16,11 +14,13 @@ decay: 450
 minimum: 100
 
 flags:
-  - csictf{Sh4u!d_hav3_n0t_u5ed_CBC}
+  - csivit{Bu!!er_e3pl01ts_ar5_5asy}
 
 tags:
-  - crypto
-  - aes
+  - pwn
+ 
+files:
+  - "pwn/Secret Society/bin/secret-society"
 
 state: hidden
 
@@ -34,4 +34,4 @@ containers:
 
 expose:
 - containerPort: 9999
-  nodePort: 30431
+  nodePort: 30041

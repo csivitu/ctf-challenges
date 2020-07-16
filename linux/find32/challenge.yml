@@ -4,8 +4,10 @@ category: Linux
 
 description: |
   I should have really named my files better. I thought I've hidden the flag, now I can't find it myself.
+  (Wrap your flag in csictf{})
 
-  nc chall.csivit.com 30630
+  ssh user1@chall.csivit.com -p 30630
+  Password is find32
 
 value: 500
 type: dynamic
@@ -26,8 +28,8 @@ containers:
   server:
     build: .
     ports:
-      - containerPort: 9999
+      - containerPort: 22
 
 expose:
-- containerPort: 9999
+- containerPort: 22
   nodePort: 30630
