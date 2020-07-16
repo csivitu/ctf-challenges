@@ -14,7 +14,7 @@ decay: 450
 minimum: 100
 
 flags:
-  - csictf{y0u_d1sc0v3r3d_th3_p4sc4l's_tr14ngl3}
+  - csictf{h3_7u2n3d_h1m531f_1n70_4_p1ck13}
 
 files:
   - "reversing/Blaise/bin/blaise"
