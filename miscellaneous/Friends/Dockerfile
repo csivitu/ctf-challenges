@@ -11,11 +11,9 @@ RUN useradd -M -d /ctf ctf
 RUN echo "Connection blocked" > /etc/banner_fail
 COPY ctf.xinetd /etc/xinetd.d/ctf
 COPY ./src /ctf/
-RUN mv /ctf/dotgit /ctf/.git
 
 RUN chown -R root:ctf /ctf && \
-  chmod -R 750 /ctf && \
-  chmod -R 740 /ctf/.git/*
+  chmod -R 750 /ctf
 
 ENTRYPOINT []
 CMD ["/usr/sbin/xinetd", "-dontfork"]
