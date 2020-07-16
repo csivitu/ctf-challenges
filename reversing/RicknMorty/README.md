@@ -1,6 +1,6 @@
 # RickNMorty
 
-Author: [Atharva=Gundawar](https://github.com/Atharva-Gundawar/)
+Author: [Atharva-Gundawar](https://github.com/Atharva-Gundawar/)
 
 ## Description
 
