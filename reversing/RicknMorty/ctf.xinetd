@@ -9,7 +9,7 @@ service ctf
     port        = 9999
     bind        = 0.0.0.0
     server      = /usr/sbin/chroot
-    server_args = --userspec=1000:1000 /home/ctf ./RicknMorty
+    server_args = --userspec=1000:1000 /home/ctf ./RickNMorty
     banner_fail = /etc/banner_fail
     # safety options
     per_source  = 10 # the maximum instances of this service per source IP address
