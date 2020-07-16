@@ -1,4 +1,4 @@
 #! /bin/sh
 
 cd /ctf
-/usr/local/bin/python ques.py
+/usr/bin/python3 ques.py
