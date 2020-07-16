@@ -1,0 +1,33 @@
+name: "find32"
+author: "Pragati1610"
+category: Linux
+
+description: |
+  I should have really named my files better. I thought I've hidden the flag, now I can't find it myself.
+
+  nc chall.csivit.com 30630
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{th15_15_unu5u41}
+
+tags:
+  - linux
+
+state: hidden
+version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 30630
