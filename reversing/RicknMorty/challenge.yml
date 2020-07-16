@@ -1,0 +1,37 @@
+name: "RicknMorty"
+author: "21StWarlock#1598"
+category: Reversing
+
+description: |
+  Rick has been captured by the council of ricks and in this dimmention morty has to save him, the chamber holding rick needs a key . Can you help him find the key ?
+
+  nc chall.csivit.com 30827
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{h3_7u2n3d_h1m531f_1n70_4_p1ck13}
+
+files:
+  - "reversing/RicknMorty/bin/RickNMorty"
+
+tags:
+  - binary
+  - reversing
+
+state: hidden
+version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 30827
