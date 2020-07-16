@@ -17,22 +17,16 @@
 
 <body style="height: 100vh; text-align: center; background-color: black; color: white; display: flex; flex-direction: column; justify-content: center;">
     <?php
-    if (!isset($_GET['file'])) {
-        echo "shhhhs3cr3tstr1ng";
-        header("Location: /?file=index.php");
-        exit;
-    }
-    header("HTTP/1.0 302 Magic");
-
     ini_set('max_execution_time', 5);
-        if ($_COOKIE['key'] != 'shhhhs3cr3tstr1ng') {
-            setcookie('key', 'secret');
-            die('Sorry, only people from csivit are allowed to access this page.');
-        }
+    if ($_COOKIE['password'] !== getenv('PASSWORD')) {
+        setcookie('password', 'PASSWORD');
+        die('Sorry, only people from csivit are allowed to access this page.');
+    }
     ?>
 
     <h1>Character Count as a Service</h1>
     <form>
+        <input type="hidden" value="wc.php" name="file">
         <textarea style="border-radius: 1rem;" type="text" name="text" rows=30 cols=100></textarea><br />
         <input type="submit">
     </form>

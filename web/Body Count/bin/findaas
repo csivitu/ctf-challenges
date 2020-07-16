@@ -1,0 +1,5 @@
+#! /bin/bash
+
+echo "Enter a filename and find it here!"
+
+find . -name $1
