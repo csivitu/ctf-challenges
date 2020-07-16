@@ -2,14 +2,16 @@
 #include <stdlib.h>
 #include <time.h>
 
-unsigned long long function2(unsigned int n)
+#define ll long long
+
+ll function2(ll n)
 {
    if (n == 0)
       return 1;
    return n * function2(n - 1);
 }
 
-unsigned int function1(unsigned int a, unsigned int b)
+ll function1(ll a, ll b)
 {
    int hcf = 0;
    for (int i = 1; i <= a || i <= b; i++)
@@ -27,7 +29,7 @@ int retrandom(int lower, int upper)
 
 int main()
 {
-   int a, b, i, hcf;
+   ll a, b, i, hcf;
 
    setbuf(stdin, NULL);
    setbuf(stdout, NULL);
@@ -42,8 +44,8 @@ int main()
       a = 6 + rand() % 10;
       b = 6 + rand() % 10;
       printf("%d %d\n", a, b);
-      int inp;
-      scanf("%d", &inp);
+      ll inp;
+      scanf("%lld", &inp);
       if (inp != function2(function1(a, b) + 3))
       {
          done = 0;
@@ -54,7 +56,10 @@ int main()
    printf("fun() took %f seconds to execute \n", time_taken);
    if (done == 1 && time_taken <= 30)
    {
+      printf("Hey, you got me!\n");
       system("cat flag.txt");
+   } else {
+      printf("Nahh.");
    }
 
    return 0;
