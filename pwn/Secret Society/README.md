@@ -26,6 +26,11 @@ to exploit it somehow. The first thing to notice is that the secret_phrase buffe
 Noticing that the strcat function can cause an overflow leads to the answer. If we input 128 or greater bytes of 
 input then the strcat function would append some string to to the secret_phrase buffer and push the null byte to the flag 
 buffer and thus printing out the secret phrase along with the flag.
+
+```
+$ python2 -c "print 'a'*128" | ./Secret Society
+```
+
 <br /> 
 
 The flag is:
