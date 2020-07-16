@@ -52,7 +52,7 @@ int main()
    time(&end);
    double time_taken = (end - start);
    printf("fun() took %f seconds to execute \n", time_taken);
-   if (done == 1 && time_taken <= 5)
+   if (done == 1 && time_taken <= 30)
    {
       system("cat flag.txt");
    }
