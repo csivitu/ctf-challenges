@@ -3,7 +3,10 @@ author: "harsoh"
 
 category: Crypto
 
-description: We forgot our credentials, help us to get the flag.
+description: |
+  We forgot our credentials, help us to get the flag.
+
+  nc chall.csivit.com 30431
 
 value: 500
 type: dynamic
