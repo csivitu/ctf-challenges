@@ -9,7 +9,9 @@ This is a linux based finding challenge.
 ## Sources
 
 ```
+I should have really named my files better. I thought I've hidden the flag, now I can't find it myself.
 
+nc chall.csivit.com 30630
 ```
 
 ## Exploit
