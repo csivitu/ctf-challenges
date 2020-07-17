@@ -29,7 +29,8 @@ def change_state(waves, state):
                 challenge_yml = yaml.load(chall, Loader=yaml.FullLoader)
                 challenge_yml['state'] = state
 
-                visible[category].append(challenge_yml['name'])
+                if state == 'visible':
+                    visible[category].append(challenge_yml['name'])
 
                 chall = open(f'{category}/{challenge}/challenge.yml', 'w')
 
@@ -86,7 +87,7 @@ def firewall(visible):
 
 # # Synchronize each category in it's own thread.
 if __name__ == "__main__":
-    visible = change_state(['wave1',], 'visible')
+    visible = change_state(['wave1',], 'hidden')
 
 #     init()
 #     categories = get_categories()

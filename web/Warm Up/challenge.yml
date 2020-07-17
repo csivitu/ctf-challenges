@@ -22,7 +22,7 @@ tags:
 state: hidden
 version: "0.1"
 
-replicas: 3
+replicas: 5
 containers:
   server:
     build: .
