@@ -2,6 +2,7 @@ import os
 import re
 import threading
 import yaml
+import json
 
 def change_state(waves, state):
     if state not in ['visible', 'hidden']:
@@ -21,91 +22,138 @@ def change_state(waves, state):
         "web": [],
     }
 
-    for wave in waves:
-        for category in challenge_waves[wave]:
-            for challenge in challenge_waves[wave][category]:
-                chall = open(f'{category}/{challenge}/challenge.yml', 'r')
+    hidden = {
+        "crypto": [],
+        "forensics": [],
+        "linux": [],
+        "miscellaneous": [],
+        "osint": [],
+        "pwn": [],
+        "reversing": [],
+        "web": [],
+    }
 
-                challenge_yml = yaml.load(chall, Loader=yaml.FullLoader)
-                challenge_yml['state'] = state
+    for wave in challenge_waves:
+        if wave in waves:
+            for category in challenge_waves[wave]:
+                for challenge in challenge_waves[wave][category]:
+                    chall = open(f'{category}/{challenge}/challenge.yml', 'r')
 
-                if state == 'visible':
-                    visible[category].append(challenge_yml['name'])
+                    challenge_yml = yaml.load(chall, Loader=yaml.FullLoader)
+                    challenge_yml['state'] = state
 
-                chall = open(f'{category}/{challenge}/challenge.yml', 'w')
+                    if state == 'visible':
+                        name = challenge_yml['name'].lower().replace(' ', '-')
+                        if 'expose' in challenge_yml:
+                            visible[category].append({'name': name, 'port': challenge_yml['expose'][0]['nodePort']})
+                        else:
+                            visible[category].append({'name': name, 'port': 0})
+                    else:
+                        if 'expose' in challenge_yml:
+                            hidden[category].append({'name': name, 'port': challenge_yml['expose'][0]['nodePort']})
+                        else:
+                            hidden[category].append({'name': name, 'port': 0})
 
-                yaml.dump(challenge_yml, chall, sort_keys=False)
+                    chall = open(f'{category}/{challenge}/challenge.yml', 'w')
 
-    return visible
+                    yaml.dump(challenge_yml, chall, sort_keys=False)
+        else:
+            for category in challenge_waves[wave]:
+                for challenge in challenge_waves[wave][category]:
+                    chall = open(f'{category}/{challenge}/challenge.yml', 'r')
 
-def firewall(visible):
-    print(visible)
+                    challenge_yml = yaml.load(chall, Loader=yaml.FullLoader)
+                    challenge_yml['state'] = 'hidden'
+                    name = challenge_yml['name'].lower().replace(' ', '-')
 
-    create = """
-    gcloud compute firewall-rules create chall-name \
-    --allow tcp:<port no>
-    --priority 1000 \
-    --target-tags challs
-    """
+                    if 'expose' in challenge_yml:
+                        hidden[category].append({'name': name, 'port': challenge_yml['expose'][0]['nodePort']})
+                    else:
+                        hidden[category].append({'name': name, 'port': 0})
 
-    delete = """
-    gcloud compute firewall-rules delete chall-name
-    """
+
+    return visible, hidden
+
+def firewall(visible, hidden):
+    rules = os.popen('gcloud compute firewall-rules --format=json list').read()
 
     for category in visible:
-        pass
-
-# # Initialize ctfcli with the CTFD_TOKEN and CTFD_URL.
-# def init():
-#     CTFD_TOKEN = os.getenv("CTFD_TOKEN", default=None)
-#     CTFD_URL = os.getenv("CTFD_URL", default=None)
-
-#     if not CTFD_TOKEN or not CTFD_URL:
-#         exit(1)
-
-#     os.system(f"echo '{CTFD_URL}\n{CTFD_TOKEN}\ny' | ctf init")
-
-
-# # Each category is in it's own directory, get the names of all directories that do not begin with '.'.
-# def get_categories():
-#     denylist_regex = r'\..*'
-
-#     categories = [name for name in os.listdir(".") if os.path.isdir(name) and not re.match(denylist_regex, name)]
-#     print("Categories: " + ", ".join(categories))
-#     return categories
-
-
-# # Synchronize all challenges in the given category, where each challenge is in it's own folder.
-# def sync(category):
-#     challenges = [f"{category}/{name}" for name in os.listdir(f"./{category}") if os.path.isdir(f"{category}/{name}")]
-
-#     for challenge in challenges:
-#         if os.path.exists(f"{challenge}/challenge.yml"):
-#             print(f"Syncing challenge: {challenge}")
-#             os.system(f"ctf challenge sync '{challenge}'; ctf challenge install '{challenge}'")
-
-
-# # Synchronize each category in it's own thread.
-if __name__ == "__main__":
-    visible = change_state(['wave1',], 'hidden')
-
-#     init()
-#     categories = get_categories()
-
-#     jobs = []
-#     for category in categories:
-#         jobs.append(threading.Thread(target=sync, args=(category, )))
+        for challenge in visible[category]:
+            if challenge['port'] and challenge['name'] not in rules:
+                os.system(
+                    f"""
+                        gcloud compute firewall-rules create {challenge['name']} \
+                            --allow tcp:{challenge['port']} \
+                            --priority 1000 \
+                            --target-tags challs
+                    """
+                )
+                print(challenge['name'])
     
-#     for job in jobs:
-#         job.start()
+    for category in hidden:
+        for challenge in hidden[category]:
+            if challenge['port'] and challenge['name'] in rules:
+                os.system(
+                    f"""
+                        echo -e "Y\n" | gcloud compute firewall-rules delete {challenge['name']}
+                    """
+                )
+                print(challenge['name'])    
 
-#     for job in jobs:
-#         job.join()
 
-#     print("Synchronized successfully!")
-    # print("The following challenges are now visible:")
+# Initialize ctfcli with the CTFD_TOKEN and CTFD_URL.
+def init():
+    CTFD_TOKEN = os.getenv("CTFD_TOKEN", default=None)
+    CTFD_URL = os.getenv("CTFD_URL", default=None)
 
-    # for category in visible:
-    #     print(f"\n{category}:")
-    #     print('- ' + '\n- '.join([challenge for challenge in visible[category]]))
-    firewall(visible)
+    if not CTFD_TOKEN or not CTFD_URL:
+        exit(1)
+
+    os.system(f"echo '{CTFD_URL}\n{CTFD_TOKEN}\ny' | ctf init")
+
+
+# Each category is in it's own directory, get the names of all directories that do not begin with '.'.
+def get_categories():
+    denylist_regex = r'\..*'
+
+    categories = [name for name in os.listdir(".") if os.path.isdir(name) and not re.match(denylist_regex, name)]
+    print("Categories: " + ", ".join(categories))
+    return categories
+
+
+# Synchronize all challenges in the given category, where each challenge is in it's own folder.
+def sync(category):
+    challenges = [f"{category}/{name}" for name in os.listdir(f"./{category}") if os.path.isdir(f"{category}/{name}")]
+
+    for challenge in challenges:
+        if os.path.exists(f"{challenge}/challenge.yml"):
+            print(f"Syncing challenge: {challenge}")
+            os.system(f"ctf challenge sync '{challenge}'; ctf challenge install '{challenge}'")
+
+
+# Synchronize each category in it's own thread.
+if __name__ == "__main__":
+    visible, hidden = change_state(['wave1',], 'visible')
+
+    init()
+    categories = get_categories()
+
+    jobs = []
+    for category in categories:
+        jobs.append(threading.Thread(target=sync, args=(category, )))
+    
+    for job in jobs:
+        job.start()
+
+    for job in jobs:
+        job.join()
+
+    print("Synchronized successfully!")
+    print("The following challenges are now visible:")
+
+    for category in visible:
+        print(f"\n{category}:")
+        print('- ' + '\n- '.join([challenge['name'] for challenge in visible[category]]))
+
+    firewall(visible, hidden)
+    print("Firewall rules updated.")
