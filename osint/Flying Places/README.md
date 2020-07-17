@@ -11,7 +11,7 @@ This is an osint challenge.
 
 ## Sources
 ```
-A reporter wanted to know where this flight is headed. Where does he live?
+A reporter wanted to know where this flight is headed. Where does he (the reporter) live?
 ```
 
 
