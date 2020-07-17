@@ -1,0 +1,83 @@
+wave1:
+  crypto:
+    - Mein Kampf
+    - Rivest Shamir Adleman
+    - The Climb
+    - Modern Clueless Child
+
+  forensics:
+    - Archenemy
+    - Gradient sky
+    - Panda
+
+  linux:
+    - AKA
+    - find32
+  
+  miscellaneous:
+    - No DIStractions
+    - Friends
+    - Escape Plan
+    - Machine Fix
+
+  osint:
+    - Pirates of the Memorial
+    - Flying Places
+    - Lo Scampo
+  
+  pwn:
+    - pwn intended 0x1
+    - pwn intended 0x2
+    - pwn intended 0x3
+
+  reversing:
+    - Vietnam
+    - pydis2ctf
+    - RicknMorty
+  
+  web:
+    - Cascade
+    - Mr Rami
+    - Warm Up
+    - Secure Portal
+    - Oreo
+
+wave2:
+  crypto:
+    - Bat Soup
+    - little RSA
+    - Login Error
+  
+  forensics:
+    - In Your Eyes
+    - unseen
+
+  linux:
+    - Where am I
+    - HTB 0x1
+
+  miscellaneous:
+    - BroBot
+    - Prime Roll
+    - Prison Break
+  
+  osint:
+    - Stalin for time
+    - Commitment
+  
+  pwn:
+    - Global Warming
+    - Secret Society
+    - Smash
+  
+  reversing:
+    - Esrever
+    - Blaise
+  
+  web:
+    - Body Count
+    - CCC
+    - The Usual Suspects
+    - File Library
+    - The Confused Deputy
+  
