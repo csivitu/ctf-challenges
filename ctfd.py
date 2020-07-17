@@ -88,6 +88,7 @@ def firewall(visible, hidden):
                             --target-tags challs
                     """
                 )
+                print('Created firewall rules for:')
                 print(challenge['name'])
     
     for category in hidden:
@@ -98,6 +99,7 @@ def firewall(visible, hidden):
                         echo -e "Y\n" | gcloud compute firewall-rules delete {challenge['name']}
                     """
                 )
+                print('Deleted firewall rules for:')
                 print(challenge['name'])    
 
 
