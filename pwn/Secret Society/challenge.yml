@@ -26,6 +26,7 @@ state: hidden
 
 version: "0.1"
 
+replicas: 0
 containers:
   server:
     build: .

@@ -25,6 +25,7 @@ files:
 state: hidden
 version: "0.1"
 
+replicas: 5
 containers:
   server:
     build: .
