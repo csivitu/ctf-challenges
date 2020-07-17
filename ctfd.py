@@ -69,7 +69,7 @@ def sync(category):
 
 # Synchronize each category in it's own thread.
 if __name__ == "__main__":
-    visible = change_state(['wave1', 'wav'], 'visible')
+    visible = change_state(['wave1',], 'visible')
 
     init()
     categories = get_categories()
