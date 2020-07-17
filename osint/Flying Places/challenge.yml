@@ -3,7 +3,7 @@ author: :"Parth"
 category: "OSINT"
 
 description: | 
-  A reporter wanted to know where this flight is headed. Where does he live?
+  A reporter wanted to know where this flight is headed. Where does he (the reporter) live?
 
 value: 500
 type: dynamic
