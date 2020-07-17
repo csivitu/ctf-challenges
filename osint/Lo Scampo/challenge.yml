@@ -13,7 +13,7 @@ decay: 450
 minimum: 100
 
 flags:
-  - csictf{libertyhotel}
+  - csictf{liberty_hotel}
 
 tags:
   - osint

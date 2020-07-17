@@ -23,5 +23,5 @@ Go to Mr Bean's Instagram account. Go through the posts until you come across [t
 
 The flag is:
 ```
-csictf{libertyhotel}
+csictf{liberty_hotel}
 ```
