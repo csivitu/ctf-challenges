@@ -18,7 +18,6 @@ flags:
 
 files:
   - "pwn/pwn intended 0x1/bin/pwn-intended-0x1"
-  - "pwn/pwn intended 0x1/bin/pwn-intended-0x1.c"
 
 tags:
   - pwn
