@@ -12,6 +12,9 @@ jobs:
       - name: Setup csivitu/ctfcli
         run: ./ctfd-init
 
+      - name: Install requirements
+        run: pip3 install pyyaml
+
       - name: Deploy
         env:
           CTFD_TOKEN: ${{ secrets.CTFD_TOKEN }}
