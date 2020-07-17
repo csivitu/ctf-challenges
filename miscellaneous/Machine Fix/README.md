@@ -1,4 +1,4 @@
-# Challenge Name
+# Machine Fix
 
 Author: [harsoh](https://github.com/harsoh)
 
@@ -12,19 +12,19 @@ Algorithmic challenge.
 
 ## Sources
 
-- [prob.pdf](./prob.pdf)
+- [code.py](./code.py)
 
 ```
-To help fix the machine, download the PDF.
+We ran a code on a machine a few years ago. It is still running however we forgot what it was meant for. It completed n=523693181734689806809285195318 iterations of the loop and broke down. We want the answer but cannot wait a few more years. Find the answer after n iterations to get the flag.
 
-Hint 1: The machines act like ternary numbers.
+The flag would be of the format csictf{answer_you_get_from_above}.
 
-Hint 2: Think of the contribution of each machine separately.
+Hint 1: Think of the contribution of each bit separately.
 ```
 
 ## Exploit
 
-The problem is a complicated way of saying - Given a positive integer n, find the sum of number of positions with different bits between consecutive ternary numbers from 0 to n.
+The problem is -> Given a positive integer n, find the sum of number of positions with different bits between consecutive ternary numbers from 0 to n.
 <br />
 
 The answer could have been brute-forced but the number is of the order 10^30 so it is not possible. Rather understanding how bits work in any general base helps.

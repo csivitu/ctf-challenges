@@ -1,0 +1,39 @@
+name: "Smash"
+author: "alias-rahil"
+category: Pwn
+
+description: |
+  My first C program that says hello, do you want to try it?
+
+  https://mega.nz/file/UmoyyapQ#jMcq5WmcV-kPusmokMH-okJX6czkgkmMuItRaHWBbU0
+
+  nc chall.csivit.com 30046
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{5up32_m4210_5m45h_8202}
+
+files:
+  - "pwn/Smash/hello"
+
+tags:
+  - pwn
+  - binary
+
+state: hidden
+version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+  - containerPort: 9999
+    nodePort: 30046

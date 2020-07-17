@@ -8,6 +8,8 @@ RUN mkdir /ctf
 WORKDIR /ctf
 RUN useradd -M -d /ctf ctf
 
+RUN chmod 1733 /tmp /var/tmp /dev/shm
+
 RUN echo "Connection blocked" > /etc/banner_fail
 COPY ctf.xinetd /etc/xinetd.d/ctf
 COPY ./src /ctf/

@@ -1,0 +1,36 @@
+name: "Friends"
+author: "ashikka and roerohan"
+category: Miscellaneous
+
+description: |
+  I made a really complicated math function. Check it out.
+
+  nc chall.csivit.com 30425
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+  - csictf{my_n4n_15_4_gr34t_c00k}
+
+files:
+  - "miscellaneous/Friends/src/namo.py"
+
+tags:
+  - miscellaneous
+
+state: hidden
+version: "0.1"
+
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 30425

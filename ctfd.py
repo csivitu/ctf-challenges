@@ -1,6 +1,42 @@
 import os
 import re
 import threading
+import yaml
+
+def change_state(waves, state):
+    if state not in ['visible', 'hidden']:
+        raise Exception("state must be 'visible' or 'hidden'")
+
+    challenge_waves = open('challenge-waves.yml').read()
+    challenge_waves = yaml.load(challenge_waves, Loader=yaml.FullLoader)
+
+    visible = {
+        "crypto": [],
+        "forensics": [],
+        "linux": [],
+        "miscellaneous": [],
+        "osint": [],
+        "pwn": [],
+        "reversing": [],
+        "web": [],
+    }
+
+    for wave in waves:
+        for category in challenge_waves[wave]:
+            for challenge in challenge_waves[wave][category]:
+                chall = open(f'{category}/{challenge}/challenge.yml', 'r')
+
+                challenge_yml = yaml.load(chall, Loader=yaml.FullLoader)
+                challenge_yml['state'] = state
+
+                if state == 'visible':
+                    visible[category].append(challenge_yml['name'])
+
+                chall = open(f'{category}/{challenge}/challenge.yml', 'w')
+
+                yaml.dump(challenge_yml, chall, sort_keys=False)
+
+    return visible
 
 # Initialize ctfcli with the CTFD_TOKEN and CTFD_URL.
 def init():
@@ -34,6 +70,8 @@ def sync(category):
 
 # Synchronize each category in it's own thread.
 if __name__ == "__main__":
+    visible = change_state(['wave1',], 'hidden')
+
     init()
     categories = get_categories()
 
@@ -48,3 +86,8 @@ if __name__ == "__main__":
         job.join()
 
     print("Synchronized successfully!")
+    print("The following challenges are now visible:")
+
+    for category in visible:
+        print(f"\n{category}:")
+        print('- ' + '\n- '.join([challenge for challenge in visible[category]]))

@@ -1,0 +1,28 @@
+name: "little RSA"
+author: "Pragati"
+
+category: Crypto
+
+description: The flag.zip contains the flag I am looking for but it is password protected. The password is the encrypted message which has to be correctly decrypted so I can useit to open the zip file. I tried using RSA but the zip doesn't open by it. Can you help me get the flag please? 
+
+value: 500
+type: dynamic
+
+decay: 450
+
+minimum: 100
+
+flags:
+  - csictf{gr34t_m1nds_th1nk_4l1k3}
+
+tags:
+  - crypto
+  - RSA
+
+files:
+  - "crypto/little RSA/a.txt"
+  - "crypto/little RSA/flag.zip"
+
+state: hidden
+
+version: "0.1"
