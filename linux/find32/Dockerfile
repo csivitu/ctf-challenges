@@ -15,6 +15,8 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 RUN sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
 RUN sed -i 's/ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/' /etc/ssh/sshd_config
 
+RUN chmod go-rx /usr/bin/passwd
+
 COPY ./user1/* /user1/
 COPY ./user2/* /user2/
 
