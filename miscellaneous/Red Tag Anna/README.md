@@ -24,12 +24,12 @@ You were just caught holding hands with a girl, bribe the Red Tag Anna to get aw
 ## Exploit
 
 The question boils down to finding the max element in a list of 300 random integers with atmost 1000 queries. The queries can determine whether the element at 
-some (position) is greater, lesser or equal to some (value). 
+some (position) is greater, lesser or equal to some (value). <br /> 
 A naive solution is to try to find the value of every element using binary search but binary search will need around log2(1000000)~20 queries per element which is much 
-more than the number of queries we have. 
+more than the number of queries we have. <br /> 
 A key observation is that we don't need to binary search the value of an element every time bit rather only when its greater than the current maximum, because otherwise it
 can't be the max element and is of no use to us. It can be proven that when we traverse through a random array of size n, we will encounter a number greater than the
-current maximum ~log2(n) times. 
+current maximum ~log2(n) times. <br /> 
 Thus we do atleast one query on each element to determine whether its greater than current maximum and log2(1000000) queires on log2(n) elements to determine their value.
 Thus doing a total of n + log2(1000000)*log2(n) queries which for n=300 comes around 464 which is much less than the 1000 queries bound given.
 
