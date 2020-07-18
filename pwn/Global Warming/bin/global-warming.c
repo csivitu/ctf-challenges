@@ -8,7 +8,7 @@ void login(char username[10], char *pass)
 {
 
 	printf(pass);
-	if (admin != 0)
+	if (admin == 0xb4dbabe3)
 	{
 		system("cat flag.txt");
 	}

