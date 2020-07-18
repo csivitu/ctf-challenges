@@ -1,4 +1,4 @@
-# Secret Society
+# Red Tag Anna
 
 Author: [harsoh](https://github.com/harsoh)
 
