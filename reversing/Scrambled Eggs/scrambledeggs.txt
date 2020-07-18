@@ -1,0 +1,3 @@
+Encrytped key1 = xtfsyhhlizoiyx                                                                                                                  
+Encrypted key2 = eudlqgluduggdluqmocgyukhbqkx                                                                                                    
+Encrypted flag = lvvrafwgtocdrdzfdqotiwvrcqnd
