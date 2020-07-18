@@ -1,8 +1,7 @@
 from pwn import *
 from math import gcd
 
-# r = remote('ctf-chall-dev.csivit.com', 30827)
-r = remote('localhost', 3000)
+r = remote('ctf-chall-dev.csivit.com', 30827)
 
 def fact(n):
     if n == 1:
