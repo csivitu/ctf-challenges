@@ -1,0 +1,40 @@
+name: "Red Tag Anna"
+author: "harsoh"
+
+category: Miscellaneous
+
+description: |
+  You were just caught holding hands with a girl, bribe the Red Tag Anna to get away unscathed and with the flag.
+
+value: 500
+type: dynamic
+
+decay: 450
+
+minimum: 100
+
+flags:
+  - csictf{y0u_ar5_t8e_k!ng_0f_rAnd0mne55}
+
+tags:
+  - miscellaneous
+  - algo
+ 
+files:
+  - "miscellaneous/Red Tag Anna/bin/prob.pdf"
+  - "miscellaneous/Red Tag Anna/bin/ques.cpp"
+
+state: hidden
+
+version: "0.1"
+
+replicas: 0
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 30041
