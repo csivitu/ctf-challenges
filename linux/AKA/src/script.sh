@@ -10,6 +10,8 @@ alias tail="cowsay Don\'t look at me, I\'m just here to say moo."
 alias less="cowsay Don\'t look at me, I\'m just here to say moo."
 alias more="cowsay Don\'t look at me, I\'m just here to say moo."
 alias sed="cowsay Don\'t look at me, I\'m just here to say moo."
+alias find="cowsay Don\'t look at me, I\'m just here to say moo."
+alias awk="cowsay Don\'t look at me, I\'m just here to say moo."
 
 while :
 do
