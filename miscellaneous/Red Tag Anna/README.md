@@ -28,8 +28,8 @@ some (position) is greater, lesser or equal to some (value). <br />
 A naive solution is to try to find the value of every element using binary search but binary search will need around log2(1000000)~20 queries per element which is much 
 more than the number of queries we have. <br /> 
 A key observation is that we don't need to binary search the value of an element every time bit rather only when its greater than the current maximum, because otherwise it
-can't be the max element and is of no use to us. It can be proven that when we traverse through a random array of size n, we will encounter a number greater than the
-current maximum ~log2(n) times. <br /> 
+can't be the max element and is of no use to us. It can be proven that when we traverse through an array of size n in random order, we will encounter a number greater than the
+current maximum ~log2(n) times. Read more on Expectation of Value to know more about this claim.<br /> 
 Thus we do atleast one query on each element to determine whether its greater than current maximum and log2(1000000) queires on log2(n) elements to determine their value.
 Thus doing a total of n + log2(1000000)*log2(n) queries which for n=300 comes around 464 which is much less than the 1000 queries bound given.
 
