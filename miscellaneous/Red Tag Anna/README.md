@@ -4,7 +4,7 @@ Author: [harsoh](https://github.com/harsoh)
 
 ## Description
 
-IChallenge based on randomized algorithms and binary search.
+Challenge based on randomized algorithms and binary search.
 
 ## Requirements
 
