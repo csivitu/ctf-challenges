@@ -23,6 +23,22 @@ Key="12123"
 ```
 
 ## Exploit
+Our goal is to generate the flag, and we know for a fact that it should start with `csictf{`. We also know that the first byte in the hex cipher text is `0x52` = 82 (base 10), and the character 'c' in ascii is 99. Since a key is given, it is useful to attempt to do an XOR, we notice that 
+```
+82 ^ 99 = 49
+```
+49 is 1 in ascii, which matches the first character of key!
+But when we try the next byte, 0xf4 = 244, with the next character of the flag 's' = 115, we notice that
+```
+244 ^ 115 = 135
+```
+Which does not match the next character of the key (2 = 50 in ascii)
+
+We make the crucial observation that to match 's', you would have needed
+```
+115 ^ 50 = 65
+```
+65 = 0x41, and we notice its in the cipher text right after the f. We also make the discovery that 'f' is just obfuscation, repeating every three characters in the flag. We remove the Fs (lol) and use XOR to solve the challenge:
 
 Use the [encryption](./Encryptor.py) and [decryption](./Decryptor.py) scripts to find the flag. Try to encrypt and compare a known text segment with the given
 ciphertext, like 'csi' or 'csictf{}' (because the flag format is known). Extra characters (here, 'f') are present (at regular intervals of 2) throughout
