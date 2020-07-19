@@ -1,4 +1,4 @@
-# Bat Soup
+# Quick Math
 Author: [ashikka](https://github.com/ashikka)
 
 ## Description
