@@ -13,7 +13,7 @@ function isAdmin(req, res, next) {
     next();
 }
 
-// router.use(isAdmin);
+router.use(isAdmin);
 
 router.get('/', (req, res) => {
     res.render('admin');
