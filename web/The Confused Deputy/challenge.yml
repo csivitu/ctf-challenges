@@ -22,12 +22,19 @@ tags:
 state: hidden
 version: "0.1"
 
-replicas: 0
+replicas: 5
 containers:
   server:
     build: .
     ports:
       - containerPort: 9999
+    resources:
+      limits:
+        cpu: 500m
+        memory: 1000Mi
+      requests:
+        cpu: 10m
+        memory: 30Mi
 
 expose:
 - containerPort: 9999
