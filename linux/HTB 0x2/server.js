@@ -11,7 +11,7 @@ app.use(session({
     secret: 'b1gb24int1m3',
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: true },
+    cookie: { secure: false },
 }));
 
 app.use(bodyParser.json());
