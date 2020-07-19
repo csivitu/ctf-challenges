@@ -36,4 +36,4 @@ containers:
 
 expose:
 - containerPort: 9999
-  nodePort: 
+  nodePort: 30721
