@@ -1,10 +1,10 @@
-name: "Red Tag Anna"
+name: "Mafia"
 author: "harsoh"
 
 category: Miscellaneous
 
 description: |
-  You were just caught holding hands with a girl, bribe the Red Tag Anna to get away unscathed and with the flag.
+  The CTF Mafia wants to remove the competition (i.e.you) to again have monopoly over flags. Bribe the Mafia to get away unscathed and with the flag. 
 
 value: 500
 type: dynamic
@@ -21,8 +21,7 @@ tags:
   - algo
  
 files:
-  - "miscellaneous/Red Tag Anna/bin/prob.pdf"
-  - "miscellaneous/Red Tag Anna/bin/ques.cpp"
+  - "miscellaneous/Mafia/bin/ques.cpp"
 
 state: hidden
 
@@ -37,4 +36,4 @@ containers:
 
 expose:
 - containerPort: 9999
-  nodePort: 30041
+  nodePort: 
