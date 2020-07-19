@@ -6,6 +6,8 @@ category: Pwn
 description: |
   Wanna enter the Secret Society? Well you have to find the secret code first!
 
+  nc chall.csivit.com 30041
+
 value: 500
 type: dynamic
 

@@ -74,4 +74,4 @@ so using any online RSA calculator we can find m = 18429
 <br />
 
 The flag is:
-csictf{gr34t_m1nds_th1nk_4l1k3}
+csictf{gr34t_m1nds_th1nk_4l1ke}
