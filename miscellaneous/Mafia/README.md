@@ -1,4 +1,4 @@
-# Red Tag Anna
+# Mafia
 
 Author: [harsoh](https://github.com/harsoh)
 
@@ -17,7 +17,7 @@ Challenge based on randomized algorithms and binary search.
 - [ans.py](./ans.py)
 
 ```
-You were just caught holding hands with a girl, bribe the Red Tag Anna to get away unscathed and with the flag.
+The CTF Mafia wants to remove the competition (i.e.you) to again have monopoly over flags. Bribe the Mafia to get away unscathed and with the flag. 
 
 ```
 
