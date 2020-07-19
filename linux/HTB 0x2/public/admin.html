@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTB 0x2</title>
+</head>
+<body>
+    <h1>Welcome, Admin</h1>
+
+    <p>You can search your users here.</p>
+    <!-- csictf{n0t_4ll_1nj3ct10n5_4re_SQLi} -->
+    <form action="/admin/query" method="POST">
+        <textarea rows=5 cols=30 name="obj"></textarea><br />
+        <input type="radio" name="type" value="json" /> json <br />
+        <input type="radio" name="type" value="xml" /> xml <br />
+        <input type="radio" name="type" value="yaml" /> yaml <br />
+        <input type="radio" name="type" value="toml" /> toml <br />
+        <input type="radio" name="type" value="brainfuck" /> brainfuck <br />
+        <input type="radio" name="type" value="modiscript" /> modiscript <br />
+        <input type="radio" name="type" value="cpp" /> cpp <br />
+        <input type="radio" name="type" value="emojilang" /> emojilang <br />
+        <input type="radio" name="type" value="csictf" />  csictf <br />
+        <input type="submit" />
+    </form>
+
+    {{#if query}}
+    You ran db.findOne( {{ query }} )
+    {{/if}}
+    <br />
+    <br />
+    {{ template }}
+</body>
+</html>
