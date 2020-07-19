@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
-cd /ctf
-/usr/bin/c++ ques.cpp
+/etc/init.d/xinetd start;
+sleep infinity;
