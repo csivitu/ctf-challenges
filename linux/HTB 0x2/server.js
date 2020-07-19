@@ -5,6 +5,8 @@ const hbs = require('express-handlebars');
 const path = require('path');
 const User = require('./models/user');
 const adminRouter = require('./routes/admin');
+const zipRouter = require('./routes/zip');
+
 require('./models/db');
 
 const app = express();
@@ -65,9 +67,10 @@ function isLoggedIn(req, res, next) {
 }
 
 app.get('/home', isLoggedIn, (req, res) => {
-    res.send('HOME!');
+    res.render('home');
 });
 
 app.use('/admin', adminRouter);
+app.use('/zip', zipRouter);
 
 app.listen(PORT, () => console.log(`Running on port: ${PORT}`));

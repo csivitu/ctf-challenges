@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zip file extractor</title>
+</head>
+<body>
+    <h1>Zip file extractor</h1>
+    <p>Give me a zip file, i'll extract it for you! </p>
+    <form method="POST" action='/zip/extract' enctype='multipart/form-data'>
+        <input type="file" name="zipFile">
+        <input type="submit">
+    </form>
+</body>
+</html>

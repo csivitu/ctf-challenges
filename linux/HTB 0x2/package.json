@@ -16,6 +16,8 @@
     "express-session": "^1.17.1",
     "libxmljs2": "^0.26.0",
     "mongoose": "^5.9.25",
+    "multer": "^1.4.2",
+    "unzipper": "^0.8.0",
     "xml2json": "^0.12.0"
   }
 }
