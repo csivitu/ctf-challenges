@@ -65,7 +65,7 @@ wave2:
     - BroBot
     - Prime Roll
     - Prison Break
-    - Mafia
+    # - Mafia
   
   osint:
     - Commitment
