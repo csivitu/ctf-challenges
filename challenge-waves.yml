@@ -13,7 +13,7 @@ wave1:
   linux:
     - AKA
     - find32
-  
+
   miscellaneous:
     - No DIStractions
     - Friends
@@ -24,7 +24,7 @@ wave1:
     - Pirates of the Memorial
     - Flying Places
     - Lo Scampo
-  
+
   pwn:
     - pwn intended 0x1
     - pwn intended 0x2
@@ -34,7 +34,7 @@ wave1:
     - Vietnam
     - pydis2ctf
     - RicknMorty
-  
+
   web:
     - Cascade
     - Mr Rami
@@ -47,7 +47,7 @@ wave2:
     - Quick Math
     - little RSA
     - Login Error
-  
+
   forensics:
     - In Your Eyes
     - unseen
@@ -66,27 +66,27 @@ wave2:
     - Prime Roll
     - Prison Break
     # - Mafia
-  
+
   osint:
     - Commitment
     - Shaken
-  
+
   pwn:
     - Global Warming
     - Secret Society
     - Smash
-  
+
   reversing:
     - Esrever
     - Blaise
     - Scrambled Eggs
-  
+
   web:
     - Body Count
     - CCC
     - The Usual Suspects
     - File Library
     - The Confused Deputy
-  
-  feedback:
+
+  # feedback:
     # - Feedback
