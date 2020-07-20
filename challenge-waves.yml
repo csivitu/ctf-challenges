@@ -55,17 +55,17 @@ wave2:
   linux:
     - Where am I
     - HTB 0x1
-    # - HTB 0x2
-    # - HTB 0x3
-    # - HTB 0x4
-    # - HTB 0x5
-    # - HTB 0x6
+    - HTB 0x2
+    - HTB 0x3
+    - HTB 0x4
+    - HTB 0x5
+    - HTB 0x6
 
   miscellaneous:
     - BroBot
     - Prime Roll
     - Prison Break
-    # - Mafia
+    - Mafia
 
   osint:
     - Commitment
@@ -88,5 +88,5 @@ wave2:
     - File Library
     - The Confused Deputy
 
-  # feedback:
-    # - Feedback
+  feedback:
+    - Feedback
