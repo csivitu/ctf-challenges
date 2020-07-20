@@ -31,13 +31,12 @@ app.use(session({
     cookie: { secure: false },
 }));
 
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-    res.render('index.html');
+app.get('/robots.txt', (req, res) => {
+    res.send('Disallow: /admin');
 });
 
 app.post('/', async (req, res) => {
@@ -72,5 +71,9 @@ app.get('/home', isLoggedIn, (req, res) => {
 
 app.use('/admin', adminRouter);
 app.use('/zip', zipRouter);
+
+app.get('/', (req, res) => {
+    res.render('index.html');
+});
 
 app.listen(PORT, () => console.log(`Running on port: ${PORT}`));
