@@ -18,14 +18,14 @@ decay: 450
 minimum: 100
 
 flags:
-  - csictf{nowucme}
+  - csictf{ucbr4ill3}
+
+files:
+  - "forensics/In Your Eyes/coolguy.bmp"
 
 tags:
   - forensics
   - steganography
-  
-files:
-  - "forensics/In Your Eyes/coolguy.bmp"
 
 state: hidden
 version: "0.1"
