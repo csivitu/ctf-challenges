@@ -34,5 +34,5 @@ $ python2 -c "print 42069" | ./double-trouble
 The flag is:
 
 ```
-csivit{y0u_g0!_fa5t_b!n5}
+csictf{y0u_g0!_fa5t_b!n5}
 ```
