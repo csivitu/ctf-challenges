@@ -1,1 +1,24 @@
-# csictf{n0t_4ll_1nj3ct10n5_4re_SQLi}
+name: "HTB 0x2"
+author: "thebongy and roerohan"
+category: Linux
+
+description: |
+  I found an online service... But I don't know the password.
+
+  Server is at 34.93.37.238.
+
+value: 500
+type: dynamic
+
+decay: 450
+minimum: 100
+
+flags:
+ - csictf{n0t_4ll_1nj3ct10n5_4re_SQLi}
+
+tags:
+ - linux
+ - hackthebox
+
+state: hidden
+version: "0.1"

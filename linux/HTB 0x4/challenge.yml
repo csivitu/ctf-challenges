@@ -1,9 +1,9 @@
-name: "HTB 0x3"
+name: "HTB 0x4"
 author: "thebongy and roerohan"
 category: Linux
 
 description: |
-  I am in csictf.
+  I know my password now :)
 
   Server is at 34.93.37.238.
 
@@ -14,7 +14,7 @@ decay: 450
 minimum: 100
 
 flags:
- - csictf{w3lc0m3_t0_th3_s3rv3r}
+ - csictf{a_w1ld_m0ng00s3_app3ar3d}
 
 tags:
  - linux
