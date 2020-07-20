@@ -7,7 +7,7 @@ Using LSB we find the key to the steghidden file inside the morse.wav which cont
 
 - Python 3
 - Morse code decoder
-- whitespace interpriter 
+- whitespace interpreter 
 - steghide
 
 Files: 
@@ -40,9 +40,12 @@ then when you apply steghide `steghide extract -sf morse.wav` you get flag.txt
 [flag.txt](./flag.txt)
 
 
-when we first look at `Flag.txt` it seems empty but it is filled woth tabs and spaces , using whitespace interpriter when we run the `flag.txt` we get the flag : 
+when we first look at `Flag.txt` it seems empty but it is filled woth tabs and spaces, using whitespace interpreter when we run the `flag.txt` we get the flag : 
 ```
 csictf{7h47_15_h0w_y0u_c4n_83c0m3_1nv151813}
 ```
 
- The flag is: `csictf{7h47_15_h0w_y0u_c4n_83c0m3_1nv151813}`
+The flag is: 
+```
+csictf{7h47_15_h0w_y0u_c4n_83c0m3_1nv151813}
+```

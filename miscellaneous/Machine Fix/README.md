@@ -34,7 +34,7 @@ For base-3 or ternary numbers, the LSB changes whenever we increase a number by 
 by 9 and so on... 
 <br />
 
-So we calculate contribution of each bit and sum them up to get the answer. The contribution of the k(th) last bit can be calculated by ( n//( 3^(k-1) ) ) where // represents integer division. This is because the k(th) last bit changes whenever we increase by 3^(k-1) and we are going from 0 (all machines empty) to n so total increment by n.
+So we calculate contribution of each bit and sum them up to get the answer. The contribution of the k(th) last bit can be calculated by ( n//( 3^(k-1) ) ) where // represents integer division. This is because the k(th) last bit changes whenever we increase by 3^(k-1) and we are going from 0 to n so total increment by n.
 <br />
 
 Solution:
