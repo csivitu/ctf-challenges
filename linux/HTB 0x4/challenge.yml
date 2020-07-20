@@ -12,7 +12,7 @@ decay: 450
 minimum: 100
 
 flags:
- - csictf{a_w1ld_m0ng00s3_app3ar3d}
+ - csictf{m0ng0_c0llect10ns_yay}
 
 tags:
  - linux
