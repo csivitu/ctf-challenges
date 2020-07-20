@@ -1,0 +1,38 @@
+name: "Double Trouble"
+author: "harsoh"
+
+category: Pwn
+
+description: |
+  The trouble is now double, use it to your advantage to get the flag.
+
+value: 500
+type: dynamic
+
+decay: 450
+
+minimum: 100
+
+flags:
+  - csictf{y0u_g0!_fa5t_b!n5}
+
+tags:
+  - pwn
+ 
+files:
+  - "pwn/Secret Society/bin/double-trouble"
+
+state: hidden
+
+version: "0.1"
+
+replicas: 
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 
