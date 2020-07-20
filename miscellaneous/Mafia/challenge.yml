@@ -1,0 +1,39 @@
+name: "Mafia"
+author: "harsoh"
+
+category: Miscellaneous
+
+description: |
+  The CTF Mafia wants to remove the competition (i.e.you) to again have monopoly over flags. Bribe the Mafia to get away unscathed and with the flag. 
+
+value: 500
+type: dynamic
+
+decay: 450
+
+minimum: 100
+
+flags:
+  - csictf{y0u_ar5_t8e_k!ng_0f_rAnd0mne55}
+
+tags:
+  - miscellaneous
+  - algo
+ 
+files:
+  - "miscellaneous/Mafia/prob.pdf"
+
+state: hidden
+
+version: "0.1"
+
+replicas: 0
+containers:
+  server:
+    build: .
+    ports:
+      - containerPort: 9999
+
+expose:
+- containerPort: 9999
+  nodePort: 30721
