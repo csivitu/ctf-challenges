@@ -2,6 +2,8 @@
 
 Fill up the feedback form, get the flag.
 
+https://forms.gle/a1y8SVwNcpJrjS2T7
+
 The flag is:
 
 ```
