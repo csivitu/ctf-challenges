@@ -21,9 +21,6 @@ tags:
   - "osint"
   - "research"
 
-files:
-  - "osint/Flying Places/300 M.jpg"
-
 state: hidden
 
 version: "0.1"
