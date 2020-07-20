@@ -55,6 +55,14 @@ function decodeJWT(req, res, next) {
         return;
     }
 
+    if (token.includes('Bearer ')) {
+        token = token.split('Bearer ')[1];
+    }
+
+    if (token.includes('bearer ')) {
+        token = token.split('bearer ')[1];
+    }
+
     try {
         req.user = jwt.verify(token, process.env.JWT_SECRET);
 
