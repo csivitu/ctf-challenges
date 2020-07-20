@@ -25,8 +25,6 @@ RUN echo csictf{1nj3ct10n_15_p41nfu1} > /ctf/system/of/a/down/flag.txt
 RUN chown -R root:ctf /ctf && \
   chmod -R 755 /ctf
 
-RUN chmod 550 /var/www
-
 RUN chmod -R 440 /ctf/system/of/a/down/flag.txt
 
 EXPOSE 80
