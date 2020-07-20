@@ -107,6 +107,14 @@ if __name__ == '__main__':
 - A secure cookie is being set and compared to print a flag value. In tornado, signed cookies contain the encoded value of the cookie
   alongwith a timestamp and an HMAC signature. Such cookies are supported by the set_secure_cookie and get_secure_cookie methods which require a specific secret key: cookie_secret.
 
+- Upon visiting `http://chall.csivit.com:30279/?icecream={{globals()}}`, you see something useful:
+
+```
+'application': <tornado.web.Application object at 0x7f2976579750>,
+```
+
+- You now know that the name of the variable `tornado.web.Application(...)` is `application`.
+
 - Run the server script with the exploit payload `http://chall.csivit.com:30279/?icecream={{application.settings["cookie_secret"]}}` to get the cookie_secret value `MangoDB` displayed on the website.
   
 - Replace the value of the secure cookie `admin` to the required comparison value `true` to obtain a signed cookie on the browser. Now, replace the signed cookie generated upon running the server script with the one obtained after the secure cookie value was set to `true`. This results in a cookie which looks like the following. Note `dHJ1ZQ==` is base64 for `true`.
