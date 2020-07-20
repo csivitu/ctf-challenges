@@ -6,6 +6,7 @@ RUN adduser --disabled-password --gecos "" ctf
 RUN mkdir chroot
 RUN rsync -aqz --exclude /chroot / /chroot 2>/dev/null || :
 RUN git clone https://github.com/ytdl-node/ytdl.git /chroot/home/ctf/ytdl
+RUN chown root:root -R /chroot/home/ctf
 RUN cp /chroot/root/.ssh/id_rsa.pub /chroot/root/.ssh/authorized_keys
 RUN chmod -R 555 /chroot
 RUN chmod 666 /chroot/dev/null
