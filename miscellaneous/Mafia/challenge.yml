@@ -5,6 +5,8 @@ category: Miscellaneous
 
 description: |
   The CTF Mafia wants to remove the competition (i.e.you) to again have monopoly over flags. Bribe the Mafia to get away unscathed and with the flag. 
+  
+  nc chall.csivit.com 30721
 
 value: 500
 type: dynamic
