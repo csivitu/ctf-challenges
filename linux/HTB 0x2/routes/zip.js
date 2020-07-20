@@ -8,8 +8,17 @@ const router = express.Router();
 
 router.post('/extract', upload.single('zipFile'), (req, res, next) => {
     console.log(req.file);
-    fs.createReadStream(req.file.path).pipe(unzipper.Extract({ path: '/home/administrator/uploads/extracts' }));
-    res.json({success: true});
+    fs.createReadStream(req.file.path).pipe(unzipper.Extract({ path: '/home/administrator/uploads/extracts' }))
+        .on('error', (e) => {
+            res.json({
+                success: false,
+                error: e,
+            });
+        }).on('finish', () => {
+            res.json({
+                success: true
+            });
+        })
 });
 
 module.exports = router;
