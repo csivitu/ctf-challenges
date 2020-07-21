@@ -1,0 +1,97 @@
+  1           0 LOAD_CONST               0 (<code object encrypt at 0x5620f6a88130, file "example.py", line 1>)
+              2 LOAD_CONST               1 ('encrypt')
+              4 MAKE_FUNCTION            0
+              6 STORE_NAME               0 (encrypt)
+
+ 15           8 LOAD_NAME                1 (open)
+             10 LOAD_CONST               2 ('flag.txt')
+             12 LOAD_CONST               3 ('r')
+             14 CALL_FUNCTION            2
+             16 STORE_NAME               2 (flagRead)
+
+ 16          18 LOAD_NAME                2 (flagRead)
+             20 LOAD_ATTR                3 (read)
+             22 CALL_FUNCTION            0
+             24 STORE_NAME               4 (flag)
+
+ 18          26 LOAD_NAME                5 (print)
+             28 LOAD_NAME                0 (encrypt)
+             30 LOAD_NAME                4 (flag)
+             32 CALL_FUNCTION            1
+             34 CALL_FUNCTION            1
+             36 POP_TOP
+             38 LOAD_CONST               4 (None)
+             40 RETURN_VALUE
+
+Disassembly of <code object encrypt at 0x5620f6a88130, file "revQ.py", line 1>:
+  3           0 LOAD_GLOBAL              0 (list)
+              2 LOAD_FAST                0 (flag)
+              4 CALL_FUNCTION            1
+              6 STORE_FAST               1 (flagList)
+
+  5           8 SETUP_LOOP              42 (to 52)
+             10 LOAD_GLOBAL              1 (range)
+             12 LOAD_CONST               1 (0)
+             14 LOAD_GLOBAL              2 (len)
+             16 LOAD_FAST                0 (flag)
+             18 CALL_FUNCTION            1
+             20 CALL_FUNCTION            2
+             22 GET_ITER
+        >>   24 FOR_ITER                24 (to 50)
+             26 STORE_FAST               2 (i)
+
+  6          28 LOAD_GLOBAL              3 (ord)
+             30 LOAD_FAST                1 (flagList)
+             32 LOAD_FAST                2 (i)
+             34 BINARY_SUBSCR
+             36 CALL_FUNCTION            1
+             38 LOAD_CONST               2 (3)
+             40 BINARY_MULTIPLY
+             42 LOAD_FAST                1 (flagList)
+             44 LOAD_FAST                2 (i)
+             46 STORE_SUBSCR
+             48 JUMP_ABSOLUTE           24
+        >>   50 POP_BLOCK
+
+  8     >>   52 LOAD_GLOBAL              2 (len)
+             54 LOAD_FAST                0 (flag)
+             56 CALL_FUNCTION            1
+             58 LOAD_CONST               3 (2)
+             60 BINARY_FLOOR_DIVIDE
+             62 STORE_FAST               3 (n1)
+
+  9          64 LOAD_FAST                1 (flagList)
+             66 LOAD_FAST                3 (n1)
+             68 LOAD_CONST               1 (0)
+             70 LOAD_CONST               5 (-1)
+             72 BUILD_SLICE              3
+             74 BINARY_SUBSCR
+             76 STORE_FAST               4 (f1)
+
+ 10          78 LOAD_FAST                4 (f1)
+             80 LOAD_ATTR                4 (insert)
+             82 LOAD_FAST                3 (n1)
+             84 LOAD_FAST                1 (flagList)
+             86 LOAD_CONST               1 (0)
+             88 BINARY_SUBSCR
+             90 CALL_FUNCTION            2
+             92 POP_TOP
+
+ 11          94 LOAD_FAST                1 (flagList)
+             96 LOAD_FAST                3 (n1)
+             98 LOAD_CONST               4 (1)
+            100 BINARY_ADD
+            102 LOAD_GLOBAL              2 (len)
+            104 LOAD_FAST                0 (flag)
+            106 CALL_FUNCTION            1
+            108 BUILD_SLICE              2
+            110 BINARY_SUBSCR
+            112 STORE_FAST               5 (f2)
+
+ 12         114 LOAD_FAST                4 (f1)
+            116 LOAD_FAST                5 (f2)
+            118 BINARY_ADD
+            120 STORE_FAST               6 (f3)
+
+ 13         122 LOAD_FAST                6 (f3)
+            124 RETURN_VALUE
