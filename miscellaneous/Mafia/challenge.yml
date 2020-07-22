@@ -29,7 +29,7 @@ state: hidden
 
 version: "0.1"
 
-replicas: 5
+replicas: 2
 containers:
   server:
     build: .
