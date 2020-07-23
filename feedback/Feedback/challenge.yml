@@ -10,7 +10,7 @@ description: |
   https://forms.gle/a1y8SVwNcpJrjS2T7
 
 value: 10
-type: static
+type: standard
 
 flags:
   - csictf{th4nk5_f0r_pl4y1ng}
