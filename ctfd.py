@@ -4,6 +4,37 @@ import threading
 import yaml
 import json
 
+# Initialize ctfcli with the CTFD_TOKEN and CTFD_URL.
+def init():
+    CTFD_TOKEN = os.getenv("CTFD_TOKEN", default=None)
+    CTFD_URL = os.getenv("CTFD_URL", default=None)
+
+    if not CTFD_TOKEN or not CTFD_URL:
+        exit(1)
+
+    os.system(f"echo '{CTFD_URL}\n{CTFD_TOKEN}\ny' | ctf init")
+
+
+# Each category is in it's own directory, get the names of all directories that do not begin with '.'.
+def get_categories():
+    denylist_regex = r'\..*'
+
+    categories = [name for name in os.listdir(".") if os.path.isdir(name) and not re.match(denylist_regex, name)]
+    print("Categories: " + ", ".join(categories))
+    return categories
+
+
+# Synchronize all challenges in the given category, where each challenge is in it's own folder.
+def sync(category):
+    challenges = [f"{category}/{name}" for name in os.listdir(f"./{category}") if os.path.isdir(f"{category}/{name}")]
+
+    for challenge in challenges:
+        if os.path.exists(f"{challenge}/challenge.yml"):
+            print(f"Syncing challenge: {challenge}")
+            os.system(f"ctf challenge sync '{challenge}'; ctf challenge install '{challenge}'")
+
+
+# Change the state of certain waves of challenges
 def change_state(waves, state):
     if state not in ['visible', 'hidden']:
         raise Exception("state must be 'visible' or 'hidden'")
@@ -11,27 +42,17 @@ def change_state(waves, state):
     challenge_waves = open('challenge-waves.yml').read()
     challenge_waves = yaml.load(challenge_waves, Loader=yaml.FullLoader)
 
-    visible = {
-        "crypto": [],
-        "forensics": [],
-        "linux": [],
-        "miscellaneous": [],
-        "osint": [],
-        "pwn": [],
-        "reversing": [],
-        "web": [],
-    }
+    visible = {}
+    hidden = {}
 
-    hidden = {
-        "crypto": [],
-        "forensics": [],
-        "linux": [],
-        "miscellaneous": [],
-        "osint": [],
-        "pwn": [],
-        "reversing": [],
-        "web": [],
-    }
+    categories = get_categories()
+    print(categories)
+
+    for category in categories:
+        visible[category] = []
+        hidden[category] = []
+
+    print(visible, hidden)
 
     for wave in challenge_waves:
         if wave in waves:
@@ -74,6 +95,8 @@ def change_state(waves, state):
 
     return visible, hidden
 
+
+# Firewall rules for visible challenges
 def firewall(visible, hidden):
     rules = os.popen('gcloud compute firewall-rules --format=json list').read()
 
@@ -101,36 +124,6 @@ def firewall(visible, hidden):
                 )
                 print('Deleted firewall rules for:')
                 print(challenge['name'])    
-
-
-# Initialize ctfcli with the CTFD_TOKEN and CTFD_URL.
-def init():
-    CTFD_TOKEN = os.getenv("CTFD_TOKEN", default=None)
-    CTFD_URL = os.getenv("CTFD_URL", default=None)
-
-    if not CTFD_TOKEN or not CTFD_URL:
-        exit(1)
-
-    os.system(f"echo '{CTFD_URL}\n{CTFD_TOKEN}\ny' | ctf init")
-
-
-# Each category is in it's own directory, get the names of all directories that do not begin with '.'.
-def get_categories():
-    denylist_regex = r'\..*'
-
-    categories = [name for name in os.listdir(".") if os.path.isdir(name) and not re.match(denylist_regex, name)]
-    print("Categories: " + ", ".join(categories))
-    return categories
-
-
-# Synchronize all challenges in the given category, where each challenge is in it's own folder.
-def sync(category):
-    challenges = [f"{category}/{name}" for name in os.listdir(f"./{category}") if os.path.isdir(f"{category}/{name}")]
-
-    for challenge in challenges:
-        if os.path.exists(f"{challenge}/challenge.yml"):
-            print(f"Syncing challenge: {challenge}")
-            os.system(f"ctf challenge sync '{challenge}'; ctf challenge install '{challenge}'")
 
 
 # Synchronize each category in it's own thread.
