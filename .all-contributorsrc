@@ -113,6 +113,26 @@
         "doc",
         "code"
       ]
+    },
+    {
+      "login": "Shiv10",
+      "name": "Shivansh Sharma",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/17690376?v=4",
+      "profile": "https://github.com/Shiv10",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "Pragati1610",
+      "name": "Pragati1610",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/55177805?v=4",
+      "profile": "https://github.com/Pragati1610",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
