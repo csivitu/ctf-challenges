@@ -46,13 +46,10 @@ def change_state(waves, state):
     hidden = {}
 
     categories = get_categories()
-    print(categories)
 
     for category in categories:
         visible[category] = []
         hidden[category] = []
-
-    print(visible, hidden)
 
     for wave in challenge_waves:
         if wave in waves:
