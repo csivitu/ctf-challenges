@@ -7,7 +7,7 @@ categories:
   - 'osint'
   - 'pwn'
   - 'web'
-registry: 'gcr.io/summer-project-275116'
+registry: 'docker.io/library/csictf'
 resources:
   limits:
     cpu: 100m

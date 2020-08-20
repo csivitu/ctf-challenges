@@ -1,0 +1,19 @@
+name: Deploy challenge on gke
+on:
+  push:
+    branches: [ master ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Login to DockerHub Registry
+        run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - run: npm install -g ctfup
+      - run: |
+          ctfup -c ctfup.yml -d ${{ env.COMMITHASH }} .
+        env:
+          COMMITHASH: $(git rev-list -n 1 latest)

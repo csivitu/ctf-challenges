@@ -1,42 +1,42 @@
-name: Deploy challenge on gke
-on:
-  push:
-    branches: [ master ]
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: git fetch --all --tags
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12'
+# name: Deploy challenge on gke
+# on:
+#   push:
+#     branches: [ master ]
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - run: git fetch --all --tags
+#       - uses: actions/setup-node@v1
+#         with:
+#           node-version: '12'
 
-      - run: npm install -g ctfup
-         # Setup gcloud CLI
-      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
-        with:
-          version: '290.0.1'
-          service_account_key: ${{ secrets.GKE_SA_KEY }}
-          project_id: ${{ secrets.GKE_PROJECT }}
+#       - run: npm install -g ctfup
+#          # Setup gcloud CLI
+#       - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+#         with:
+#           version: '290.0.1'
+#           service_account_key: ${{ secrets.GKE_SA_KEY }}
+#           project_id: ${{ secrets.GKE_PROJECT }}
 
-      # Configure Docker to use the gcloud command-line tool as a credential
-      # helper for authentication
-      - run: |-
-          gcloud --quiet auth configure-docker
-      # Get the GKE credentials so we can deploy to the cluster
-      - run: |-
-          gcloud container clusters get-credentials "${{ secrets.GKE_CLUSTER_NAME }}" --zone "${{ secrets.GKE_CLUSTER_ZONE }}"
+#       # Configure Docker to use the gcloud command-line tool as a credential
+#       # helper for authentication
+#       - run: |-
+#           gcloud --quiet auth configure-docker
+#       # Get the GKE credentials so we can deploy to the cluster
+#       - run: |-
+#           gcloud container clusters get-credentials "${{ secrets.GKE_CLUSTER_NAME }}" --zone "${{ secrets.GKE_CLUSTER_ZONE }}"
 
-      - name: Deploy
-        run: |
-          echo ${{ env.COMMITHASH }}
-          ctfup -c ctfup.yml -d ${{ env.COMMITHASH }} .
-        env:
-          COMMITHASH: $(git rev-list -n 1 latest)
+#       - name: Deploy
+#         run: |
+#           echo ${{ env.COMMITHASH }}
+#           ctfup -c ctfup.yml -d ${{ env.COMMITHASH }} .
+#         env:
+#           COMMITHASH: $(git rev-list -n 1 latest)
   
-      - run: |
-          git config --global user.email "roerohan@gmail.com"
-          git config --global user.name "roerohan"
-          git tag -fa latest -m "feat:Update latest tag"
-          git push -f origin latest
+#       - run: |
+#           git config --global user.email "roerohan@gmail.com"
+#           git config --global user.name "roerohan"
+#           git tag -fa latest -m "feat:Update latest tag"
+#           git push -f origin latest
