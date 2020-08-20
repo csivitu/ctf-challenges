@@ -17,3 +17,8 @@ jobs:
           ctfup -c ctfup.yml -d ${{ env.COMMITHASH }} .
         env:
           COMMITHASH: $(git rev-list -n 1 latest)
+      - run: |
+          git config --global user.email "actions@action.com"
+          git config --global user.name "github-action"
+          git tag -fa latest -m "feat:Update latest tag"
+          git push -f origin latest
