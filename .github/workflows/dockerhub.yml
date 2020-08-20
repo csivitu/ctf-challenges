@@ -15,7 +15,7 @@ jobs:
           node-version: '12'
       - run: npm install -g ctfup
       - run: |
-          ctfup -c ctfup.yml -d ${{ env.COMMITHASH }} .
+          ctfup -c ctfup.yml -d ${{ env.COMMITHASH }} -bo .
         env:
           COMMITHASH: $(git rev-list -n 1 latest)
       - run: |
