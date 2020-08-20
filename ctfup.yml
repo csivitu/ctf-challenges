@@ -7,7 +7,7 @@ categories:
   - 'osint'
   - 'pwn'
   - 'web'
-registry: 'docker.io/library/csictf'
+registry: 'csictf'
 resources:
   limits:
     cpu: 100m
